@@ -47,6 +47,9 @@
 </template>
 
 <style lang="scss">
+.q-page-container {
+  background-color: $primary;
+}
 #portrait {
   width: 240px;
 }

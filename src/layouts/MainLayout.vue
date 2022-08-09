@@ -9,9 +9,13 @@
     >
       <q-toolbar class="col">
         <q-toolbar-title class="row items-center">
-          <q-avatar class="q-mr-sm">
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-black.svg" />
-          </q-avatar>
+          <a href="/">
+            <q-avatar class="q-mr-sm">
+              <img
+                src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-black.svg"
+              />
+            </q-avatar>
+          </a>
           RIVER ROSE DESIGN
         </q-toolbar-title>
       </q-toolbar>
@@ -69,7 +73,7 @@
     </q-dialog>
 
     <!-- Page Content -->
-    <q-page-container class="bg-primary">
+    <q-page-container>
       <router-view />
     </q-page-container>
 
