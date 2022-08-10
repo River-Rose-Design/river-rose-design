@@ -3,7 +3,6 @@
     <!-- Desktop/Tablet Header -->
     <q-header
       v-if="$q.screen.gt.xs"
-      elevated
       id="header"
       class="bg-white text-black row"
     >
@@ -60,13 +59,13 @@
         </q-bar>
         <q-card-section class="q-ma-lg">
           <div class="text-h2">
-            <a href="javascript:void(0)" class="text-black">Gallery</a>
+            <a href="/gallery" class="text-black">Gallery</a>
           </div>
           <div class="text-h2 q-mt-sm">
-            <a href="javascript:void(0)" class="text-black">About</a>
+            <a href="/about" class="text-black">About</a>
           </div>
           <div class="text-h2 q-mt-sm">
-            <a href="javascript:void(0)" class="text-black">Contact</a>
+            <a href="/contact" class="text-black">Contact</a>
           </div>
         </q-card-section>
       </q-card>
@@ -100,6 +99,9 @@
   top: 24px;
   right: 24px;
   z-index: 2001;
+}
+.q-tab__indicator {
+  // TODO: Style the bottom tab indicator
 }
 </style>
 

@@ -9,7 +9,7 @@
       ></vue-easy-lightbox>
     </div>
 
-    <q-tabs inline-label class="bg-teal text-white shadow-2">
+    <q-tabs inline-label class="text-black">
       <q-btn-dropdown
         v-model="gdMenuVisible"
         persistent
@@ -94,6 +94,60 @@
 import { defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import VueEasyLightbox from 'vue-easy-lightbox';
+
+const brandingAssets = [
+  {
+    title: '',
+    src: '/src/assets/graphic-design/branding/cjllogo.png',
+  },
+  {
+    title: '',
+    src: '/src/assets/graphic-design/branding/LAP_business_card_front.png',
+    srcBack: '/src/assets/graphic-design/branding/LAP_business_card_back.png',
+  },
+  {
+    title: '',
+    src: '/src/assets/graphic-design/branding/magical_seams_logo_thumb.png',
+    srcBack:
+      '/src/assets/graphic-design/branding/magical_seams_logo_dark_thumb.png',
+  },
+  {
+    title: '',
+    src: '/src/assets/graphic-design/branding/ruth_logo_standalone.png',
+    srcBack:
+      '/src/assets/graphic-design/branding/ruth_logo_standalone_fordark.png',
+  },
+];
+
+const editorialAssets = [
+  {
+    title: '',
+    src: '/src/assets/graphic-design/editorial/imagine.jpg',
+  },
+  {
+    title: '',
+    src: '/src/assets/graphic-design/editorial/why_go_renewable.jpg',
+  },
+];
+
+const promotionalAssets = [
+  {
+    title: '',
+    src: '/src/assets/graphic-design/promotional/ginger_tea.jpg',
+  },
+  {
+    title: '',
+    src: '/src/assets/graphic-design/promotional/kaelidescope_poster_thumb.jpg',
+  },
+  {
+    title: '',
+    src: '/src/assets/graphic-design/promotional/winterFormalPoster_thumb.png',
+  },
+  {
+    title: '',
+    src: '/src/assets/graphic-design/promotional/winterformalTicket_thumb.png',
+  },
+];
 
 const photographyAssets = [
   {
@@ -231,6 +285,18 @@ const fineArtAssets = [
     title: '',
     src: '/src/assets/fine-art/tithonia_thumb.jpg',
   },
+  {
+    title: '',
+    src: '/src/assets/fine-art/theWave.jpg',
+  },
+  {
+    title: '',
+    src: '/src/assets/fine-art/vector_self_portrait.png',
+  },
+  {
+    title: '',
+    src: '/src/assets/fine-art/wibbeldywobbldy_thumb.jpg',
+  },
 ];
 
 export default defineComponent({
@@ -291,7 +357,21 @@ export default defineComponent({
       const route = useRoute();
       switch (route.name) {
         case 'gallery':
-          return [].concat(photographyAssets, fineArtAssets);
+          return [].concat(
+            brandingAssets,
+            editorialAssets,
+            promotionalAssets,
+            photographyAssets,
+            fineArtAssets
+          );
+        case 'graphic-design':
+          return [].concat(brandingAssets, editorialAssets, promotionalAssets);
+        case 'branding':
+          return brandingAssets;
+        case 'editorial':
+          return editorialAssets;
+        case 'promotional':
+          return promotionalAssets;
         case 'photography':
           return photographyAssets;
         case 'fine-art':
@@ -321,6 +401,11 @@ export default defineComponent({
         );
       }
       return imgSrc;
+    },
+  },
+  watch: {
+    $route(to, from) {
+      this.gdMenuVisible = false;
     },
   },
 });
