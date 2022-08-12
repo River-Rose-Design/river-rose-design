@@ -10,7 +10,7 @@
     <div class="row justify-center shadow-5 bg-white q-pa-md q-mt-xl">
       <div class="row justify-center q-gutter-md">
         <img
-          src="https://placekitten.com/240/300"
+          src="../assets/brand/self_portrait.svg"
           id="portrait"
           class="col-3-sm"
         />

@@ -7,16 +7,11 @@
       class="bg-white text-black row"
     >
       <q-toolbar class="col">
-        <q-toolbar-title class="row items-center">
-          <a href="/">
-            <q-avatar class="q-mr-sm">
-              <img
-                src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-black.svg"
-              />
-            </q-avatar>
-          </a>
-          RIVER ROSE DESIGN
-        </q-toolbar-title>
+        <img
+          src="../assets/brand/logo_horizontal.svg"
+          @click="$router.push({ name: 'home' })"
+          id="logo"
+        />
       </q-toolbar>
       <q-tabs align="right">
         <q-route-tab to="/gallery" label="Gallery" />
@@ -30,9 +25,13 @@
       v-if="$q.screen.lt.sm"
       elevated
       id="header"
-      class="bg-white text-black row justify-center"
+      class="bg-white text-black row justify-center items-center"
     >
-      <img src="https://placekitten.com/40/75" />
+      <img
+        src="../assets/brand/logo_rose.svg"
+        @click="$router.push({ name: 'home' })"
+        id="logo-mobile"
+      />
     </q-header>
     <q-btn
       v-if="$q.screen.lt.sm"
@@ -44,6 +43,7 @@
       round
       aria-label="Menu"
       icon="menu"
+      size="xl"
     />
     <q-dialog
       v-model="mobileMenu"
@@ -94,9 +94,17 @@
 #header {
   height: 80px;
 }
+#logo {
+  height: 58px;
+  cursor: pointer;
+}
+#logo-mobile {
+  height: 75px;
+  cursor: pointer;
+}
 #mobile-menu-button {
   position: fixed;
-  top: 24px;
+  top: 12px;
   right: 24px;
   z-index: 2001;
 }
