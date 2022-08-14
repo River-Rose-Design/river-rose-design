@@ -11,16 +11,13 @@
 
     <q-tabs inline-label class="text-black">
       <q-btn-dropdown
-        v-model="gdMenuVisible"
-        persistent
-        auto-close
-        stretch
+        class="nav-dropdown-gd"
+        split
         flat
         label="Graphic Design"
-        @mouseenter="gdMenuVisible = true"
         @click="$router.push({ name: 'graphic-design' })"
       >
-        <q-list>
+        <q-list class="nav-dropdown-gd">
           <q-route-tab :to="{ name: 'branding' }" label="Branding" />
           <q-route-tab :to="{ name: 'editorial' }" label="Editorial" />
           <q-route-tab :to="{ name: 'promotional' }" label="Promotional" />
@@ -32,7 +29,6 @@
 
     <!-- {{ $route.name }} -->
     <!-- {{ assets() }} -->
-    <!-- <q-toggle v-model="gdMenuVisible" label="Menu state" /> -->
 
     <div id="grid">
       <q-img
@@ -92,7 +88,7 @@
 </style>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import VueEasyLightbox from 'vue-easy-lightbox';
 
@@ -156,7 +152,7 @@ const editorialAssets = [
 
 const promotionalAssets = [
   {
-    title: '',
+    title: 'Art at Lane',
     srcThumb:
       '/src/assets/graphic-design/promotional/artAtLane_Flyers_thumb.jpg',
     srcMedium: '/src/assets/graphic-design/promotional/artAtLane_Flyers_m.jpg',
@@ -362,8 +358,6 @@ export default defineComponent({
     VueEasyLightbox,
   },
   setup() {
-    let gdMenuVisible = ref(false);
-
     const lightboxVisibleRef = ref(false);
     const lightboxIndexRef = ref(0); // default 0
     const lightboxImgsRef: Array<string> = ref([]);
@@ -377,8 +371,6 @@ export default defineComponent({
     // },
 
     return {
-      gdMenuVisible,
-
       lightboxVisibleRef,
       lightboxIndexRef,
       lightboxImgsRef,
@@ -492,11 +484,6 @@ export default defineComponent({
         default:
           return [];
       }
-    },
-  },
-  watch: {
-    $route(to, from) {
-      this.gdMenuVisible = false;
     },
   },
 });
