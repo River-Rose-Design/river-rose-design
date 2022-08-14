@@ -38,7 +38,7 @@
       <q-img
         v-for="(asset, idx) in assets"
         :key="idx"
-        :src="asset.src"
+        :src="asset.srcThumb"
         @mouseover="if (asset.title) hoverImg(idx);"
         @mouseleave="if (asset.title) unhoverImg(idx);"
         @click="onLightboxShow(idx)"
@@ -85,9 +85,10 @@
     width: 100%;
   }
 }
-// #grid > img {
-//   width: 200px;
-// }
+
+.toolbar-btn__rotate {
+  display: none;
+}
 </style>
 
 <script lang="ts">
@@ -98,54 +99,110 @@ import VueEasyLightbox from 'vue-easy-lightbox';
 const brandingAssets = [
   {
     title: '',
-    src: '/src/assets/graphic-design/branding/cjllogo.png',
+    srcThumb: '/src/assets/graphic-design/branding/cjllogo.png',
+    srcMedium: '/src/assets/graphic-design/branding/cjllogo.png',
+    srcFullSize: '/src/assets/graphic-design/branding/cjllogo.png',
+    srcXL: '/src/assets/graphic-design/branding/cjllogo.png',
   },
   {
     title: '',
-    src: '/src/assets/graphic-design/branding/LAP_business_card_front.png',
+    srcThumb: '/src/assets/graphic-design/branding/LAP_business_card_front.png',
     srcBack: '/src/assets/graphic-design/branding/LAP_business_card_back.png',
+    srcMedium:
+      '/src/assets/graphic-design/branding/LAP_business_card_front.png',
+    srcFullSize:
+      '/src/assets/graphic-design/branding/LAP_business_card_front.png',
+    srcXL: '/src/assets/graphic-design/branding/LAP_business_card_front.png',
   },
   {
     title: '',
-    src: '/src/assets/graphic-design/branding/magical_seams_logo_thumb.png',
+    srcThumb:
+      '/src/assets/graphic-design/branding/magical_seams_logo_thumb.png',
     srcBack:
       '/src/assets/graphic-design/branding/magical_seams_logo_dark_thumb.png',
+    srcMedium:
+      '/src/assets/graphic-design/branding/magical_seams_logo_thumb.png',
+    srcFullSize:
+      '/src/assets/graphic-design/branding/magical_seams_logo_thumb.png',
+    srcXL: '/src/assets/graphic-design/branding/magical_seams_logo_thumb.png',
   },
   {
     title: '',
-    src: '/src/assets/graphic-design/branding/ruth_logo_standalone.png',
+    srcThumb: '/src/assets/graphic-design/branding/ruth_logo_standalone.png',
     srcBack:
       '/src/assets/graphic-design/branding/ruth_logo_standalone_fordark.png',
+    srcMedium: '/src/assets/graphic-design/branding/ruth_logo_standalone.png',
+    srcFullSize: '/src/assets/graphic-design/branding/ruth_logo_standalone.png',
+    srcXL: '/src/assets/graphic-design/branding/ruth_logo_standalone.png',
   },
 ];
 
 const editorialAssets = [
   {
     title: '',
-    src: '/src/assets/graphic-design/editorial/imagine.jpg',
+    srcThumb: '/src/assets/graphic-design/editorial/imagine.jpg',
+    srcMedium: '/src/assets/graphic-design/editorial/imagine.jpg',
+    srcFullSize: '/src/assets/graphic-design/editorial/imagine.jpg',
+    srcXL: '/src/assets/graphic-design/editorial/imagine.jpg',
   },
   {
     title: '',
-    src: '/src/assets/graphic-design/editorial/why_go_renewable.jpg',
+    srcThumb: '/src/assets/graphic-design/editorial/why_go_renewable.jpg',
+    srcMedium: '/src/assets/graphic-design/editorial/why_go_renewable.jpg',
+    srcFullSize: '/src/assets/graphic-design/editorial/why_go_renewable.jpg',
+    srcXL: '/src/assets/graphic-design/editorial/why_go_renewable.jpg',
   },
 ];
 
 const promotionalAssets = [
   {
     title: '',
-    src: '/src/assets/graphic-design/promotional/ginger_tea.jpg',
+    srcThumb:
+      '/src/assets/graphic-design/promotional/artAtLane_Flyers_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/promotional/artAtLane_Flyers_m.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/promotional/artAtLane_Flyers_fs.jpg',
+    srcXL: '/src/assets/graphic-design/promotional/artAtLane_Flyers_xl.jpg',
   },
   {
     title: '',
-    src: '/src/assets/graphic-design/promotional/kaelidescope_poster_thumb.jpg',
+    srcThumb: '/src/assets/graphic-design/promotional/ginger_tea.jpg',
+    srcMedium: '/src/assets/graphic-design/promotional/ginger_tea.jpg',
+    srcFullSize: '/src/assets/graphic-design/promotional/ginger_tea.jpg',
+    srcXL: '/src/assets/graphic-design/promotional/ginger_tea.jpg',
   },
   {
     title: '',
-    src: '/src/assets/graphic-design/promotional/winterFormalPoster_thumb.png',
+    srcThumb:
+      '/src/assets/graphic-design/promotional/kaelidescope_poster_thumb.jpg',
+    srcMedium:
+      '/src/assets/graphic-design/promotional/kaelidescope_poster_thumb.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/promotional/kaelidescope_poster_thumb.jpg',
+    srcXL:
+      '/src/assets/graphic-design/promotional/kaelidescope_poster_thumb.jpg',
   },
   {
     title: '',
-    src: '/src/assets/graphic-design/promotional/winterformalTicket_thumb.png',
+    srcThumb:
+      '/src/assets/graphic-design/promotional/winterFormalPoster_thumb.png',
+    srcMedium:
+      '/src/assets/graphic-design/promotional/winterFormalPoster_thumb.png',
+    srcFullSize:
+      '/src/assets/graphic-design/promotional/winterFormalPoster_thumb.png',
+    srcXL:
+      '/src/assets/graphic-design/promotional/winterFormalPoster_thumb.png',
+  },
+  {
+    title: '',
+    srcThumb:
+      '/src/assets/graphic-design/promotional/winterformalTicket_thumb.png',
+    srcMedium:
+      '/src/assets/graphic-design/promotional/winterformalTicket_thumb.png',
+    srcFullSize:
+      '/src/assets/graphic-design/promotional/winterformalTicket_thumb.png',
+    srcXL:
+      '/src/assets/graphic-design/promotional/winterformalTicket_thumb.png',
   },
 ];
 
@@ -351,6 +408,58 @@ export default defineComponent({
     onLightboxHide() {
       this.lightboxVisibleRef = false;
     },
+    // getImageSrcSet(asset) {
+    //   let imgSrcSet = '';
+    //   if (asset.srcThumb) {
+    //     imgSrcSet += `${asset.srcThumb} 400w, `;
+    //   }
+    //   if (asset.srcMedium) {
+    //     imgSrcSet += `${asset.srcMedium} 800w `;
+    //   }
+    //   if (asset.src) {
+    //     imgSrcSet += `${asset.src} 1200w, `;
+    //   }
+    //   return imgSrcSet;
+    // },
+    getBrandingAssets() {
+      let assets = [];
+      for (let i = 0; i < brandingAssets.length; i++) {
+        let lightBoxImageSrc = brandingAssets[i].srcXL;
+        if (this.$q.screen.lt.md) {
+          lightBoxImageSrc = brandingAssets[i].srcMedium;
+        } else if (this.$q.screen.lt.lg) {
+          lightBoxImageSrc = brandingAssets[i].srcFullSize;
+        }
+        assets.push({ ...brandingAssets[i], src: lightBoxImageSrc });
+      }
+      return assets;
+    },
+    getEditorialAssets() {
+      let assets = [];
+      for (let i = 0; i < editorialAssets.length; i++) {
+        let lightBoxImageSrc = editorialAssets[i].srcXL;
+        if (this.$q.screen.lt.md) {
+          lightBoxImageSrc = editorialAssets[i].srcMedium;
+        } else if (this.$q.screen.lt.lg) {
+          lightBoxImageSrc = editorialAssets[i].srcFullSize;
+        }
+        assets.push({ ...editorialAssets[i], src: lightBoxImageSrc });
+      }
+      return assets;
+    },
+    getPromotionalAssets() {
+      let assets = [];
+      for (let i = 0; i < promotionalAssets.length; i++) {
+        let lightBoxImageSrc = promotionalAssets[i].srcXL;
+        if (this.$q.screen.lt.md) {
+          lightBoxImageSrc = promotionalAssets[i].srcMedium;
+        } else if (this.$q.screen.lt.lg) {
+          lightBoxImageSrc = promotionalAssets[i].srcFullSize;
+        }
+        assets.push({ ...promotionalAssets[i], src: lightBoxImageSrc });
+      }
+      return assets;
+    },
   },
   computed: {
     assets() {
@@ -358,20 +467,24 @@ export default defineComponent({
       switch (route.name) {
         case 'gallery':
           return [].concat(
-            brandingAssets,
-            editorialAssets,
-            promotionalAssets,
+            this.getBrandingAssets(),
+            this.getEditorialAssets(),
+            this.getPromotionalAssets(),
             photographyAssets,
             fineArtAssets
           );
         case 'graphic-design':
-          return [].concat(brandingAssets, editorialAssets, promotionalAssets);
+          return [].concat(
+            this.getBrandingAssets(),
+            this.getEditorialAssets(),
+            this.getPromotionalAssets()
+          );
         case 'branding':
-          return brandingAssets;
+          return this.getBrandingAssets();
         case 'editorial':
-          return editorialAssets;
+          return this.getEditorialAssets();
         case 'promotional':
-          return promotionalAssets;
+          return this.getPromotionalAssets();
         case 'photography':
           return photographyAssets;
         case 'fine-art':
@@ -379,28 +492,6 @@ export default defineComponent({
         default:
           return [];
       }
-    },
-
-    getImgUrl(pic: string) {
-      let imgSrc = '';
-      try {
-        imgSrc = require('../assets/photography/' + pic + '.jpg');
-      } catch (error) {
-        console.error(`Image '../assets/photography/${pic}.jpg' not found!`);
-      }
-      return imgSrc;
-    },
-
-    getImage(filename: string) {
-      let imgSrc = '';
-      try {
-        imgSrc = require(`../assets/photography/${filename}.jpg`);
-      } catch (error) {
-        console.error(
-          `Image '../assets/photography/${filename}.jpg' not found!`
-        );
-      }
-      return imgSrc;
     },
   },
   watch: {
