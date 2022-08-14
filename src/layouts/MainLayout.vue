@@ -15,8 +15,8 @@
       </q-toolbar>
       <q-tabs align="right">
         <q-route-tab to="/gallery" label="Gallery" />
-        <q-route-tab to="/about" label="About" />
-        <q-route-tab to="/contact" label="Contact" />
+        <!-- <q-route-tab to="/about" label="About" />
+        <q-route-tab to="/contact" label="Contact" /> -->
       </q-tabs>
     </q-header>
 
@@ -61,12 +61,12 @@
           <div class="text-h2">
             <a href="/gallery" class="text-black">Gallery</a>
           </div>
-          <div class="text-h2 q-mt-sm">
+          <!-- <div class="text-h2 q-mt-sm">
             <a href="/about" class="text-black">About</a>
           </div>
           <div class="text-h2 q-mt-sm">
             <a href="/contact" class="text-black">Contact</a>
-          </div>
+          </div> -->
         </q-card-section>
       </q-card>
     </q-dialog>
