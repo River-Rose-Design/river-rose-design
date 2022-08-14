@@ -27,9 +27,6 @@
       <q-route-tab :to="{ name: 'fine-art' }" label="Fine Art" />
     </q-tabs>
 
-    <!-- {{ $route.name }} -->
-    <!-- {{ assets() }} -->
-
     <div id="grid">
       <q-img
         v-for="(asset, idx) in assets"
@@ -88,11 +85,62 @@
 </style>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue';
+import { defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import VueEasyLightbox from 'vue-easy-lightbox';
 
 const brandingAssets = [
+  {
+    title: '',
+    srcThumb:
+      '/src/assets/graphic-design/branding/costanoa_cosmetics_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/costanoa_cosmetics_m.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/branding/costanoa_cosmetics_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/costanoa_cosmetics_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/branding/costanoa_tea_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/costanoa_tea_m.jpg',
+    srcFullSize: '/src/assets/graphic-design/branding/costanoa_tea_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/costanoa_tea_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/branding/CS15_mask_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/CS15_mask_m.jpg',
+    srcFullSize: '/src/assets/graphic-design/branding/CS15_mask_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/CS15_mask_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/branding/CS15_poster_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/CS15_poster_m.jpg',
+    srcFullSize: '/src/assets/graphic-design/branding/CS15_poster_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/CS15_poster_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/branding/CS15_program_02_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/CS15_program_02_m.jpg',
+    srcFullSize: '/src/assets/graphic-design/branding/CS15_program_02_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/CS15_program_02_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/branding/CS15_waterBottle_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/CS15_waterBottle_m.jpg',
+    srcFullSize: '/src/assets/graphic-design/branding/CS15_waterBottle_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/CS15_waterBottle_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/branding/CS15_website_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/CS15_website_m.jpg',
+    srcFullSize: '/src/assets/graphic-design/branding/CS15_website_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/CS15_website_xl.jpg',
+  },
   {
     title: '',
     srcThumb: '/src/assets/graphic-design/branding/cjllogo.png',
@@ -136,6 +184,28 @@ const brandingAssets = [
 const editorialAssets = [
   {
     title: '',
+    srcThumb:
+      '/src/assets/graphic-design/editorial/anActOfCommunicacion_spread_thumb.jpg',
+    srcMedium:
+      '/src/assets/graphic-design/editorial/anActOfCommunicacion_spread_m.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/editorial/anActOfCommunicacion_spread_fs.jpg',
+    srcXL:
+      '/src/assets/graphic-design/editorial/anActOfCommunicacion_spread_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb:
+      '/src/assets/graphic-design/editorial/bothAlarmAndHope_spread_thumb.jpg',
+    srcMedium:
+      '/src/assets/graphic-design/editorial/bothAlarmAndHope_spread_m.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/editorial/bothAlarmAndHope_spread_fs.jpg',
+    srcXL:
+      '/src/assets/graphic-design/editorial/bothAlarmAndHope_spread_xl.jpg',
+  },
+  {
+    title: '',
     srcThumb: '/src/assets/graphic-design/editorial/imagine.jpg',
     srcMedium: '/src/assets/graphic-design/editorial/imagine.jpg',
     srcFullSize: '/src/assets/graphic-design/editorial/imagine.jpg',
@@ -162,43 +232,63 @@ const promotionalAssets = [
   },
   {
     title: '',
-    srcThumb: '/src/assets/graphic-design/promotional/ginger_tea.jpg',
-    srcMedium: '/src/assets/graphic-design/promotional/ginger_tea.jpg',
-    srcFullSize: '/src/assets/graphic-design/promotional/ginger_tea.jpg',
-    srcXL: '/src/assets/graphic-design/promotional/ginger_tea.jpg',
+    srcThumb:
+      '/src/assets/graphic-design/promotional/artAtLane_insta_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/promotional/artAtLane_insta_m.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/promotional/artAtLane_insta_fs.jpg',
+    srcXL: '/src/assets/graphic-design/promotional/artAtLane_insta_xl.jpg',
   },
   {
     title: '',
     srcThumb:
-      '/src/assets/graphic-design/promotional/kaelidescope_poster_thumb.jpg',
-    srcMedium:
-      '/src/assets/graphic-design/promotional/kaelidescope_poster_thumb.jpg',
+      '/src/assets/graphic-design/promotional/artAtLane2_insta_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/promotional/artAtLane2_insta_m.jpg',
     srcFullSize:
-      '/src/assets/graphic-design/promotional/kaelidescope_poster_thumb.jpg',
-    srcXL:
-      '/src/assets/graphic-design/promotional/kaelidescope_poster_thumb.jpg',
+      '/src/assets/graphic-design/promotional/artAtLane2_insta_fs.jpg',
+    srcXL: '/src/assets/graphic-design/promotional/artAtLane2_insta_xl.jpg',
   },
   {
     title: '',
     srcThumb:
-      '/src/assets/graphic-design/promotional/winterFormalPoster_thumb.png',
-    srcMedium:
-      '/src/assets/graphic-design/promotional/winterFormalPoster_thumb.png',
+      '/src/assets/graphic-design/promotional/kenKwapis_flyer_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/promotional/kenKwapis_flyer_m.jpg',
     srcFullSize:
-      '/src/assets/graphic-design/promotional/winterFormalPoster_thumb.png',
-    srcXL:
-      '/src/assets/graphic-design/promotional/winterFormalPoster_thumb.png',
+      '/src/assets/graphic-design/promotional/kenKwapis_flyer_fs.jpg',
+    srcXL: '/src/assets/graphic-design/promotional/kenKwapis_flyer_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/promotional/mirage_cover_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/promotional/mirage_cover_m.jpg',
+    srcFullSize: '/src/assets/graphic-design/promotional/mirage_cover_fs.jpg',
+    srcXL: '/src/assets/graphic-design/promotional/mirage_cover_xl.jpg',
   },
   {
     title: '',
     srcThumb:
-      '/src/assets/graphic-design/promotional/winterformalTicket_thumb.png',
+      '/src/assets/graphic-design/promotional/theBleed_coverPlus_thumb.jpg',
     srcMedium:
-      '/src/assets/graphic-design/promotional/winterformalTicket_thumb.png',
+      '/src/assets/graphic-design/promotional/theBleed_coverPlus_m.jpg',
     srcFullSize:
-      '/src/assets/graphic-design/promotional/winterformalTicket_thumb.png',
-    srcXL:
-      '/src/assets/graphic-design/promotional/winterformalTicket_thumb.png',
+      '/src/assets/graphic-design/promotional/theBleed_coverPlus_fs.jpg',
+    srcXL: '/src/assets/graphic-design/promotional/theBleed_coverPlus_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/promotional/theWorks_insta_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/promotional/theWorks_insta_m.jpg',
+    srcFullSize: '/src/assets/graphic-design/promotional/theWorks_insta_fs.jpg',
+    srcXL: '/src/assets/graphic-design/promotional/theWorks_insta_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb:
+      '/src/assets/graphic-design/promotional/theWorks_poster_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/promotional/theWorks_poster_m.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/promotional/theWorks_poster_fs.jpg',
+    srcXL: '/src/assets/graphic-design/promotional/theWorks_poster_xl.jpg',
   },
 ];
 
@@ -362,14 +452,6 @@ export default defineComponent({
     const lightboxIndexRef = ref(0); // default 0
     const lightboxImgsRef: Array<string> = ref([]);
 
-    // paths() {
-    //   let list = [];
-    //   for (let i = 0; i < assets.length; i++) {
-    //     list.push(`../assets/photos/${assets[i]}.jpg`);
-    //   }
-    //   return list;
-    // },
-
     return {
       lightboxVisibleRef,
       lightboxIndexRef,
@@ -384,71 +466,26 @@ export default defineComponent({
       document.querySelector(`#caption-${id}`).style.visibility = 'hidden';
     },
     onLightboxShow(num: number) {
-      // lightboxImgsRef.value = [
-      //   'src/assets/photos/full_size_photo_optimized1.jpg',
-      //   'src/assets/photos/full_size_photo_optimized2.jpg',
-      // ];
       this.lightboxImgsRef = this.assets;
-      // or
-      // imgsRef.value = [
-      //   { title: 'test img', src: 'http://via.placeholder.com/350x150' },
-      //   'http://via.placeholder.com/350x150'
-      // ]
       this.lightboxIndexRef = num; // index of imgList
       this.lightboxVisibleRef = true;
     },
     onLightboxHide() {
       this.lightboxVisibleRef = false;
     },
-    // getImageSrcSet(asset) {
-    //   let imgSrcSet = '';
-    //   if (asset.srcThumb) {
-    //     imgSrcSet += `${asset.srcThumb} 400w, `;
-    //   }
-    //   if (asset.srcMedium) {
-    //     imgSrcSet += `${asset.srcMedium} 800w `;
-    //   }
-    //   if (asset.src) {
-    //     imgSrcSet += `${asset.src} 1200w, `;
-    //   }
-    //   return imgSrcSet;
-    // },
-    getBrandingAssets() {
+    getAssetsOfType(assetType) {
       let assets = [];
-      for (let i = 0; i < brandingAssets.length; i++) {
-        let lightBoxImageSrc = brandingAssets[i].srcXL;
-        if (this.$q.screen.lt.md) {
-          lightBoxImageSrc = brandingAssets[i].srcMedium;
-        } else if (this.$q.screen.lt.lg) {
-          lightBoxImageSrc = brandingAssets[i].srcFullSize;
+      for (let i = 0; i < assetType.length; i++) {
+        // Default to XL, for screen sizes greater than 1792px
+        let lightBoxImageSrc = assetType[i].srcXL;
+        if (this.$q.screen.width <= 896) {
+          // Medium, for half our laptop screen (896px) or less
+          lightBoxImageSrc = assetType[i].srcMedium;
+        } else if (this.$q.screen.width <= 1792) {
+          // Full size, for our laptop screen (1792px) or less
+          lightBoxImageSrc = assetType[i].srcFullSize;
         }
-        assets.push({ ...brandingAssets[i], src: lightBoxImageSrc });
-      }
-      return assets;
-    },
-    getEditorialAssets() {
-      let assets = [];
-      for (let i = 0; i < editorialAssets.length; i++) {
-        let lightBoxImageSrc = editorialAssets[i].srcXL;
-        if (this.$q.screen.lt.md) {
-          lightBoxImageSrc = editorialAssets[i].srcMedium;
-        } else if (this.$q.screen.lt.lg) {
-          lightBoxImageSrc = editorialAssets[i].srcFullSize;
-        }
-        assets.push({ ...editorialAssets[i], src: lightBoxImageSrc });
-      }
-      return assets;
-    },
-    getPromotionalAssets() {
-      let assets = [];
-      for (let i = 0; i < promotionalAssets.length; i++) {
-        let lightBoxImageSrc = promotionalAssets[i].srcXL;
-        if (this.$q.screen.lt.md) {
-          lightBoxImageSrc = promotionalAssets[i].srcMedium;
-        } else if (this.$q.screen.lt.lg) {
-          lightBoxImageSrc = promotionalAssets[i].srcFullSize;
-        }
-        assets.push({ ...promotionalAssets[i], src: lightBoxImageSrc });
+        assets.push({ ...assetType[i], src: lightBoxImageSrc });
       }
       return assets;
     },
@@ -459,24 +496,24 @@ export default defineComponent({
       switch (route.name) {
         case 'gallery':
           return [].concat(
-            this.getBrandingAssets(),
-            this.getEditorialAssets(),
-            this.getPromotionalAssets(),
+            this.getAssetsOfType(brandingAssets),
+            this.getAssetsOfType(editorialAssets),
+            this.getAssetsOfType(promotionalAssets),
             photographyAssets,
             fineArtAssets
           );
         case 'graphic-design':
           return [].concat(
-            this.getBrandingAssets(),
-            this.getEditorialAssets(),
-            this.getPromotionalAssets()
+            this.getAssetsOfType(brandingAssets),
+            this.getAssetsOfType(editorialAssets),
+            this.getAssetsOfType(promotionalAssets)
           );
         case 'branding':
-          return this.getBrandingAssets();
+          return this.getAssetsOfType(brandingAssets);
         case 'editorial':
-          return this.getEditorialAssets();
+          return this.getAssetsOfType(editorialAssets);
         case 'promotional':
-          return this.getPromotionalAssets();
+          return this.getAssetsOfType(promotionalAssets);
         case 'photography':
           return photographyAssets;
         case 'fine-art':
