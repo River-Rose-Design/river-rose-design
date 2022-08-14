@@ -92,6 +92,55 @@ import VueEasyLightbox from 'vue-easy-lightbox';
 const brandingAssets = [
   {
     title: '',
+    srcThumb: '/src/assets/graphic-design/branding/staunton_fall_11x17_fs.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/staunton_fall_11x17_fs.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/branding/staunton_fall_11x17_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_fall_11x17_fs.jpg',
+  },
+  {
+    title: '',
+    srcThumb:
+      '/src/assets/graphic-design/branding/staunton_roadBanner_thumb.jpg',
+    srcMedium:
+      '/src/assets/graphic-design/branding/staunton_roadBanner_thumb.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/branding/staunton_road_banner_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_road_banner_fs.jpg',
+  },
+  {
+    title: '',
+    srcThumb:
+      '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
+    srcMedium:
+      '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/branding/staunton_tickets_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/staunton_tickets_thumb.jpg',
+    srcFullSize: '/src/assets/graphic-design/branding/staunton_tickets_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_tickets_fs.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/branding/staunton_tshirt_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/staunton_tshirt_thumb.jpg',
+    srcFullSize: '/src/assets/graphic-design/branding/staunton_tshirt_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_tshirt_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/branding/staunton_wine_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/staunton_wine_thumb.jpg',
+    srcFullSize: '/src/assets/graphic-design/branding/staunton_wine_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_wine_fs.jpg',
+  },
+  {
+    title: '',
     srcThumb:
       '/src/assets/graphic-design/branding/costanoa_cosmetics_thumb.jpg',
     srcMedium: '/src/assets/graphic-design/branding/costanoa_cosmetics_m.jpg',
@@ -476,16 +525,29 @@ export default defineComponent({
     getAssetsOfType(assetType) {
       let assets = [];
       for (let i = 0; i < assetType.length; i++) {
-        // Default to XL, for screen sizes greater than 1792px
-        let lightBoxImageSrc = assetType[i].srcXL;
-        if (this.$q.screen.width <= 896) {
-          // Medium, for half our laptop screen (896px) or less
-          lightBoxImageSrc = assetType[i].srcMedium;
-        } else if (this.$q.screen.width <= 1792) {
-          // Full size, for our laptop screen (1792px) or less
-          lightBoxImageSrc = assetType[i].srcFullSize;
+        // For SVG images, use it for all sizes including lightbox
+        if (assetType[i].srcSVG) {
+          assets.push({
+            ...assetType[i],
+            srcThumb: assetType[i].srcSVG,
+            srcMedium: assetType[i].srcSVG,
+            srcFullSize: assetType[i].srcSVG,
+            srcXL: assetType[i].srcSVG,
+            src: assetType[i].srcSVG,
+          });
+        } else {
+          // For normal images, just generate Lightbox source based on screen size
+          // Default to XL, for screen sizes greater than 1792px
+          let lightBoxImageSrc = assetType[i].srcXL;
+          if (this.$q.screen.width <= 896) {
+            // Medium, for half our laptop screen (896px) or less
+            lightBoxImageSrc = assetType[i].srcMedium;
+          } else if (this.$q.screen.width <= 1792) {
+            // Full size, for our laptop screen (1792px) or less
+            lightBoxImageSrc = assetType[i].srcFullSize;
+          }
+          assets.push({ ...assetType[i], src: lightBoxImageSrc });
         }
-        assets.push({ ...assetType[i], src: lightBoxImageSrc });
       }
       return assets;
     },

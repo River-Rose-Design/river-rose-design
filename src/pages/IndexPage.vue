@@ -34,10 +34,10 @@
       <q-scroll-area style="height: 360px" class="">
         <div class="row no-wrap q-gutter-sm">
           <img
-            v-for="(asset, idx) in stauntonAssets"
+            v-for="(asset, idx) in getAssetsOfType(stauntonAssets)"
             :key="idx"
-            :src="asset.src"
-            @click="onLightboxShow(stauntonAssets, idx)"
+            :src="asset.srcThumb"
+            @click="onLightboxShow(getAssetsOfType(stauntonAssets), idx)"
           />
         </div>
       </q-scroll-area>
@@ -75,21 +75,73 @@ import VueEasyLightbox from 'vue-easy-lightbox';
 const stauntonAssets = [
   {
     title: '',
-    src: 'https://placekitten.com/220/350',
+    srcThumb: '/src/assets/graphic-design/branding/staunton_fall_11x17_fs.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/staunton_fall_11x17_fs.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/branding/staunton_fall_11x17_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_fall_11x17_fs.jpg',
   },
   {
     title: '',
-    src: 'https://placekitten.com/240/350',
+    srcThumb:
+      '/src/assets/graphic-design/branding/staunton_roadBanner_thumb.jpg',
+    srcMedium:
+      '/src/assets/graphic-design/branding/staunton_roadBanner_thumb.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/branding/staunton_road_banner_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_road_banner_fs.jpg',
   },
   {
     title: '',
-    src: 'https://placekitten.com/350/350',
+    srcThumb:
+      '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
+    srcMedium:
+      '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
   },
   {
     title: '',
-    src: 'https://placekitten.com/350/350',
+    srcThumb: '/src/assets/graphic-design/branding/staunton_tickets_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/staunton_tickets_thumb.jpg',
+    srcFullSize: '/src/assets/graphic-design/branding/staunton_tickets_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_tickets_fs.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/branding/staunton_tshirt_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/staunton_tshirt_thumb.jpg',
+    srcFullSize: '/src/assets/graphic-design/branding/staunton_tshirt_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_tshirt_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb: '/src/assets/graphic-design/branding/staunton_wine_thumb.jpg',
+    srcMedium: '/src/assets/graphic-design/branding/staunton_wine_thumb.jpg',
+    srcFullSize: '/src/assets/graphic-design/branding/staunton_wine_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_wine_fs.jpg',
   },
 ];
+
+// const stauntonAssets = [
+//   {
+//     title: '',
+//     src: 'https://placekitten.com/220/350',
+//   },
+//   {
+//     title: '',
+//     src: 'https://placekitten.com/240/350',
+//   },
+//   {
+//     title: '',
+//     src: 'https://placekitten.com/350/350',
+//   },
+//   {
+//     title: '',
+//     src: 'https://placekitten.com/350/350',
+//   },
+// ];
 
 const microMachinesAssets = [
   {
@@ -121,16 +173,7 @@ export default defineComponent({
     const lightboxImgsRef: Array<string> = ref([]);
 
     const onLightboxShow = (assets, num: number) => {
-      // lightboxImgsRef.value = [
-      //   'src/assets/photos/full_size_photo_optimized1.jpg',
-      //   'src/assets/photos/full_size_photo_optimized2.jpg',
-      // ];
       lightboxImgsRef.value = assets;
-      // or
-      // imgsRef.value = [
-      //   { title: 'test img', src: 'http://via.placeholder.com/350x150' },
-      //   'http://via.placeholder.com/350x150'
-      // ]
       lightboxIndexRef.value = num; // index of imgList
       lightboxVisibleRef.value = true;
     };
@@ -145,6 +188,37 @@ export default defineComponent({
       stauntonAssets,
       microMachinesAssets,
     };
+  },
+  methods: {
+    getAssetsOfType(assetType) {
+      let assets = [];
+      for (let i = 0; i < assetType.length; i++) {
+        // For SVG images, use it for all sizes including lightbox
+        if (assetType[i].srcSVG) {
+          assets.push({
+            ...assetType[i],
+            srcThumb: assetType[i].srcSVG,
+            srcMedium: assetType[i].srcSVG,
+            srcFullSize: assetType[i].srcSVG,
+            srcXL: assetType[i].srcSVG,
+            src: assetType[i].srcSVG,
+          });
+        } else {
+          // For normal images, just generate Lightbox source based on screen size
+          // Default to XL, for screen sizes greater than 1792px
+          let lightBoxImageSrc = assetType[i].srcXL;
+          if (this.$q.screen.width <= 896) {
+            // Medium, for half our laptop screen (896px) or less
+            lightBoxImageSrc = assetType[i].srcMedium;
+          } else if (this.$q.screen.width <= 1792) {
+            // Full size, for our laptop screen (1792px) or less
+            lightBoxImageSrc = assetType[i].srcFullSize;
+          }
+          assets.push({ ...assetType[i], src: lightBoxImageSrc });
+        }
+      }
+      return assets;
+    },
   },
 });
 </script>
