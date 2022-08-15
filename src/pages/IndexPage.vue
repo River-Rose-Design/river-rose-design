@@ -8,7 +8,7 @@
     ></vue-easy-lightbox>
 
     <div class="row justify-center shadow-5 bg-white q-pa-md q-mt-xl">
-      <div class="row justify-center q-gutter-md">
+      <div class="row justify-center q-gutter-md" style="max-width: 1200px">
         <img
           src="../assets/brand/self_portrait.svg"
           id="portrait"
@@ -18,7 +18,9 @@
           <h4>Hi, I’m Quinn.</h4>
           <p>
             I‘m a neurodivergent science and data nerd who uses art and design
-            to communicate across the myriad of human neurotypes.
+            to communicate across the myriad of human neurotypes. One two three
+            o'clock four o'clock rock. Five six seven o'clock eight o'clock
+            rock.
           </p>
           <p>
             I delight in visually rendering the abstract and making the
@@ -29,33 +31,47 @@
       </div>
     </div>
 
-    <div class="shadow-5 bg-white q-mt-xl q-pa-md">
-      <h6 class="text-uppercase q-mt-none q-mb-lg">Staunton Music Festival</h6>
-      <q-scroll-area style="height: 360px" class="">
-        <div class="row no-wrap q-gutter-sm">
-          <img
-            v-for="(asset, idx) in getAssetsOfType(stauntonAssets)"
-            :key="idx"
-            :src="asset.srcThumb"
-            style="height: 360px"
-            @click="onLightboxShow(getAssetsOfType(stauntonAssets), idx)"
-          />
-        </div>
-      </q-scroll-area>
+    <div
+      class="shadow-5 bg-white q-mt-xl q-pa-md"
+      style="display: flex; justify-content: center"
+    >
+      <div style="width: 1200px">
+        <h6 class="text-uppercase q-mt-none q-mb-lg text-center">
+          Staunton Music Festival
+        </h6>
+        <q-scroll-area style="height: 360px">
+          <div class="row no-wrap q-gutter-sm">
+            <img
+              v-for="(asset, idx) in getAssetsOfType(stauntonAssets)"
+              :key="idx"
+              :src="asset.srcThumb"
+              style="height: 360px"
+              @click="onLightboxShow(getAssetsOfType(stauntonAssets), idx)"
+            />
+          </div>
+        </q-scroll-area>
+      </div>
     </div>
 
-    <div class="shadow-5 bg-white q-mt-xl q-pa-md">
-      <h6 class="text-uppercase q-mt-none q-mb-lg">Micro Machines X-Force</h6>
-      <q-scroll-area style="height: 360px" class="">
-        <div class="row no-wrap q-gutter-sm">
-          <img
-            v-for="(asset, idx) in microMachinesAssets"
-            :key="idx"
-            :src="asset.src"
-            @click="onLightboxShow(microMachinesAssets, idx)"
-          />
-        </div>
-      </q-scroll-area>
+    <div
+      class="shadow-5 bg-white q-mt-xl q-pa-md"
+      style="display: flex; justify-content: center"
+    >
+      <div style="width: 1200px">
+        <h6 class="text-uppercase q-mt-none q-mb-lg text-center">
+          Micro Machines X-Force
+        </h6>
+        <q-scroll-area style="height: 360px">
+          <div class="row no-wrap q-gutter-sm">
+            <img
+              v-for="(asset, idx) in microMachinesAssets"
+              :key="idx"
+              :src="asset.src"
+              @click="onLightboxShow(microMachinesAssets, idx)"
+            />
+          </div>
+        </q-scroll-area>
+      </div>
     </div>
   </q-page>
 </template>
