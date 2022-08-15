@@ -2,10 +2,7 @@
   <q-layout view="hHh lpr fff">
     <!-- Desktop/Tablet Header -->
     <q-header v-if="$q.screen.gt.xs" id="header" class="bg-white text-black">
-      <div
-        class="row"
-        style="max-width: 1200px; margin: auto; margin-top: 11px"
-      >
+      <div class="row header-interior">
         <q-tabs class="col">
           <q-route-tab to="/" label="Home" />
           <q-route-tab to="/gallery" label="Gallery" />
@@ -100,10 +97,16 @@
 
 <style lang="scss">
 #header {
-  height: 80px;
+  height: 88px;
+
+  .header-interior {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 4px;
+  }
 }
 #logo {
-  height: 58px;
+  height: 80px;
   cursor: pointer;
 }
 #logo-mobile {

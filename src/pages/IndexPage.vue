@@ -18,9 +18,7 @@
           <h4>Hi, I’m Quinn.</h4>
           <p>
             I‘m a neurodivergent science and data nerd who uses art and design
-            to communicate across the myriad of human neurotypes. One two three
-            o'clock four o'clock rock. Five six seven o'clock eight o'clock
-            rock.
+            to communicate across the myriad of human neurotypes.
           </p>
           <p>
             I delight in visually rendering the abstract and making the
@@ -42,11 +40,20 @@
         <q-scroll-area style="height: 360px">
           <div class="row no-wrap q-gutter-sm">
             <img
-              v-for="(asset, idx) in getAssetsOfType(stauntonAssets)"
+              v-for="(asset, idx) in getAssetsOfTag(
+                'gd',
+                'staunton',
+                $q.screen.width
+              )"
               :key="idx"
               :src="asset.srcThumb"
               style="height: 360px"
-              @click="onLightboxShow(getAssetsOfType(stauntonAssets), idx)"
+              @click="
+                onLightboxShow(
+                  getAssetsOfTag('gd', 'staunton', $q.screen.width),
+                  idx
+                )
+              "
             />
           </div>
         </q-scroll-area>
@@ -59,15 +66,25 @@
     >
       <div style="width: 1200px">
         <h6 class="text-uppercase q-mt-none q-mb-lg text-center">
-          Micro Machines X-Force
+          Costanoa Resort
         </h6>
         <q-scroll-area style="height: 360px">
           <div class="row no-wrap q-gutter-sm">
             <img
-              v-for="(asset, idx) in microMachinesAssets"
+              v-for="(asset, idx) in getAssetsOfTag(
+                'gd',
+                'costanoa',
+                $q.screen.width
+              )"
               :key="idx"
-              :src="asset.src"
-              @click="onLightboxShow(microMachinesAssets, idx)"
+              :src="asset.srcThumb"
+              style="height: 360px"
+              @click="
+                onLightboxShow(
+                  getAssetsOfTag('gd', 'costanoa', $q.screen.width),
+                  idx
+                )
+              "
             />
           </div>
         </q-scroll-area>
@@ -89,96 +106,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import VueEasyLightbox from 'vue-easy-lightbox';
-
-const stauntonAssets = [
-  {
-    title: '',
-    srcThumb: '/src/assets/graphic-design/branding/staunton_fall_11x17_fs.jpg',
-    srcMedium: '/src/assets/graphic-design/branding/staunton_fall_11x17_fs.jpg',
-    srcFullSize:
-      '/src/assets/graphic-design/branding/staunton_fall_11x17_fs.jpg',
-    srcXL: '/src/assets/graphic-design/branding/staunton_fall_11x17_fs.jpg',
-  },
-  {
-    title: '',
-    srcThumb:
-      '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
-    srcMedium:
-      '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
-    srcFullSize:
-      '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
-    srcXL: '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
-  },
-  {
-    title: '',
-    srcThumb: '/src/assets/graphic-design/branding/staunton_tickets_thumb.jpg',
-    srcMedium: '/src/assets/graphic-design/branding/staunton_tickets_thumb.jpg',
-    srcFullSize: '/src/assets/graphic-design/branding/staunton_tickets_fs.jpg',
-    srcXL: '/src/assets/graphic-design/branding/staunton_tickets_fs.jpg',
-  },
-  {
-    title: '',
-    srcThumb: '/src/assets/graphic-design/branding/staunton_tshirt_thumb.jpg',
-    srcMedium: '/src/assets/graphic-design/branding/staunton_tshirt_thumb.jpg',
-    srcFullSize: '/src/assets/graphic-design/branding/staunton_tshirt_fs.jpg',
-    srcXL: '/src/assets/graphic-design/branding/staunton_tshirt_xl.jpg',
-  },
-  {
-    title: '',
-    srcThumb:
-      '/src/assets/graphic-design/branding/staunton_roadBanner_thumb.jpg',
-    srcMedium:
-      '/src/assets/graphic-design/branding/staunton_roadBanner_thumb.jpg',
-    srcFullSize:
-      '/src/assets/graphic-design/branding/staunton_road_banner_fs.jpg',
-    srcXL: '/src/assets/graphic-design/branding/staunton_road_banner_fs.jpg',
-  },
-  {
-    title: '',
-    srcThumb: '/src/assets/graphic-design/branding/staunton_wine_thumb.jpg',
-    srcMedium: '/src/assets/graphic-design/branding/staunton_wine_thumb.jpg',
-    srcFullSize: '/src/assets/graphic-design/branding/staunton_wine_fs.jpg',
-    srcXL: '/src/assets/graphic-design/branding/staunton_wine_fs.jpg',
-  },
-];
-
-// const stauntonAssets = [
-//   {
-//     title: '',
-//     src: 'https://placekitten.com/220/350',
-//   },
-//   {
-//     title: '',
-//     src: 'https://placekitten.com/240/350',
-//   },
-//   {
-//     title: '',
-//     src: 'https://placekitten.com/350/350',
-//   },
-//   {
-//     title: '',
-//     src: 'https://placekitten.com/350/350',
-//   },
-// ];
-
-const microMachinesAssets = [
-  {
-    title: '',
-    src: 'https://placekitten.com/220/350',
-  },
-  {
-    title: '',
-    src: 'https://placekitten.com/240/350',
-  },
-  {
-    title: '',
-    src: 'https://placekitten.com/350/350',
-  },
-  {
-    title: '',
-    src: 'https://placekitten.com/350/350',
-  },
-];
+import { getAssetsOfTag } from '../helpers';
 
 export default defineComponent({
   name: 'IndexPage',
@@ -203,40 +131,8 @@ export default defineComponent({
       lightboxImgsRef,
       onLightboxShow,
       onLightboxHide,
-      stauntonAssets,
-      microMachinesAssets,
+      getAssetsOfTag,
     };
-  },
-  methods: {
-    getAssetsOfType(assetType) {
-      let assets = [];
-      for (let i = 0; i < assetType.length; i++) {
-        // For SVG images, use it for all sizes including lightbox
-        if (assetType[i].srcSVG) {
-          assets.push({
-            ...assetType[i],
-            srcThumb: assetType[i].srcSVG,
-            srcMedium: assetType[i].srcSVG,
-            srcFullSize: assetType[i].srcSVG,
-            srcXL: assetType[i].srcSVG,
-            src: assetType[i].srcSVG,
-          });
-        } else {
-          // For normal images, just generate Lightbox source based on screen size
-          // Default to XL, for screen sizes greater than 1792px
-          let lightBoxImageSrc = assetType[i].srcXL;
-          if (this.$q.screen.width <= 896) {
-            // Medium, for half our laptop screen (896px) or less
-            lightBoxImageSrc = assetType[i].srcMedium;
-          } else if (this.$q.screen.width <= 1792) {
-            // Full size, for our laptop screen (1792px) or less
-            lightBoxImageSrc = assetType[i].srcFullSize;
-          }
-          assets.push({ ...assetType[i], src: lightBoxImageSrc });
-        }
-      }
-      return assets;
-    },
   },
 });
 </script>
