@@ -47,6 +47,11 @@ const routes: RouteRecordRaw[] = [
             path: 'fine-art',
             component: () => import('pages/GalleryPage.vue'),
           },
+          {
+            name: 'gallery-tag',
+            path: 'tag/:tagName',
+            component: () => import('pages/GalleryPage.vue'),
+          },
         ],
       },
       { path: 'about', redirect: { name: 'home' } },

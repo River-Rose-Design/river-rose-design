@@ -85,10 +85,14 @@
 </style>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import VueEasyLightbox from 'vue-easy-lightbox';
-import { getAssetsOfType, getAssetsOfCategory } from '../helpers';
+import {
+  getAssetsOfCategory,
+  getAssetsOfTag,
+  getAssetsOfType,
+} from '../helpers';
 
 export default defineComponent({
   name: 'GalleryPage',
@@ -99,14 +103,20 @@ export default defineComponent({
     const lightboxVisibleRef = ref(false);
     const lightboxIndexRef = ref(0); // default 0
     const lightboxImgsRef: Array<string> = ref([]);
+    const tag = ref('');
 
     return {
       lightboxVisibleRef,
       lightboxIndexRef,
       lightboxImgsRef,
-      getAssetsOfType,
+      tag,
       getAssetsOfCategory,
+      getAssetsOfTag,
+      getAssetsOfType,
     };
+  },
+  mounted() {
+    this.tag = this.$route.params.tagName;
   },
   methods: {
     hoverImg(id: number) {
@@ -128,6 +138,8 @@ export default defineComponent({
     assets() {
       const route = useRoute();
       switch (route.name) {
+        case 'gallery-tag':
+          return this.getAssetsOfTag('gd', this.tag, this.$q.screen.width);
         case 'gallery':
           return [].concat(
             this.getAssetsOfType('gd', 'branding', this.$q.screen.width),
