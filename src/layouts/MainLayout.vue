@@ -1,28 +1,28 @@
 <template>
   <q-layout view="hHh lpr fff">
     <!-- Desktop/Tablet Header -->
-    <q-header
-      v-if="$q.screen.gt.xs"
-      id="header"
-      class="bg-white text-black row"
-      style="max-width: 1200px; margin: auto"
-    >
-      <q-tabs class="col">
-        <q-route-tab to="/" label="Home" />
-        <q-route-tab to="/gallery" label="Gallery" />
-      </q-tabs>
-      <q-toolbar class="col justify-center">
-        <img
-          src="../assets/brand/logo_rectangle.svg"
-          @click="$router.push({ name: 'home' })"
-          id="logo"
-          style="width: 196px"
-        />
-      </q-toolbar>
-      <q-tabs class="col">
-        <q-route-tab to="/about" label="About" />
-        <q-route-tab to="/contact" label="Contact" />
-      </q-tabs>
+    <q-header v-if="$q.screen.gt.xs" id="header" class="bg-white text-black">
+      <div
+        class="row"
+        style="max-width: 1200px; margin: auto; margin-top: 11px"
+      >
+        <q-tabs class="col">
+          <q-route-tab to="/" label="Home" />
+          <q-route-tab to="/gallery" label="Gallery" />
+        </q-tabs>
+        <q-toolbar class="col justify-center">
+          <img
+            src="../assets/brand/logo_rectangle.svg"
+            @click="$router.push({ name: 'home' })"
+            id="logo"
+            style="width: 196px"
+          />
+        </q-toolbar>
+        <q-tabs class="col">
+          <q-route-tab to="/about" label="About" />
+          <q-route-tab to="/contact" label="Contact" />
+        </q-tabs>
+      </div>
     </q-header>
 
     <!-- Mobile Header -->
@@ -86,7 +86,7 @@
 
     <!-- Footer -->
     <q-footer elevated class="bg-white text-black">
-      <q-toolbar>
+      <q-toolbar style="max-width: 1200px; margin: auto">
         <q-toolbar-title class="row justify-between">
           <div>Contact/Social Footer</div>
           <q-avatar>
