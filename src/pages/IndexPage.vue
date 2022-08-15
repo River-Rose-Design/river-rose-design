@@ -37,6 +37,7 @@
             v-for="(asset, idx) in getAssetsOfType(stauntonAssets)"
             :key="idx"
             :src="asset.srcThumb"
+            style="height: 360px"
             @click="onLightboxShow(getAssetsOfType(stauntonAssets), idx)"
           />
         </div>
@@ -84,16 +85,6 @@ const stauntonAssets = [
   {
     title: '',
     srcThumb:
-      '/src/assets/graphic-design/branding/staunton_roadBanner_thumb.jpg',
-    srcMedium:
-      '/src/assets/graphic-design/branding/staunton_roadBanner_thumb.jpg',
-    srcFullSize:
-      '/src/assets/graphic-design/branding/staunton_road_banner_fs.jpg',
-    srcXL: '/src/assets/graphic-design/branding/staunton_road_banner_fs.jpg',
-  },
-  {
-    title: '',
-    srcThumb:
       '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
     srcMedium:
       '/src/assets/graphic-design/branding/staunton_summer_11x17_fs.jpg',
@@ -114,6 +105,16 @@ const stauntonAssets = [
     srcMedium: '/src/assets/graphic-design/branding/staunton_tshirt_thumb.jpg',
     srcFullSize: '/src/assets/graphic-design/branding/staunton_tshirt_fs.jpg',
     srcXL: '/src/assets/graphic-design/branding/staunton_tshirt_xl.jpg',
+  },
+  {
+    title: '',
+    srcThumb:
+      '/src/assets/graphic-design/branding/staunton_roadBanner_thumb.jpg',
+    srcMedium:
+      '/src/assets/graphic-design/branding/staunton_roadBanner_thumb.jpg',
+    srcFullSize:
+      '/src/assets/graphic-design/branding/staunton_road_banner_fs.jpg',
+    srcXL: '/src/assets/graphic-design/branding/staunton_road_banner_fs.jpg',
   },
   {
     title: '',
