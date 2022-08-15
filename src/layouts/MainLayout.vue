@@ -4,7 +4,8 @@
     <q-header
       v-if="$q.screen.gt.xs"
       id="header"
-      class="bg-white text-black row justify-center"
+      class="bg-white text-black row"
+      style="max-width: 1200px; margin: auto"
     >
       <q-tabs class="col">
         <q-route-tab to="/" label="Home" />
