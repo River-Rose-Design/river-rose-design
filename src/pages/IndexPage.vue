@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page id="index-page">
     <vue-easy-lightbox
       :visible="lightboxVisibleRef"
       :imgs="lightboxImgsRef"
@@ -77,8 +77,9 @@
 </template>
 
 <style lang="scss">
-.q-page-container {
+#index-page {
   background-color: $primary;
+  padding-top: 0.01px; // TODO: Why is this necessary to get pink background above hero?
 }
 #portrait {
   width: 240px;

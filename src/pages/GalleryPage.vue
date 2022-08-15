@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page id="gallery-page">
     <div>
       <vue-easy-lightbox
         :visible="lightboxVisibleRef"
@@ -50,7 +50,7 @@
 </template>
 
 <style lang="scss">
-.q-page-container {
+#gallery-page {
   background-color: white;
 }
 
