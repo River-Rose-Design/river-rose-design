@@ -4,19 +4,23 @@
     <q-header
       v-if="$q.screen.gt.xs"
       id="header"
-      class="bg-white text-black row"
+      class="bg-white text-black row justify-center"
     >
-      <q-toolbar class="col">
+      <q-tabs class="col">
+        <q-route-tab to="/" label="Home" />
+        <q-route-tab to="/gallery" label="Gallery" />
+      </q-tabs>
+      <q-toolbar class="col justify-center">
         <img
-          src="../assets/brand/logo_horizontal.svg"
+          src="../assets/brand/logo_rectangle.svg"
           @click="$router.push({ name: 'home' })"
           id="logo"
+          style="width: 196px"
         />
       </q-toolbar>
-      <q-tabs align="right">
-        <q-route-tab to="/gallery" label="Gallery" />
-        <!-- <q-route-tab to="/about" label="About" />
-        <q-route-tab to="/contact" label="Contact" /> -->
+      <q-tabs class="col">
+        <q-route-tab to="/about" label="About" />
+        <q-route-tab to="/contact" label="Contact" />
       </q-tabs>
     </q-header>
 
