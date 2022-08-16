@@ -8,14 +8,14 @@
     ></vue-easy-lightbox>
 
     <div class="row justify-center bg-white q-pa-md q-mt-xl card-shadow">
-      <div class="row justify-center q-gutter-md" style="max-width: 1200px">
+      <div class="row justify-center q-gutter-md" style="max-width: 800px">
         <img
           src="../assets/brand/self_portrait.svg"
           id="portrait"
           class="col-3-sm"
         />
         <div class="col-sm">
-          <h4>Hi, I’m Quinn.</h4>
+          <h4 style="margin-top: 20px; margin-bottom: 20px">Hi, I’m Quinn.</h4>
           <p>
             I‘m a neurodivergent science and data nerd who uses art and design
             to communicate across the myriad of human neurotypes.
@@ -103,8 +103,8 @@
   width: 240px;
 }
 .card-shadow {
-  box-shadow: 0px -5px 7px 0 rgba(0, 0, 0, 0.1),
-    0px 5px 7px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -5px 7px 0 rgba(0, 0, 0, 0.08),
+    0px 5px 7px 0 rgba(0, 0, 0, 0.08);
 }
 </style>
 

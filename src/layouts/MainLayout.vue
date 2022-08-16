@@ -1,18 +1,13 @@
 <template>
   <q-layout view="hHh lpr fff">
     <!-- Desktop/Tablet Header -->
-    <q-header
-      v-if="$q.screen.gt.xs"
-      id="header"
-      class="bg-white text-black"
-      elevated
-    >
+    <q-header v-if="$q.screen.gt.xs" id="header" class="bg-white text-black">
       <div class="row header-interior">
         <q-tabs class="col">
           <q-route-tab to="/" label="Home" />
           <q-route-tab to="/gallery" label="Gallery" />
         </q-tabs>
-        <q-toolbar class="col justify-center">
+        <q-toolbar class="col justify-center" style="top: 3px">
           <img
             src="../assets/brand/logo_rectangle.svg"
             @click="$router.push({ name: 'home' })"
@@ -30,7 +25,6 @@
     <!-- Mobile Header -->
     <q-header
       v-if="$q.screen.lt.sm"
-      elevated
       id="header"
       class="bg-white text-black row justify-center items-center"
     >
@@ -87,7 +81,7 @@
     </q-page-container>
 
     <!-- Footer -->
-    <q-footer elevated class="bg-white text-black">
+    <q-footer class="bg-white text-black" id="footer">
       <q-toolbar style="max-width: 1200px; margin: auto">
         <q-toolbar-title class="row justify-between">
           <div>Contact/Social Footer</div>
@@ -103,6 +97,7 @@
 <style lang="scss">
 #header {
   height: 88px;
+  box-shadow: 0px 5px 7px 0 rgba(0, 0, 0, 0.08);
 
   .header-interior {
     max-width: 1200px;
@@ -110,10 +105,15 @@
     margin-top: 4px;
   }
 
+  .q-tab__label {
+    font-size: 16px;
+  }
+
   .q-tab__indicator {
-    width: 30px;
+    width: 2em;
     margin: auto;
     bottom: 24px;
+    color: $accent;
   }
 }
 #logo {
@@ -129,6 +129,9 @@
   top: 12px;
   right: 24px;
   z-index: 2001;
+}
+#footer {
+  box-shadow: 0px -5px 7px 0 rgba(0, 0, 0, 0.08);
 }
 </style>
 

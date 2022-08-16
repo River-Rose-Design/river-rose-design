@@ -9,7 +9,7 @@
       ></vue-easy-lightbox>
     </div>
 
-    <q-tabs inline-label class="text-black">
+    <q-tabs inline-label class="text-black q-mt-md">
       <q-btn-dropdown
         class="nav-dropdown-gd"
         split
@@ -55,9 +55,10 @@
 }
 
 .q-tab__indicator {
-  width: 30px;
+  width: 2em;
   margin: auto;
   bottom: 10px;
+  color: $accent;
 }
 
 // Masonry with Columns
@@ -91,7 +92,7 @@
 </style>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue';
+import { defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import VueEasyLightbox from 'vue-easy-lightbox';
 import {
