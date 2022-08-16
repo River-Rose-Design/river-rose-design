@@ -54,6 +54,12 @@
   background-color: white;
 }
 
+.q-tab__indicator {
+  width: 30px;
+  margin: auto;
+  bottom: 10px;
+}
+
 // Masonry with Columns
 // https://codepen.io/chriscoyier/pen/NeRNBO?editors=1100
 // https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/
