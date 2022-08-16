@@ -109,6 +109,12 @@
     margin: auto;
     margin-top: 4px;
   }
+
+  .q-tab__indicator {
+    width: 30px;
+    margin: auto;
+    bottom: 24px;
+  }
 }
 #logo {
   height: 80px;
@@ -123,9 +129,6 @@
   top: 12px;
   right: 24px;
   z-index: 2001;
-}
-.q-tab__indicator {
-  // TODO: Style the bottom tab indicator
 }
 </style>
 
