@@ -7,7 +7,7 @@
       @hide="onLightboxHide"
     ></vue-easy-lightbox>
 
-    <div class="row justify-center shadow-5 bg-white q-pa-md q-mt-xl">
+    <div class="row justify-center bg-white q-pa-md q-mt-xl card-shadow">
       <div class="row justify-center q-gutter-md" style="max-width: 1200px">
         <img
           src="../assets/brand/self_portrait.svg"
@@ -30,7 +30,7 @@
     </div>
 
     <div
-      class="shadow-5 bg-white q-mt-xl q-pa-md"
+      class="bg-white q-mt-xl q-pa-md card-shadow"
       style="display: flex; justify-content: center"
     >
       <div style="width: 1200px">
@@ -61,7 +61,7 @@
     </div>
 
     <div
-      class="shadow-5 bg-white q-mt-xl q-pa-md"
+      class="bg-white q-my-xl q-pa-md card-shadow"
       style="display: flex; justify-content: center"
     >
       <div style="width: 1200px">
@@ -96,10 +96,15 @@
 <style lang="scss">
 #index-page {
   background-color: $primary;
-  padding-top: 0.01px; // TODO: Why is this necessary to get pink background above hero?
+  padding-top: 0.02px; // TODO: Why is this necessary to get pink background above hero?
+  padding-bottom: 0.02px; // TODO: Why is this necessary to get pink background above hero?
 }
 #portrait {
   width: 240px;
+}
+.card-shadow {
+  box-shadow: 0px -5px 7px 0 rgba(0, 0, 0, 0.1),
+    0px 5px 7px 0 rgba(0, 0, 0, 0.1);
 }
 </style>
 

@@ -1,7 +1,12 @@
 <template>
   <q-layout view="hHh lpr fff">
     <!-- Desktop/Tablet Header -->
-    <q-header v-if="$q.screen.gt.xs" id="header" class="bg-white text-black">
+    <q-header
+      v-if="$q.screen.gt.xs"
+      id="header"
+      class="bg-white text-black"
+      elevated
+    >
       <div class="row header-interior">
         <q-tabs class="col">
           <q-route-tab to="/" label="Home" />
