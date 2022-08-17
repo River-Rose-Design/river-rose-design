@@ -27,25 +27,26 @@
       v-if="$q.screen.lt.sm"
       id="header"
       class="bg-white text-black row justify-center items-center"
+      reveal
     >
       <img
         src="../assets/brand/logo_rose.svg"
         @click="$router.push({ name: 'home' })"
         id="logo-mobile"
       />
+      <q-btn
+        v-if="$q.screen.lt.sm"
+        id="mobile-menu-button"
+        class="text-secondary"
+        @click="mobileMenu = true"
+        flat
+        dense
+        round
+        aria-label="Menu"
+        icon="menu"
+        size="xl"
+      />
     </q-header>
-    <q-btn
-      v-if="$q.screen.lt.sm"
-      id="mobile-menu-button"
-      class="text-secondary"
-      @click="mobileMenu = true"
-      flat
-      dense
-      round
-      aria-label="Menu"
-      icon="menu"
-      size="xl"
-    />
     <q-dialog
       v-model="mobileMenu"
       persistent
