@@ -7,7 +7,7 @@
       @hide="onLightboxHide"
     ></vue-easy-lightbox>
 
-    <div class="row justify-center bg-white q-pa-md q-mt-xl card-shadow">
+    <div class="row justify-center bg-white q-pa-md q-my-xl card-shadow">
       <div class="row justify-center q-gutter-md" style="max-width: 800px">
         <img
           src="../assets/brand/self_portrait.svg"
@@ -30,64 +30,39 @@
     </div>
 
     <div
-      class="bg-white q-mt-xl q-pa-md card-shadow"
+      v-for="project in projectCards"
+      :key="project.tag"
+      class="bg-white q-mb-xl q-pa-md card-shadow"
       style="display: flex; justify-content: center"
     >
       <div style="width: 1200px">
-        <h6 class="text-uppercase q-mt-none q-mb-lg text-center">
-          Staunton Music Festival
-        </h6>
         <q-scroll-area style="height: 360px">
           <div class="row no-wrap q-gutter-sm">
             <img
               v-for="(asset, idx) in getAssetsOfTag(
-                'gd',
-                'staunton',
+                project.category,
+                project.tag,
                 $q.screen.width
               )"
               :key="idx"
-              :src="asset.srcThumb"
+              :src="asset.srcS"
               style="height: 360px"
               @click="
                 onLightboxShow(
-                  getAssetsOfTag('gd', 'staunton', $q.screen.width),
+                  getAssetsOfTag(
+                    project.category,
+                    project.tag,
+                    $q.screen.width
+                  ),
                   idx
                 )
               "
             />
           </div>
         </q-scroll-area>
-      </div>
-    </div>
-
-    <div
-      class="bg-white q-my-xl q-pa-md card-shadow"
-      style="display: flex; justify-content: center"
-    >
-      <div style="width: 1200px">
-        <h6 class="text-uppercase q-mt-none q-mb-lg text-center">
-          Costanoa Resort
+        <h6 class="text-uppercase q-mb-none q-mt-lg text-center">
+          {{ project.title }}
         </h6>
-        <q-scroll-area style="height: 360px">
-          <div class="row no-wrap q-gutter-sm">
-            <img
-              v-for="(asset, idx) in getAssetsOfTag(
-                'gd',
-                'costanoa',
-                $q.screen.width
-              )"
-              :key="idx"
-              :src="asset.srcThumb"
-              style="height: 360px"
-              @click="
-                onLightboxShow(
-                  getAssetsOfTag('gd', 'costanoa', $q.screen.width),
-                  idx
-                )
-              "
-            />
-          </div>
-        </q-scroll-area>
       </div>
     </div>
   </q-page>
@@ -113,6 +88,18 @@ import { defineComponent, ref } from 'vue';
 import VueEasyLightbox from 'vue-easy-lightbox';
 import { getAssetsOfTag } from '../helpers';
 
+const projectCards: Array<{
+  title: string;
+  category: 'gd' | 'photo' | 'fine';
+  tag: string;
+}> = [
+  { title: 'Staunton Music Festival', category: 'gd', tag: 'staunton' },
+  { title: 'Costanoa Resort Rebrand', category: 'gd', tag: 'costanoa' },
+  { title: 'Creative Summit 15', category: 'gd', tag: 'CS15' },
+  { title: 'The Bleed Magazine', category: 'gd', tag: 'theBleed' },
+  { title: 'Art At Lane Promotions', category: 'gd', tag: 'artAtLane' },
+];
+
 export default defineComponent({
   name: 'IndexPage',
   components: {
@@ -137,6 +124,7 @@ export default defineComponent({
       onLightboxShow,
       onLightboxHide,
       getAssetsOfTag,
+      projectCards,
     };
   },
 });

@@ -11,16 +11,16 @@ export function getAssetsOfCategory(
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
     const srcS = asset.fileNameS
-      ? `/src/assets/${assetCategory}/${asset.fileNameS}.jpg`
+      ? `/src/assets/${assetCategory}/${asset.fileNameS}`
       : `/src/assets/${assetCategory}/${asset.fileName}_s.jpg`;
     const srcM = asset.fileNameM
-      ? `/src/assets/${assetCategory}/${asset.fileNameM}.jpg`
+      ? `/src/assets/${assetCategory}/${asset.fileNameM}`
       : `/src/assets/${assetCategory}/${asset.fileName}_m.jpg`;
     const srcLG = asset.fileNameLG
-      ? `/src/assets/${assetCategory}/${asset.fileNameLG}.jpg`
+      ? `/src/assets/${assetCategory}/${asset.fileNameLG}`
       : `/src/assets/${assetCategory}/${asset.fileName}_lg.jpg`;
     const srcXL = asset.fileNameXL
-      ? `/src/assets/${assetCategory}/${asset.fileNameXL}.jpg`
+      ? `/src/assets/${assetCategory}/${asset.fileNameXL}`
       : `/src/assets/${assetCategory}/${asset.fileName}_xl.jpg`;
     // Default to XL, for screen sizes greater than 1792px
     let lightBoxImageSrc = srcXL;
@@ -40,7 +40,9 @@ export function getAssetsOfCategory(
       src: lightBoxImageSrc,
     });
   }
-  return assets;
+  return assets.sort(
+    (a, b) => parseInt(b.qualityRating) - parseInt(a.qualityRating)
+  );
 }
 
 export function getAssetsOfType(
@@ -53,16 +55,16 @@ export function getAssetsOfType(
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
     const srcS = asset.fileNameS
-      ? `/src/assets/${assetCategory}/${asset.fileNameS}.jpg`
+      ? `/src/assets/${assetCategory}/${asset.fileNameS}`
       : `/src/assets/${assetCategory}/${asset.fileName}_s.jpg`;
     const srcM = asset.fileNameM
-      ? `/src/assets/${assetCategory}/${asset.fileNameM}.jpg`
+      ? `/src/assets/${assetCategory}/${asset.fileNameM}`
       : `/src/assets/${assetCategory}/${asset.fileName}_m.jpg`;
     const srcLG = asset.fileNameLG
-      ? `/src/assets/${assetCategory}/${asset.fileNameLG}.jpg`
+      ? `/src/assets/${assetCategory}/${asset.fileNameLG}`
       : `/src/assets/${assetCategory}/${asset.fileName}_lg.jpg`;
     const srcXL = asset.fileNameXL
-      ? `/src/assets/${assetCategory}/${asset.fileNameXL}.jpg`
+      ? `/src/assets/${assetCategory}/${asset.fileNameXL}`
       : `/src/assets/${assetCategory}/${asset.fileName}_xl.jpg`;
     // Default to XL, for screen sizes greater than 1792px
     let lightBoxImageSrc = srcXL;
@@ -82,7 +84,9 @@ export function getAssetsOfType(
       src: lightBoxImageSrc,
     });
   }
-  return assets;
+  return assets.sort(
+    (a, b) => parseInt(b.qualityRating) - parseInt(a.qualityRating)
+  );
 }
 
 export function getAssetsOfTag(
@@ -97,16 +101,16 @@ export function getAssetsOfTag(
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
     const srcS = asset.fileNameS
-      ? `/src/assets/${assetCategory}/${asset.fileNameS}.jpg`
+      ? `/src/assets/${assetCategory}/${asset.fileNameS}`
       : `/src/assets/${assetCategory}/${asset.fileName}_s.jpg`;
     const srcM = asset.fileNameM
-      ? `/src/assets/${assetCategory}/${asset.fileNameM}.jpg`
+      ? `/src/assets/${assetCategory}/${asset.fileNameM}`
       : `/src/assets/${assetCategory}/${asset.fileName}_m.jpg`;
     const srcLG = asset.fileNameLG
-      ? `/src/assets/${assetCategory}/${asset.fileNameLG}.jpg`
+      ? `/src/assets/${assetCategory}/${asset.fileNameLG}`
       : `/src/assets/${assetCategory}/${asset.fileName}_lg.jpg`;
     const srcXL = asset.fileNameXL
-      ? `/src/assets/${assetCategory}/${asset.fileNameXL}.jpg`
+      ? `/src/assets/${assetCategory}/${asset.fileNameXL}`
       : `/src/assets/${assetCategory}/${asset.fileName}_xl.jpg`;
     // Default to XL, for screen sizes greater than 1792px
     let lightBoxImageSrc = srcXL;
@@ -126,5 +130,7 @@ export function getAssetsOfTag(
       src: lightBoxImageSrc,
     });
   }
-  return assets;
+  return assets.sort(
+    (a, b) => parseInt(b.qualityRating) - parseInt(a.qualityRating)
+  );
 }
