@@ -84,9 +84,11 @@ export function getAssetsOfType(
       src: lightBoxImageSrc,
     });
   }
-  return assets.sort(
-    (a, b) => parseInt(b.qualityRating) - parseInt(a.qualityRating)
-  );
+  return assets.sort((a, b) => {
+    const aQuality = a.qualityRating ? parseInt(a.qualityRating) : 0;
+    const bQuality = b.qualityRating ? parseInt(b.qualityRating) : 0;
+    return bQuality - aQuality;
+  });
 }
 
 export function getAssetsOfTag(
@@ -96,7 +98,7 @@ export function getAssetsOfTag(
 ) {
   const assets = [];
   const assetsRaw = assetsJSONData.filter(
-    (row) => row.tags.indexOf(assetTag) != -1
+    (row) => !!row.tags && row.tags.indexOf(assetTag) != -1
   );
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
