@@ -9,22 +9,64 @@
       ></vue-easy-lightbox>
     </div>
 
-    <q-tabs inline-label class="text-black q-mt-md">
+    <q-tabs inline-label class="text-black q-mt-md justify-center">
       <q-btn-dropdown
         class="nav-dropdown-gd"
         split
         flat
-        label="Graphic Design"
         @click="$router.push({ name: 'graphic-design' })"
       >
+        <template v-slot:label>
+          <div class="row items-center no-wrap">
+            <div class="text-center">
+              Graphic<br v-if="$q.screen.lt.sm" />
+              Design
+            </div>
+          </div>
+        </template>
         <q-list class="nav-dropdown-gd">
           <q-route-tab :to="{ name: 'branding' }" label="Branding" />
           <q-route-tab :to="{ name: 'editorial' }" label="Editorial" />
           <q-route-tab :to="{ name: 'promotional' }" label="Promotional" />
         </q-list>
       </q-btn-dropdown>
-      <q-route-tab :to="{ name: 'photography' }" label="Photography" />
-      <q-route-tab :to="{ name: 'fine-art' }" label="Fine Art" />
+      <q-btn-dropdown
+        class="nav-dropdown-gd"
+        split
+        flat
+        @click="$router.push({ name: 'photography' })"
+      >
+        <template v-slot:label>
+          <div class="row items-center no-wrap">
+            <div v-if="$q.screen.lt.sm" class="text-center">Photos</div>
+            <div v-else class="text-center">Photography</div>
+          </div>
+        </template>
+        <q-list class="nav-dropdown-gd">
+          <!-- <q-route-tab :to="{ name: 'branding' }" label="Branding" />
+          <q-route-tab :to="{ name: 'editorial' }" label="Editorial" /> -->
+        </q-list>
+      </q-btn-dropdown>
+      <q-btn-dropdown
+        class="nav-dropdown-gd"
+        split
+        flat
+        @click="$router.push({ name: 'fine-art' })"
+      >
+        <template v-slot:label>
+          <div class="row items-center no-wrap">
+            <div class="text-center">
+              Fine<br v-if="$q.screen.lt.sm" />
+              Art
+            </div>
+          </div>
+        </template>
+        <q-list class="nav-dropdown-gd">
+          <!-- <q-route-tab :to="{ name: 'branding' }" label="Branding" />
+          <q-route-tab :to="{ name: 'editorial' }" label="Editorial" />
+          <q-route-tab :to="{ name: 'promotional' }" label="Promotional" /> -->
+        </q-list>
+      </q-btn-dropdown>
     </q-tabs>
 
     <div id="grid">
@@ -52,6 +94,14 @@
 <style lang="scss">
 #gallery-page {
   background-color: white;
+}
+
+.q-tabs__content {
+  justify-content: center;
+}
+
+.q-btn__content {
+  line-height: 16px;
 }
 
 .q-tab__indicator {
