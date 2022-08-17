@@ -27,7 +27,10 @@
         <q-list class="nav-dropdown-gd">
           <q-route-tab :to="{ name: 'branding' }" label="Branding" />
           <q-route-tab :to="{ name: 'editorial' }" label="Editorial" />
+          <q-route-tab :to="{ name: 'illustration' }" label="Illustration" />
+          <q-route-tab :to="{ name: 'packaging' }" label="Packaging" />
           <q-route-tab :to="{ name: 'promotional' }" label="Promotional" />
+          <q-route-tab :to="{ name: 'web' }" label="Web" />
         </q-list>
       </q-btn-dropdown>
       <q-btn-dropdown
@@ -62,9 +65,8 @@
           </div>
         </template>
         <q-list class="nav-dropdown-gd">
-          <!-- <q-route-tab :to="{ name: 'branding' }" label="Branding" />
-          <q-route-tab :to="{ name: 'editorial' }" label="Editorial" />
-          <q-route-tab :to="{ name: 'promotional' }" label="Promotional" /> -->
+          <q-route-tab :to="{ name: 'digital' }" label="Digital" />
+          <q-route-tab :to="{ name: 'analog' }" label="Analog" />
         </q-list>
       </q-btn-dropdown>
     </q-tabs>
@@ -73,7 +75,7 @@
       <q-img
         v-for="(asset, idx) in assets"
         :key="idx"
-        :src="asset.srcThumb"
+        :src="asset.srcS"
         @mouseover="if (asset.title) hoverImg(idx);"
         @mouseleave="if (asset.title) unhoverImg(idx);"
         @click="onLightboxShow(idx)"
@@ -197,30 +199,36 @@ export default defineComponent({
       switch (route.name) {
         case 'gallery-tag':
           return this.getAssetsOfTag('gd', this.tag, this.$q.screen.width);
-        case 'gallery':
-          return [].concat(
-            this.getAssetsOfType('gd', 'branding', this.$q.screen.width),
-            this.getAssetsOfType('gd', 'editorial', this.$q.screen.width),
-            this.getAssetsOfType('gd', 'promotional', this.$q.screen.width),
-            this.getAssetsOfCategory('photo', this.$q.screen.width),
-            this.getAssetsOfCategory('fine', this.$q.screen.width)
-          );
         case 'graphic-design':
           return this.getAssetsOfCategory('gd', this.$q.screen.width);
         case 'branding':
           return this.getAssetsOfType('gd', 'branding', this.$q.screen.width);
         case 'editorial':
           return this.getAssetsOfType('gd', 'editorial', this.$q.screen.width);
+        case 'illustration':
+          return this.getAssetsOfType(
+            'gd',
+            'illustration',
+            this.$q.screen.width
+          );
+        case 'packaging':
+          return this.getAssetsOfType('gd', 'packaging', this.$q.screen.width);
         case 'promotional':
           return this.getAssetsOfType(
             'gd',
             'promotional',
             this.$q.screen.width
           );
+        case 'web':
+          return this.getAssetsOfType('gd', 'web', this.$q.screen.width);
         case 'photography':
           return this.getAssetsOfCategory('photo', this.$q.screen.width);
         case 'fine-art':
           return this.getAssetsOfCategory('fine', this.$q.screen.width);
+        case 'digital':
+          return this.getAssetsOfType('fine', 'digital', this.$q.screen.width);
+        case 'analog':
+          return this.getAssetsOfType('fine', 'analog', this.$q.screen.width);
         default:
           return [];
       }

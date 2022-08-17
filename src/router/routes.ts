@@ -14,6 +14,7 @@ const routes: RouteRecordRaw[] = [
         name: 'gallery',
         path: 'gallery',
         component: () => import('pages/GalleryPage.vue'),
+        redirect: { name: 'graphic-design' },
         children: [
           {
             name: 'graphic-design',
@@ -31,8 +32,23 @@ const routes: RouteRecordRaw[] = [
                 component: () => import('pages/GalleryPage.vue'),
               },
               {
+                name: 'illustration',
+                path: 'illustration',
+                component: () => import('pages/GalleryPage.vue'),
+              },
+              {
+                name: 'packaging',
+                path: 'packaging',
+                component: () => import('pages/GalleryPage.vue'),
+              },
+              {
                 name: 'promotional',
                 path: 'promotional',
+                component: () => import('pages/GalleryPage.vue'),
+              },
+              {
+                name: 'web',
+                path: 'web',
                 component: () => import('pages/GalleryPage.vue'),
               },
             ],
@@ -46,6 +62,18 @@ const routes: RouteRecordRaw[] = [
             name: 'fine-art',
             path: 'fine-art',
             component: () => import('pages/GalleryPage.vue'),
+            children: [
+              {
+                name: 'digital',
+                path: 'digital',
+                component: () => import('pages/GalleryPage.vue'),
+              },
+              {
+                name: 'analog',
+                path: 'analog',
+                component: () => import('pages/GalleryPage.vue'),
+              },
+            ],
           },
           {
             name: 'gallery-tag',

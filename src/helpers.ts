@@ -10,15 +10,15 @@ export function getAssetsOfCategory(
   );
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
-    const srcThumb = asset.fileNameThumb
-      ? `/src/assets/${assetCategory}/${asset.fileNameThumb}.jpg`
-      : `/src/assets/${assetCategory}/${asset.fileName}_thumb.jpg`;
-    const srcMedium = asset.fileNameM
+    const srcS = asset.fileNameS
+      ? `/src/assets/${assetCategory}/${asset.fileNameS}.jpg`
+      : `/src/assets/${assetCategory}/${asset.fileName}_s.jpg`;
+    const srcM = asset.fileNameM
       ? `/src/assets/${assetCategory}/${asset.fileNameM}.jpg`
       : `/src/assets/${assetCategory}/${asset.fileName}_m.jpg`;
-    const srcFullSize = asset.fileNameFS
-      ? `/src/assets/${assetCategory}/${asset.fileNameFS}.jpg`
-      : `/src/assets/${assetCategory}/${asset.fileName}_fs.jpg`;
+    const srcLG = asset.fileNameLG
+      ? `/src/assets/${assetCategory}/${asset.fileNameLG}.jpg`
+      : `/src/assets/${assetCategory}/${asset.fileName}_lg.jpg`;
     const srcXL = asset.fileNameXL
       ? `/src/assets/${assetCategory}/${asset.fileNameXL}.jpg`
       : `/src/assets/${assetCategory}/${asset.fileName}_xl.jpg`;
@@ -26,16 +26,16 @@ export function getAssetsOfCategory(
     let lightBoxImageSrc = srcXL;
     if (screenWidth <= 896) {
       // Medium, for half our laptop screen (896px) or less
-      lightBoxImageSrc = srcMedium;
+      lightBoxImageSrc = srcM;
     } else if (screenWidth <= 1792) {
       // Full size, for our laptop screen (1792px) or less
-      lightBoxImageSrc = srcFullSize;
+      lightBoxImageSrc = srcLG;
     }
     assets.push({
       ...asset,
-      srcThumb,
-      srcMedium,
-      srcFullSize,
+      srcS,
+      srcM,
+      srcLG,
       srcXL,
       src: lightBoxImageSrc,
     });
@@ -52,15 +52,15 @@ export function getAssetsOfType(
   const assetsRaw = assetsJSONData.filter((row) => row.type == assetType);
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
-    const srcThumb = asset.fileNameThumb
-      ? `/src/assets/${assetCategory}/${asset.fileNameThumb}.jpg`
-      : `/src/assets/${assetCategory}/${asset.fileName}_thumb.jpg`;
-    const srcMedium = asset.fileNameM
+    const srcS = asset.fileNameS
+      ? `/src/assets/${assetCategory}/${asset.fileNameS}.jpg`
+      : `/src/assets/${assetCategory}/${asset.fileName}_s.jpg`;
+    const srcM = asset.fileNameM
       ? `/src/assets/${assetCategory}/${asset.fileNameM}.jpg`
       : `/src/assets/${assetCategory}/${asset.fileName}_m.jpg`;
-    const srcFullSize = asset.fileNameFS
-      ? `/src/assets/${assetCategory}/${asset.fileNameFS}.jpg`
-      : `/src/assets/${assetCategory}/${asset.fileName}_fs.jpg`;
+    const srcLG = asset.fileNameLG
+      ? `/src/assets/${assetCategory}/${asset.fileNameLG}.jpg`
+      : `/src/assets/${assetCategory}/${asset.fileName}_lg.jpg`;
     const srcXL = asset.fileNameXL
       ? `/src/assets/${assetCategory}/${asset.fileNameXL}.jpg`
       : `/src/assets/${assetCategory}/${asset.fileName}_xl.jpg`;
@@ -68,16 +68,16 @@ export function getAssetsOfType(
     let lightBoxImageSrc = srcXL;
     if (screenWidth <= 896) {
       // Medium, for half our laptop screen (896px) or less
-      lightBoxImageSrc = srcMedium;
+      lightBoxImageSrc = srcM;
     } else if (screenWidth <= 1792) {
       // Full size, for our laptop screen (1792px) or less
-      lightBoxImageSrc = srcFullSize;
+      lightBoxImageSrc = srcLG;
     }
     assets.push({
       ...asset,
-      srcThumb,
-      srcMedium,
-      srcFullSize,
+      srcS,
+      srcM,
+      srcLG,
       srcXL,
       src: lightBoxImageSrc,
     });
@@ -96,15 +96,15 @@ export function getAssetsOfTag(
   );
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
-    const srcThumb = asset.fileNameThumb
-      ? `/src/assets/${assetCategory}/${asset.fileNameThumb}.jpg`
-      : `/src/assets/${assetCategory}/${asset.fileName}_thumb.jpg`;
-    const srcMedium = asset.fileNameM
+    const srcS = asset.fileNameS
+      ? `/src/assets/${assetCategory}/${asset.fileNameS}.jpg`
+      : `/src/assets/${assetCategory}/${asset.fileName}_s.jpg`;
+    const srcM = asset.fileNameM
       ? `/src/assets/${assetCategory}/${asset.fileNameM}.jpg`
       : `/src/assets/${assetCategory}/${asset.fileName}_m.jpg`;
-    const srcFullSize = asset.fileNameFS
-      ? `/src/assets/${assetCategory}/${asset.fileNameFS}.jpg`
-      : `/src/assets/${assetCategory}/${asset.fileName}_fs.jpg`;
+    const srcLG = asset.fileNameLG
+      ? `/src/assets/${assetCategory}/${asset.fileNameLG}.jpg`
+      : `/src/assets/${assetCategory}/${asset.fileName}_lg.jpg`;
     const srcXL = asset.fileNameXL
       ? `/src/assets/${assetCategory}/${asset.fileNameXL}.jpg`
       : `/src/assets/${assetCategory}/${asset.fileName}_xl.jpg`;
@@ -112,16 +112,16 @@ export function getAssetsOfTag(
     let lightBoxImageSrc = srcXL;
     if (screenWidth <= 896) {
       // Medium, for half our laptop screen (896px) or less
-      lightBoxImageSrc = srcMedium;
+      lightBoxImageSrc = srcM;
     } else if (screenWidth <= 1792) {
       // Full size, for our laptop screen (1792px) or less
-      lightBoxImageSrc = srcFullSize;
+      lightBoxImageSrc = srcLG;
     }
     assets.push({
       ...asset,
-      srcThumb,
-      srcMedium,
-      srcFullSize,
+      srcS,
+      srcM,
+      srcLG,
       srcXL,
       src: lightBoxImageSrc,
     });
