@@ -33,5 +33,5 @@ yarn-error.log*
 *.sln
 
 /src/assets/photo
-/src/assets/fine
+/src/assets/fine-OLD
 /src/assets/gd
