@@ -27,10 +27,7 @@
         <q-list class="nav-dropdown-gd">
           <q-route-tab :to="{ name: 'branding' }" label="Branding" />
           <q-route-tab :to="{ name: 'editorial' }" label="Editorial" />
-          <q-route-tab :to="{ name: 'illustration' }" label="Illustration" />
-          <q-route-tab :to="{ name: 'packaging' }" label="Packaging" />
-          <q-route-tab :to="{ name: 'promotional' }" label="Promotional" />
-          <q-route-tab :to="{ name: 'web' }" label="Web" />
+          <q-route-tab :to="{ name: 'event' }" label="Event" />
         </q-list>
       </q-btn-dropdown>
       <q-btn-dropdown
@@ -46,8 +43,10 @@
           </div>
         </template>
         <q-list class="nav-dropdown-gd">
-          <!-- <q-route-tab :to="{ name: 'branding' }" label="Branding" />
-          <q-route-tab :to="{ name: 'editorial' }" label="Editorial" /> -->
+          <q-route-tab :to="{ name: 'abstract' }" label="Abstract" />
+          <q-route-tab :to="{ name: 'photo-fine-art' }" label="Fine Art" />
+          <q-route-tab :to="{ name: 'nature' }" label="Nature" />
+          <q-route-tab :to="{ name: 'portrait' }" label="Portrait" />
         </q-list>
       </q-btn-dropdown>
       <q-btn-dropdown
@@ -192,28 +191,30 @@ export default defineComponent({
     assets() {
       const route = useRoute();
       switch (route.name) {
+        // GALLERY
         case 'gallery-tag':
           return this.getAssetsOfTag('gd', this.tag, this.$q.screen.width);
+        // GRAPHIC DESIGN
         case 'graphic-design':
           return this.getAssetsOfCategory('gd', this.$q.screen.width);
         case 'branding':
           return this.getAssetsOfTag('gd', 'branding', this.$q.screen.width);
         case 'editorial':
           return this.getAssetsOfTag('gd', 'editorial', this.$q.screen.width);
-        case 'illustration':
-          return this.getAssetsOfTag(
-            'gd',
-            'illustration',
-            this.$q.screen.width
-          );
-        case 'packaging':
-          return this.getAssetsOfTag('gd', 'packaging', this.$q.screen.width);
-        case 'promotional':
-          return this.getAssetsOfTag('gd', 'promotional', this.$q.screen.width);
-        case 'web':
-          return this.getAssetsOfTag('gd', 'web', this.$q.screen.width);
+        case 'event':
+          return this.getAssetsOfTag('gd', 'event', this.$q.screen.width);
+        // PHOTOGRAPHY
         case 'photography':
           return this.getAssetsOfCategory('photo', this.$q.screen.width);
+        case 'abstract':
+          return this.getAssetsOfTag('photo', 'abstract', this.$q.screen.width);
+        case 'photo-fine-art':
+          return this.getAssetsOfTag('photo', 'fineArt', this.$q.screen.width);
+        case 'nature':
+          return this.getAssetsOfTag('photo', 'nature', this.$q.screen.width);
+        case 'portrait':
+          return this.getAssetsOfTag('photo', 'portrait', this.$q.screen.width);
+        // FINE ART
         case 'fine-art':
           return this.getAssetsOfCategory('fine', this.$q.screen.width);
         case 'digital':

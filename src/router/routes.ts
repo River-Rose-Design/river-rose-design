@@ -32,23 +32,8 @@ const routes: RouteRecordRaw[] = [
                 component: () => import('pages/GalleryPage.vue'),
               },
               {
-                name: 'illustration',
-                path: 'illustration',
-                component: () => import('pages/GalleryPage.vue'),
-              },
-              {
-                name: 'packaging',
-                path: 'packaging',
-                component: () => import('pages/GalleryPage.vue'),
-              },
-              {
-                name: 'promotional',
-                path: 'promotional',
-                component: () => import('pages/GalleryPage.vue'),
-              },
-              {
-                name: 'web',
-                path: 'web',
+                name: 'event',
+                path: 'event',
                 component: () => import('pages/GalleryPage.vue'),
               },
             ],
@@ -57,6 +42,28 @@ const routes: RouteRecordRaw[] = [
             name: 'photography',
             path: 'photography',
             component: () => import('pages/GalleryPage.vue'),
+            children: [
+              {
+                name: 'abstract',
+                path: 'abstract',
+                component: () => import('pages/GalleryPage.vue'),
+              },
+              {
+                name: 'photo-fine-art',
+                path: 'photo-fine-art',
+                component: () => import('pages/GalleryPage.vue'),
+              },
+              {
+                name: 'nature',
+                path: 'nature',
+                component: () => import('pages/GalleryPage.vue'),
+              },
+              {
+                name: 'portrait',
+                path: 'portrait',
+                component: () => import('pages/GalleryPage.vue'),
+              },
+            ],
           },
           {
             name: 'fine-art',

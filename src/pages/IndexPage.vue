@@ -95,6 +95,7 @@ const projectCards: Array<{
 }> = [
   { title: 'Staunton Music Festival', category: 'gd', tag: 'staunton' },
   { title: 'Costanoa Resort Rebrand', category: 'gd', tag: 'costanoa' },
+  { title: 'Sundance Natural Foods', category: 'gd', tag: 'naturalFoods' },
   { title: 'Creative Summit 15', category: 'gd', tag: 'CS15' },
   { title: 'The Bleed Magazine', category: 'gd', tag: 'theBleed' },
   { title: 'Art At Lane Promotions', category: 'gd', tag: 'artAtLane' },

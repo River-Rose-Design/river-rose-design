@@ -52,7 +52,10 @@ export function getAssetsOfTag(
 ) {
   const assets = [];
   const assetsRaw = assetsJSONData.filter(
-    (row) => !!row.tags && row.tags.indexOf(assetTag) != -1
+    (row) =>
+      row.category == assetCategory &&
+      !!row.tags &&
+      row.tags.indexOf(assetTag) != -1
   );
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
