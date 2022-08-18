@@ -1,4 +1,4 @@
-import assetsJSONData from 'assets/assets';
+import assetsJSONData from './assets';
 
 export function getAssetsOfCategory(
   assetCategory: 'gd' | 'fine' | 'photo',

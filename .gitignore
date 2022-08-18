@@ -32,7 +32,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-/src/assets/photo
-/src/assets/fine
-/src/assets/gd
-/src/assets/assets.ts
+/assets/photo
+/assets/fine
+/assets/gd
+/src/assets.ts
