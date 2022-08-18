@@ -1,4 +1,4 @@
-import assetsJSONData from './assets/assets';
+import assetsJSONData from 'assets/assets';
 
 export function getAssetsOfCategory(
   assetCategory: 'gd' | 'fine' | 'photo',
@@ -11,17 +11,17 @@ export function getAssetsOfCategory(
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
     const srcS = asset.fileNameS
-      ? `/src/assets/${assetCategory}/${asset.fileNameS}`
-      : `/src/assets/${assetCategory}/${asset.fileName}_s.jpg`;
+      ? `/assets/${assetCategory}/${asset.fileNameS}`
+      : `/assets/${assetCategory}/${asset.fileName}_s.jpg`;
     const srcM = asset.fileNameM
-      ? `/src/assets/${assetCategory}/${asset.fileNameM}`
-      : `/src/assets/${assetCategory}/${asset.fileName}_m.jpg`;
+      ? `/assets/${assetCategory}/${asset.fileNameM}`
+      : `/assets/${assetCategory}/${asset.fileName}_m.jpg`;
     const srcLG = asset.fileNameLG
-      ? `/src/assets/${assetCategory}/${asset.fileNameLG}`
-      : `/src/assets/${assetCategory}/${asset.fileName}_lg.jpg`;
+      ? `/assets/${assetCategory}/${asset.fileNameLG}`
+      : `/assets/${assetCategory}/${asset.fileName}_lg.jpg`;
     const srcXL = asset.fileNameXL
-      ? `/src/assets/${assetCategory}/${asset.fileNameXL}`
-      : `/src/assets/${assetCategory}/${asset.fileName}_xl.jpg`;
+      ? `/assets/${assetCategory}/${asset.fileNameXL}`
+      : `/assets/${assetCategory}/${asset.fileName}_xl.jpg`;
     // Default to XL, for screen sizes greater than 1792px
     let lightBoxImageSrc = srcXL;
     if (screenWidth <= 896) {
@@ -60,17 +60,17 @@ export function getAssetsOfTag(
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
     const srcS = asset.fileNameS
-      ? `/src/assets/${assetCategory}/${asset.fileNameS}`
-      : `/src/assets/${assetCategory}/${asset.fileName}_s.jpg`;
+      ? `/assets/${assetCategory}/${asset.fileNameS}`
+      : `/assets/${assetCategory}/${asset.fileName}_s.jpg`;
     const srcM = asset.fileNameM
-      ? `/src/assets/${assetCategory}/${asset.fileNameM}`
-      : `/src/assets/${assetCategory}/${asset.fileName}_m.jpg`;
+      ? `/assets/${assetCategory}/${asset.fileNameM}`
+      : `/assets/${assetCategory}/${asset.fileName}_m.jpg`;
     const srcLG = asset.fileNameLG
-      ? `/src/assets/${assetCategory}/${asset.fileNameLG}`
-      : `/src/assets/${assetCategory}/${asset.fileName}_lg.jpg`;
+      ? `/assets/${assetCategory}/${asset.fileNameLG}`
+      : `/assets/${assetCategory}/${asset.fileName}_lg.jpg`;
     const srcXL = asset.fileNameXL
-      ? `/src/assets/${assetCategory}/${asset.fileNameXL}`
-      : `/src/assets/${assetCategory}/${asset.fileName}_xl.jpg`;
+      ? `/assets/${assetCategory}/${asset.fileNameXL}`
+      : `/assets/${assetCategory}/${asset.fileName}_xl.jpg`;
     // Default to XL, for screen sizes greater than 1792px
     let lightBoxImageSrc = srcXL;
     if (screenWidth <= 896) {
