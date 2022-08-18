@@ -147,11 +147,7 @@
 import { defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import VueEasyLightbox from 'vue-easy-lightbox';
-import {
-  getAssetsOfCategory,
-  getAssetsOfTag,
-  getAssetsOfType,
-} from '../helpers';
+import { getAssetsOfCategory, getAssetsOfTag } from '../helpers';
 
 export default defineComponent({
   name: 'GalleryPage',
@@ -171,7 +167,6 @@ export default defineComponent({
       tag,
       getAssetsOfCategory,
       getAssetsOfTag,
-      getAssetsOfType,
     };
   },
   mounted() {
@@ -202,33 +197,29 @@ export default defineComponent({
         case 'graphic-design':
           return this.getAssetsOfCategory('gd', this.$q.screen.width);
         case 'branding':
-          return this.getAssetsOfType('gd', 'branding', this.$q.screen.width);
+          return this.getAssetsOfTag('gd', 'branding', this.$q.screen.width);
         case 'editorial':
-          return this.getAssetsOfType('gd', 'editorial', this.$q.screen.width);
+          return this.getAssetsOfTag('gd', 'editorial', this.$q.screen.width);
         case 'illustration':
-          return this.getAssetsOfType(
+          return this.getAssetsOfTag(
             'gd',
             'illustration',
             this.$q.screen.width
           );
         case 'packaging':
-          return this.getAssetsOfType('gd', 'packaging', this.$q.screen.width);
+          return this.getAssetsOfTag('gd', 'packaging', this.$q.screen.width);
         case 'promotional':
-          return this.getAssetsOfType(
-            'gd',
-            'promotional',
-            this.$q.screen.width
-          );
+          return this.getAssetsOfTag('gd', 'promotional', this.$q.screen.width);
         case 'web':
-          return this.getAssetsOfType('gd', 'web', this.$q.screen.width);
+          return this.getAssetsOfTag('gd', 'web', this.$q.screen.width);
         case 'photography':
           return this.getAssetsOfCategory('photo', this.$q.screen.width);
         case 'fine-art':
           return this.getAssetsOfCategory('fine', this.$q.screen.width);
         case 'digital':
-          return this.getAssetsOfType('fine', 'digital', this.$q.screen.width);
+          return this.getAssetsOfTag('fine', 'digital', this.$q.screen.width);
         case 'analog':
-          return this.getAssetsOfType('fine', 'analog', this.$q.screen.width);
+          return this.getAssetsOfTag('fine', 'analog', this.$q.screen.width);
         default:
           return [];
       }
