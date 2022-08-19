@@ -10,9 +10,17 @@ export function getAssetsOfCategory(
   );
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
-    const srcS = asset.fileNameS
-      ? `/assets/${assetCategory}/${asset.fileNameS}`
-      : `/assets/${assetCategory}/${asset.fileName}_s.jpg`;
+
+    let srcS: string;
+    if (assetCategory == 'photo') {
+      srcS = asset.fileNameS
+        ? `/assets/${assetCategory}/${asset.fileNameS}`
+        : `/assets/${assetCategory}/${asset.fileName}_s.jpg`;
+    } else {
+      srcS = asset.fileNameS
+        ? `/assets/${assetCategory}/${asset.fileNameS}`
+        : `/assets/${assetCategory}/${asset.fileName}_sqt.jpg`;
+    }
     const srcM = asset.fileNameM
       ? `/assets/${assetCategory}/${asset.fileNameM}`
       : `/assets/${assetCategory}/${asset.fileName}_m.jpg`;
@@ -59,9 +67,16 @@ export function getAssetsOfTag(
   );
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
-    const srcS = asset.fileNameS
-      ? `/assets/${assetCategory}/${asset.fileNameS}`
-      : `/assets/${assetCategory}/${asset.fileName}_s.jpg`;
+    let srcS: string;
+    if (assetCategory == 'photo') {
+      srcS = asset.fileNameS
+        ? `/assets/${assetCategory}/${asset.fileNameS}`
+        : `/assets/${assetCategory}/${asset.fileName}_s.jpg`;
+    } else {
+      srcS = asset.fileNameS
+        ? `/assets/${assetCategory}/${asset.fileNameS}`
+        : `/assets/${assetCategory}/${asset.fileName}_sqt.jpg`;
+    }
     const srcM = asset.fileNameM
       ? `/assets/${assetCategory}/${asset.fileNameM}`
       : `/assets/${assetCategory}/${asset.fileName}_m.jpg`;
