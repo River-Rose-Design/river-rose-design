@@ -70,24 +70,29 @@
       </q-btn-dropdown>
     </q-tabs>
 
-    <div id="grid">
-      <q-img
+    <div class="row q-col-gutter-sm q-px-sm q-mt-xs q-mb-md">
+      <div
         v-for="(asset, idx) in assets"
         :key="idx"
-        :src="asset.srcS"
-        @mouseover="if (asset.title) hoverImg(idx);"
-        @mouseleave="if (asset.title) unhoverImg(idx);"
-        @click="onLightboxShow(idx)"
+        class="gallery-image col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12"
       >
-        <div
-          v-if="asset.title"
-          :id="'caption-' + idx.toString()"
-          style="visibility: hidden"
-          class="absolute-bottom text-subtitle1 text-center"
+        <q-img
+          :src="asset.srcS"
+          @mouseover="if (asset.title) hoverImg(idx);"
+          @mouseleave="if (asset.title) unhoverImg(idx);"
+          @click="onLightboxShow(idx)"
+          class="gallery-image col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12"
         >
-          {{ asset.title }}
-        </div>
-      </q-img>
+          <div
+            v-if="asset.title"
+            :id="'caption-' + idx.toString()"
+            style="visibility: hidden"
+            class="absolute-bottom text-subtitle1 text-center"
+          >
+            {{ asset.title }}
+          </div>
+        </q-img>
+      </div>
     </div>
   </q-page>
 </template>
@@ -110,31 +115,6 @@
   margin: auto;
   bottom: 10px;
   color: $accent;
-}
-
-// Masonry with Columns
-// https://codepen.io/chriscoyier/pen/NeRNBO?editors=1100
-// https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/
-#grid {
-  margin: 1rem;
-  columns: 1 200px;
-  column-gap: 1rem;
-
-  @media (min-width: $breakpoint-sm-min) {
-    columns: 2 200px;
-  }
-  @media (min-width: $breakpoint-md-min) {
-    columns: 3 200px;
-  }
-  @media (min-width: $breakpoint-lg-min) {
-    columns: 4 200px;
-  }
-
-  .q-img {
-    margin: 0 1rem 1rem 0;
-    display: inline-block;
-    width: 100%;
-  }
 }
 
 .toolbar-btn__rotate {
