@@ -70,7 +70,11 @@
       </q-btn-dropdown>
     </q-tabs>
 
-    <div class="row q-col-gutter-sm q-px-sm q-mt-xs q-mb-md">
+    <!-- Gallery for GD and Fine Art -->
+    <div
+      class="row q-col-gutter-sm q-px-sm q-mt-xs q-mb-md"
+      v-if="routeName !== 'photography'"
+    >
       <div
         v-for="(asset, idx) in assets"
         :key="idx"
@@ -94,6 +98,27 @@
         </q-img>
       </div>
     </div>
+
+    <!-- TEMP: Gallery for Photography until we make square thumbnails -->
+    <div id="photo-grid" v-if="routeName == 'photography'">
+      <q-img
+        v-for="(asset, idx) in assets"
+        :key="idx"
+        :src="asset.srcS"
+        @mouseover="if (asset.title) hoverImg(idx);"
+        @mouseleave="if (asset.title) unhoverImg(idx);"
+        @click="onLightboxShow(idx)"
+      >
+        <div
+          v-if="asset.title"
+          :id="'caption-' + idx.toString()"
+          style="visibility: hidden"
+          class="absolute-bottom text-subtitle1 text-center"
+        >
+          {{ asset.title }}
+        </div>
+      </q-img>
+    </div>
   </q-page>
 </template>
 
@@ -115,6 +140,31 @@
   margin: auto;
   bottom: 10px;
   color: $accent;
+}
+
+// Masonry with Columns
+// https://codepen.io/chriscoyier/pen/NeRNBO?editors=1100
+// https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/
+#photo-grid {
+  margin: 1rem;
+  columns: 1 200px;
+  column-gap: 1rem;
+
+  @media (min-width: $breakpoint-sm-min) {
+    columns: 2 200px;
+  }
+  @media (min-width: $breakpoint-md-min) {
+    columns: 3 200px;
+  }
+  @media (min-width: $breakpoint-lg-min) {
+    columns: 4 200px;
+  }
+
+  .q-img {
+    margin: 0 1rem 1rem 0;
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 .toolbar-btn__rotate {
@@ -204,6 +254,9 @@ export default defineComponent({
         default:
           return [];
       }
+    },
+    routeName() {
+      return useRoute().name;
     },
   },
 });
