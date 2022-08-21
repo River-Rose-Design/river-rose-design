@@ -413,6 +413,7 @@ export default [
       'Flyer produced and designed with original artwork for event at Lane Community College',
     dateCreated: '',
     projectMembership: 'artAtLane',
+    active: 'TRUE',
   },
   {
     fileName: 'CS15_poster',
@@ -430,6 +431,7 @@ export default [
       'The CS15 project consisted of branding of an international conference on art and technology in a two week turnaround. Logo, Poster, & art direction are my personal work as part of an overall team of four designers. Conceptual framework for the art direction attempts to merge technologial visuals with the organic & artistic.',
     dateCreated: '',
     projectMembership: 'cs15',
+    active: 'TRUE',
   },
   {
     fileName: 'costanoa_gin',
@@ -447,6 +449,7 @@ export default [
       'Part of a full rebrand of Costanoa eco-resort, including expanding the brand to products both related and not directly related to the operations of the facility ',
     dateCreated: '',
     projectMembership: 'costanoa',
+    active: 'TRUE',
   },
   {
     fileName: 'teaBoxes_stagedPhoto',
@@ -464,6 +467,7 @@ export default [
       'Four tea box set packaging design for Eden Organics with existing company logo',
     dateCreated: '',
     projectMembership: 'edenOrganics',
+    active: 'TRUE',
   },
   {
     fileName: 'edenOrganicsTea_earlGrey',
@@ -480,6 +484,7 @@ export default [
     description: '',
     dateCreated: '',
     projectMembership: 'edenOrganics',
+    active: 'TRUE',
   },
   {
     fileName: 'edenOrganicsTea_greenTea_dieline',
@@ -496,6 +501,7 @@ export default [
     description: '',
     dateCreated: '',
     projectMembership: 'edenOrganics',
+    active: 'TRUE',
   },
   {
     fileName: 'edenOrganicsTea_nightTime',
@@ -512,6 +518,7 @@ export default [
     description: '',
     dateCreated: '',
     projectMembership: 'edenOrganics',
+    active: 'TRUE',
   },
   {
     fileName: 'edenOrganicsTea_oolong',
@@ -528,6 +535,7 @@ export default [
     description: '',
     dateCreated: '',
     projectMembership: 'edenOrganics',
+    active: 'TRUE',
   },
   {
     fileName: 'mirage_cover',
@@ -545,6 +553,7 @@ export default [
       'Photography Magazine design work, front and back cover, advertisement and 6-page article layout on the Photographic work of artist Ziqian Liu. Text written by Devid Gualandris.',
     dateCreated: '',
     projectMembership: 'mirage',
+    active: 'TRUE',
   },
   {
     fileName: 'staunton_fall_11x17',
@@ -561,6 +570,7 @@ export default [
     description: '',
     dateCreated: '',
     projectMembership: 'staunton',
+    active: 'TRUE',
   },
   {
     fileName: 'staunton_summer_11x17',
@@ -577,6 +587,7 @@ export default [
     description: '',
     dateCreated: '',
     projectMembership: 'staunton',
+    active: 'TRUE',
   },
   {
     fileName: 'theBleed_summary_mockup',
@@ -594,6 +605,7 @@ export default [
       'Art direction, writing, editing, illustration and graphic design for The Bleed Magazine, a national-award-winning Magazine on  Art & Design. ',
     dateCreated: '',
     projectMembership: 'theBleed',
+    active: 'TRUE',
   },
   {
     fileName: 'theBleed_communicacion_mockup',
@@ -611,6 +623,7 @@ export default [
       'Magazine spread I co-wrote and designed, exploring, both textually and visually, the challenges of adapting content for bilingual audiences and communicating visually across cultures',
     dateCreated: '',
     projectMembership: 'theBleed',
+    active: 'TRUE',
   },
   {
     fileName: 'bothAlarmAndHope_spread',
@@ -628,6 +641,7 @@ export default [
       'Magazine spread I designed and wrote about the challenges of creating art and design that communicates effectively about climate change.',
     dateCreated: '',
     projectMembership: 'theBleed',
+    active: 'TRUE',
   },
   {
     fileName: 'SNF_mockup',
@@ -645,6 +659,7 @@ export default [
       'Worked with local web development company Wagon Wheel Web (development) to produce a full redesigned website with a backend for local natural foods insitution Sundance Natural Foods',
     dateCreated: '',
     projectMembership: 'sundance',
+    active: 'TRUE',
   },
   {
     fileName: 'sundanceWine',
@@ -662,6 +677,7 @@ export default [
       'Full design and development of local wine merchant Sundance Wine Cellars/Oregon Wine Merchants website',
     dateCreated: '',
     projectMembership: 'sundance',
+    active: 'TRUE',
   },
   {
     fileName: 'artAtLane_flyerMockup',
@@ -679,6 +695,7 @@ export default [
       'Flyer produced and designed with original artwork for event at Lane Community College',
     dateCreated: '04/2022',
     projectMembership: 'artAtLane',
+    active: 'TRUE',
   },
   {
     fileName: 'kenKwapis_flyer_mockup',
@@ -696,6 +713,7 @@ export default [
       'Flyer produced and designed for visiting artist event at Lane Community College',
     dateCreated: '',
     projectMembership: 'artAtLane',
+    active: 'TRUE',
   },
   {
     fileName: 'costanoa_cosmetics',
@@ -713,6 +731,7 @@ export default [
       'Part of a full rebrand of Costanoa eco-resort, including expanding the brand to products both related and not directly related to the operations of the facility ',
     dateCreated: '',
     projectMembership: 'costanoa',
+    active: 'TRUE',
   },
   {
     fileName: 'costanoa_stationary',
@@ -729,6 +748,7 @@ export default [
     description: 'Part of a full rebrand of Costanoa eco-resort',
     dateCreated: '',
     projectMembership: 'costanoa',
+    active: 'TRUE',
   },
   {
     fileName: 'costanoa_tea',
@@ -745,6 +765,7 @@ export default [
     description: 'Part of a full rebrand of Costanoa eco-resort',
     dateCreated: '',
     projectMembership: 'costanoa',
+    active: 'TRUE',
   },
   {
     fileName: 'CS15_program_01',
@@ -761,6 +782,7 @@ export default [
     description: 'Program was required to be 8-pages, 2 colors, no bleed.  ',
     dateCreated: '',
     projectMembership: 'cs15',
+    active: 'TRUE',
   },
   {
     fileName: 'CS15_web_mockup',
@@ -777,6 +799,7 @@ export default [
     description: '',
     dateCreated: '',
     projectMembership: 'cs15',
+    active: 'TRUE',
   },
   {
     fileName: 'mirage_firstSpread',
@@ -794,6 +817,7 @@ export default [
       'Photography Magazine design work, front and back cover, advertisement and 6-page article layout on the Photographic work of artist Ziqian Liu. Text written by Devid Gualandris.',
     dateCreated: '',
     projectMembership: 'mirage',
+    active: 'TRUE',
   },
   {
     fileName: 'staunton_allSeasons_posters',
@@ -811,6 +835,7 @@ export default [
       'Branding for Contemporary and Historical Classical Music Festival in Staunton Virginia, spring 2022. Multi-Season cohesive but differentiated promotional materials.',
     dateCreated: '',
     projectMembership: 'staunton',
+    active: 'TRUE',
   },
   {
     fileName: 'staunton_roadBanner',
@@ -827,6 +852,7 @@ export default [
     description: '',
     dateCreated: '',
     projectMembership: 'staunton',
+    active: 'TRUE',
   },
   {
     fileName: 'staunton_tickets',
@@ -843,6 +869,7 @@ export default [
     description: '',
     dateCreated: '',
     projectMembership: 'staunton',
+    active: 'TRUE',
   },
   {
     fileName: 'artAtLane02_insta',
@@ -860,6 +887,7 @@ export default [
       'Promotional flyer adapted to instagram for event at Lane Community College',
     dateCreated: '',
     projectMembership: 'artAtLane',
+    active: 'TRUE',
   },
   {
     fileName: 'costanoa_business_card',
@@ -876,6 +904,7 @@ export default [
     description: 'Part of a full rebrand of Costanoa eco-resort',
     dateCreated: '',
     projectMembership: 'costanoa',
+    active: 'TRUE',
   },
   {
     fileName: 'costanoa_mug',
@@ -893,6 +922,7 @@ export default [
       'Part of a full rebrand of Costanoa eco-resort, including expanding the brand to products both related and not directly related to the operations of the facility ',
     dateCreated: '',
     projectMembership: 'costanoa',
+    active: 'TRUE',
   },
   {
     fileName: 'costanoa_tote',
@@ -909,6 +939,7 @@ export default [
     description: 'Part of a full rebrand of Costanoa eco-resort',
     dateCreated: '',
     projectMembership: 'costanoa',
+    active: 'TRUE',
   },
   {
     fileName: 'mirage_secondSpread',
@@ -926,6 +957,7 @@ export default [
       'Photography Magazine design work, front and back cover, advertisement and 6-page article layout on the Photographic work of artist Ziqian Liu. Text written by Devid Gualandris.',
     dateCreated: '',
     projectMembership: 'mirage',
+    active: 'TRUE',
   },
   {
     fileName: 'staunton_wine',
@@ -942,6 +974,7 @@ export default [
     description: '',
     dateCreated: '',
     projectMembership: 'staunton',
+    active: 'TRUE',
   },
   {
     fileName: 'staunton_tshirt',
@@ -958,6 +991,7 @@ export default [
     description: '',
     dateCreated: '',
     projectMembership: 'staunton',
+    active: 'TRUE',
   },
   {
     fileName: 'phobiaIllustration_layout',
@@ -973,6 +1007,9 @@ export default [
     URL: '',
     description:
       'Illustration for Things to Fear and Loathe, an article in the Opinonator on phobias, Scratchboard',
+    dateCreated: '',
+    projectMembership: '',
+    active: 'TRUE',
   },
   {
     fileName: 'costanoa_notebook',
@@ -990,6 +1027,7 @@ export default [
       'Part of a full rebrand of Costanoa eco-resort, including expanding the brand to products both related and not directly related to the operations of the facility ',
     dateCreated: '',
     projectMembership: 'costanoa',
+    active: 'TRUE',
   },
   {
     fileName: 'CS15_H20mockup',
@@ -1006,6 +1044,7 @@ export default [
     description: 'Part of CS15 Event Brand',
     dateCreated: '',
     projectMembership: 'cs15',
+    active: 'TRUE',
   },
   {
     fileName: 'CS15_mask',
@@ -1022,6 +1061,7 @@ export default [
     description: 'Part of CS15 Event Brand',
     dateCreated: '',
     projectMembership: 'cs15',
+    active: 'TRUE',
   },
   {
     fileName: 'mirage_thirdSpread',
@@ -1039,6 +1079,7 @@ export default [
       'Photography Magazine design work, front and back cover, advertisement and 6-page article layout on the Photographic work of artist Ziqian Liu. Text written by Devid Gualandris.',
     dateCreated: '',
     projectMembership: 'mirage',
+    active: 'TRUE',
   },
   {
     fileName: 'staunton_umbrella',
@@ -1055,6 +1096,7 @@ export default [
     description: '',
     dateCreated: '',
     projectMembership: 'staunton',
+    active: 'TRUE',
   },
   {
     fileName: 'kenKwapis_flyer',
@@ -1072,6 +1114,7 @@ export default [
       'Flyer produced and designed for visiting artist event at Lane Community College',
     dateCreated: '',
     projectMembership: 'cs15',
+    active: 'TRUE',
   },
   {
     fileName: 'CS15_badge_mokcup',
@@ -1088,6 +1131,7 @@ export default [
     description: 'Part of CS15 Event Brand',
     dateCreated: '',
     projectMembership: 'cs15',
+    active: 'TRUE',
   },
   {
     fileName: 'artAtLane_insta',
@@ -2239,6 +2283,7 @@ export default [
     description: 'Program was required to be 8-pages, 2 colors, no bleed.  ',
     dateCreated: '',
     projectMembership: 'cs15',
+    active: 'TRUE',
   },
   {},
   {},

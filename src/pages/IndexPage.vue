@@ -128,5 +128,33 @@ export default defineComponent({
       projectCards,
     };
   },
+
+  mounted() {
+    const scrollContainers = document.getElementsByClassName(
+      'q-scrollarea__container'
+    );
+
+    function IsScrollbarAtBeginning(element: HTMLElement) {
+      return element.scrollLeft == 0;
+    }
+
+    function IsScrollbarAtEnd(element: HTMLElement) {
+      return element.clientWidth + element.scrollLeft == element.scrollWidth;
+    }
+
+    if (scrollContainers) {
+      for (let i = 0; i < scrollContainers.length; i++) {
+        scrollContainers[i].addEventListener('wheel', (evt) => {
+          if (
+            (evt.deltaY > 0 && !IsScrollbarAtEnd(scrollContainers[i])) ||
+            (evt.deltaY < 0 && !IsScrollbarAtBeginning(scrollContainers[i]))
+          ) {
+            evt.preventDefault();
+            scrollContainers[i].scrollLeft += evt.deltaY;
+          }
+        });
+      }
+    }
+  },
 });
 </script>
