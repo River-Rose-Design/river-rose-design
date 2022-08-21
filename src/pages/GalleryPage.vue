@@ -1,11 +1,37 @@
 <template>
   <q-page id="gallery-page">
-    <div>
+    <!-- Use page-wide lightbox for photography and fine art -->
+    <div
+      v-if="
+        [
+          'graphic-design',
+          'branding',
+          'editorial',
+          'event',
+          'gallery-tag',
+        ].indexOf(routeName) == -1
+      "
+    >
       <vue-easy-lightbox
         :visible="lightboxVisibleRef"
         :imgs="lightboxImgsRef"
         :index="lightboxIndexRef"
         @hide="onLightboxHide"
+      ></vue-easy-lightbox>
+    </div>
+    <!-- Use project lightboxes for GD -->
+    <div v-else>
+      <!-- <div v-for="(project, idx) in projects" :key="idx">
+        <div>{{ project.name }} {{ project.assets.length }}</div>
+        <div>{{ project.assets }}</div>
+      </div> -->
+      <vue-easy-lightbox
+        v-for="(project, idx) in projects"
+        :key="idx"
+        :visible="anyGDLightBoxVisibleRef && GDlightboxVisible(project.name)"
+        :imgs="lightboxImgsRef"
+        :index="lightboxIndexRef"
+        @hide="onGDLightboxHide(project.name)"
       ></vue-easy-lightbox>
     </div>
 
@@ -70,10 +96,19 @@
       </q-btn-dropdown>
     </q-tabs>
 
-    <!-- Gallery for GD and Fine Art -->
+    <!-- TODO: Merge all the galleries once we have squares for the photos and have grouped FA and photos into projects -->
+    <!-- TEMP: Gallery for GD while we group GD by projects and not fine art -->
     <div
       class="row q-col-gutter-sm q-px-sm q-mt-xs q-mb-md"
-      v-if="routeName !== 'photography'"
+      v-if="
+        [
+          'graphic-design',
+          'branding',
+          'editorial',
+          'event',
+          'gallery-tag',
+        ].indexOf(routeName) != -1
+      "
     >
       <div
         v-for="(asset, idx) in assets"
@@ -81,6 +116,37 @@
         class="gallery-image col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12"
       >
         <q-img
+          v-if="asset.showThumbnailInGallery"
+          :src="asset.srcS"
+          @mouseover="if (asset.title) hoverImg(idx);"
+          @mouseleave="if (asset.title) unhoverImg(idx);"
+          @click="onGDLightboxShow(asset)"
+          class="gallery-image col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12"
+        >
+          <div
+            v-if="asset.title"
+            :id="'caption-' + idx.toString()"
+            style="visibility: hidden"
+            class="absolute-bottom text-subtitle1 text-center"
+          >
+            {{ asset.title }}
+          </div>
+        </q-img>
+      </div>
+    </div>
+
+    <!-- TEMP: Gallery for Fine Art while we group GD by projects and not fine art -->
+    <div
+      class="row q-col-gutter-sm q-px-sm q-mt-xs q-mb-md"
+      v-if="['fine-art', 'digital', 'analog'].indexOf(routeName) != -1"
+    >
+      <div
+        v-for="(asset, idx) in assets"
+        :key="idx"
+        class="gallery-image col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12"
+      >
+        <q-img
+          v-if="asset.showThumbnailInGallery"
           :src="asset.srcS"
           @mouseover="if (asset.title) hoverImg(idx);"
           @mouseleave="if (asset.title) unhoverImg(idx);"
@@ -100,7 +166,18 @@
     </div>
 
     <!-- TEMP: Gallery for Photography until we make square thumbnails -->
-    <div id="photo-grid" v-if="routeName == 'photography'">
+    <div
+      id="photo-grid"
+      v-if="
+        [
+          'photography',
+          'abstract',
+          'photo-fine-art',
+          'nature',
+          'portrait',
+        ].indexOf(routeName) != -1
+      "
+    >
       <q-img
         v-for="(asset, idx) in assets"
         :key="idx"
@@ -184,15 +261,23 @@ export default defineComponent({
     VueEasyLightbox,
   },
   setup() {
+    // For single lightbox in photography and fine art
     const lightboxVisibleRef = ref(false);
     const lightboxIndexRef = ref(0); // default 0
     const lightboxImgsRef: Array<string> = ref([]);
+
+    // For multiple lightboxes in GD
+    const anyGDLightBoxVisibleRef = ref(false); // Necessary to close lightboxes
+    const whichGDLightBoxVisibleRef = '';
+
     const tag = ref('');
 
     return {
       lightboxVisibleRef,
       lightboxIndexRef,
       lightboxImgsRef,
+      anyGDLightBoxVisibleRef,
+      whichGDLightBoxVisibleRef,
       tag,
       getAssetsOfCategory,
       getAssetsOfTag,
@@ -215,6 +300,24 @@ export default defineComponent({
     },
     onLightboxHide() {
       this.lightboxVisibleRef = false;
+    },
+
+    onGDLightboxShow(asset) {
+      const projectName = asset.projectMembership || asset.fileName;
+      this.anyGDLightBoxVisibleRef = true;
+      const project = this.projects.filter(
+        (project) => project.name == projectName
+      )[0];
+      this.lightboxImgsRef = project.assets;
+      this.lightboxIndexRef = project.assets.indexOf(asset);
+      this.whichGDLightBoxVisibleRef = projectName;
+    },
+    onGDLightboxHide(projectName: string) {
+      this.anyGDLightBoxVisibleRef = false;
+      this.whichGDLightBoxVisibleRef = '';
+    },
+    GDlightboxVisible(name: string) {
+      return name == this.whichGDLightBoxVisibleRef;
     },
   },
   computed: {
@@ -254,6 +357,31 @@ export default defineComponent({
         default:
           return [];
       }
+    },
+    projects() {
+      let projectGroupings: Array<{ name: string; assets: Array<any> }> = [];
+      for (let i = 0; i < this.assets.length; i++) {
+        const asset = this.assets[i];
+        if (asset.projectMembership) {
+          const existingGroupings = projectGroupings.filter(
+            (grouping) => grouping.name == asset.projectMembership
+          );
+          if (existingGroupings.length) {
+            existingGroupings[0].assets.push(asset);
+          } else {
+            projectGroupings.push({
+              name: asset.projectMembership,
+              assets: [asset],
+            });
+          }
+        } else {
+          projectGroupings.push({
+            name: asset.fileName,
+            assets: [asset],
+          });
+        }
+      }
+      return projectGroupings;
     },
     routeName() {
       return useRoute().name;

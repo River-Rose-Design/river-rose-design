@@ -39,6 +39,8 @@ export function getAssetsOfCategory(
       // Full size, for our laptop screen (1792px) or less
       lightBoxImageSrc = srcLG;
     }
+    const quality = asset.qualityRating ? parseInt(asset.qualityRating) : 0;
+    const showThumbnailInGallery = quality >= 7;
     assets.push({
       ...asset,
       srcS,
@@ -46,6 +48,7 @@ export function getAssetsOfCategory(
       srcLG,
       srcXL,
       src: lightBoxImageSrc,
+      showThumbnailInGallery,
     });
   }
   return assets.sort(
@@ -95,6 +98,8 @@ export function getAssetsOfTag(
       // Full size, for our laptop screen (1792px) or less
       lightBoxImageSrc = srcLG;
     }
+    const quality = asset.qualityRating ? parseInt(asset.qualityRating) : 0;
+    const showThumbnailInGallery = quality >= 7;
     assets.push({
       ...asset,
       srcS,
@@ -102,6 +107,7 @@ export function getAssetsOfTag(
       srcLG,
       srcXL,
       src: lightBoxImageSrc,
+      showThumbnailInGallery,
     });
   }
   return assets.sort(
