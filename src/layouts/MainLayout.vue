@@ -9,21 +9,31 @@
     >
       <div class="row header-interior">
         <q-tabs class="col">
-          <q-route-tab to="/" label="Home" />
-          <q-route-tab to="/gallery" label="Gallery" />
+          <q-route-tab class="col" to="/" label="Home" />
+          <q-route-tab class="col" to="/gallery" label="Gallery" />
+          <q-toolbar class="col-4 justify-center" style="top: 3px">
+            <img
+              src="../assets/brand/logo_rectangle.svg"
+              @click="$router.push({ name: 'home' })"
+              id="logo"
+              style="width: 196px"
+            />
+          </q-toolbar>
+          <q-route-tab class="col" to="/about" label="About" />
+          <q-route-tab class="col" to="/contact" label="Contact" />
         </q-tabs>
-        <q-toolbar class="col justify-center" style="top: 3px">
+        <!-- <q-toolbar class="col justify-center" style="top: 3px">
           <img
             src="../assets/brand/logo_rectangle.svg"
             @click="$router.push({ name: 'home' })"
             id="logo"
             style="width: 196px"
           />
-        </q-toolbar>
-        <q-tabs class="col">
+        </q-toolbar> -->
+        <!-- <q-tabs class="col">
           <q-route-tab to="/about" label="About" />
           <q-route-tab to="/contact" label="Contact" />
-        </q-tabs>
+        </q-tabs> -->
       </div>
     </q-header>
 
