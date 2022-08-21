@@ -6,7 +6,7 @@ export function getAssetsOfCategory(
 ) {
   const assets = [];
   const assetsRaw = assetsJSONData.filter(
-    (row) => row.category == assetCategory
+    (row) => row.active != 'FALSE' && row.category == assetCategory
   );
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
@@ -64,6 +64,7 @@ export function getAssetsOfTag(
   const assets = [];
   const assetsRaw = assetsJSONData.filter(
     (row) =>
+      row.active != 'FALSE' &&
       row.category == assetCategory &&
       !!row.tags &&
       row.tags.indexOf(assetTag) != -1
