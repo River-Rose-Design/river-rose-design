@@ -89,8 +89,16 @@ const routes: RouteRecordRaw[] = [
           },
         ],
       },
-      { path: 'about', redirect: { name: 'home' } },
-      { path: 'contact', redirect: { name: 'home' } },
+      {
+        name: 'about',
+        path: 'about',
+        component: () => import('pages/AboutPage.vue'),
+      },
+      {
+        name: 'contact',
+        path: 'contact',
+        component: () => import('pages/ContactPage.vue'),
+      },
     ],
   },
 
