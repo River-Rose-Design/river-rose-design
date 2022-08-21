@@ -33,7 +33,7 @@
         :imgs="lightboxImgsRef"
         :index="lightboxIndexRef"
         :loop="true"
-        @hide="onGDLightboxHide(project.name)"
+        @hide="onGDLightboxHide()"
       ></vue-easy-lightbox>
     </div>
 
@@ -318,7 +318,7 @@ export default defineComponent({
       this.lightboxIndexRef = project.assets.indexOf(asset);
       this.whichGDLightBoxVisibleRef = projectName;
     },
-    onGDLightboxHide(projectName: string) {
+    onGDLightboxHide() {
       this.anyGDLightBoxVisibleRef = false;
       this.whichGDLightBoxVisibleRef = '';
     },
