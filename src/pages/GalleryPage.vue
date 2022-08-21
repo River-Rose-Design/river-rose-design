@@ -16,6 +16,7 @@
         :visible="lightboxVisibleRef"
         :imgs="lightboxImgsRef"
         :index="lightboxIndexRef"
+        loop="true"
         @hide="onLightboxHide"
       ></vue-easy-lightbox>
     </div>
@@ -31,6 +32,7 @@
         :visible="anyGDLightBoxVisibleRef && GDlightboxVisible(project.name)"
         :imgs="lightboxImgsRef"
         :index="lightboxIndexRef"
+        loop="true"
         @hide="onGDLightboxHide(project.name)"
       ></vue-easy-lightbox>
     </div>
