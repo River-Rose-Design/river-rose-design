@@ -288,10 +288,14 @@ export default defineComponent({
   },
   methods: {
     hoverImg(id: number) {
-      document.querySelector(`#caption-${id}`).style.visibility = 'visible';
+      if (document.querySelector(`#caption-${id}`)) {
+        document.querySelector(`#caption-${id}`).style.visibility = 'visible';
+      }
     },
     unhoverImg(id: number) {
-      document.querySelector(`#caption-${id}`).style.visibility = 'hidden';
+      if (document.querySelector(`#caption-${id}`)) {
+        document.querySelector(`#caption-${id}`).style.visibility = 'hidden';
+      }
     },
     onLightboxShow(num: number) {
       this.lightboxImgsRef = this.assets;
