@@ -2,7 +2,8 @@ import assetsJSONData from './assets';
 
 export function getAssetsOfCategory(
   assetCategory: 'gd' | 'fine' | 'photo',
-  screenWidth: number
+  screenWidth: number,
+  useSquare = true
 ) {
   const assets = [];
   const assetsRaw = assetsJSONData.filter(
@@ -12,14 +13,14 @@ export function getAssetsOfCategory(
     const asset = assetsRaw[i];
 
     let srcS: string;
-    if (assetCategory == 'photo') {
-      srcS = asset.fileNameS
-        ? `/assets/${assetCategory}/${asset.fileNameS}`
-        : `/assets/${assetCategory}/${asset.fileName}_s.jpg`;
-    } else {
+    if (useSquare) {
       srcS = asset.fileNameS
         ? `/assets/${assetCategory}/${asset.fileNameS}`
         : `/assets/${assetCategory}/${asset.fileName}_sqt.jpg`;
+    } else {
+      srcS = asset.fileNameS
+        ? `/assets/${assetCategory}/${asset.fileNameS}`
+        : `/assets/${assetCategory}/${asset.fileName}_s.jpg`;
     }
     const srcM = asset.fileNameM
       ? `/assets/${assetCategory}/${asset.fileNameM}`
@@ -59,7 +60,8 @@ export function getAssetsOfCategory(
 export function getAssetsOfTag(
   assetCategory: 'gd' | 'fine' | 'photo',
   assetTag: string,
-  screenWidth: number
+  screenWidth: number,
+  useSquare = true
 ) {
   const assets = [];
   const assetsRaw = assetsJSONData.filter(
@@ -72,14 +74,14 @@ export function getAssetsOfTag(
   for (let i = 0; i < assetsRaw.length; i++) {
     const asset = assetsRaw[i];
     let srcS: string;
-    if (assetCategory == 'photo') {
-      srcS = asset.fileNameS
-        ? `/assets/${assetCategory}/${asset.fileNameS}`
-        : `/assets/${assetCategory}/${asset.fileName}_s.jpg`;
-    } else {
+    if (useSquare) {
       srcS = asset.fileNameS
         ? `/assets/${assetCategory}/${asset.fileNameS}`
         : `/assets/${assetCategory}/${asset.fileName}_sqt.jpg`;
+    } else {
+      srcS = asset.fileNameS
+        ? `/assets/${assetCategory}/${asset.fileNameS}`
+        : `/assets/${assetCategory}/${asset.fileName}_s.jpg`;
     }
     const srcM = asset.fileNameM
       ? `/assets/${assetCategory}/${asset.fileNameM}`

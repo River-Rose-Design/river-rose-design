@@ -344,15 +344,35 @@ export default defineComponent({
           return this.getAssetsOfTag('gd', 'event', this.$q.screen.width);
         // PHOTOGRAPHY
         case 'photography':
-          return this.getAssetsOfCategory('photo', this.$q.screen.width);
+          return this.getAssetsOfCategory('photo', this.$q.screen.width, false);
         case 'abstract':
-          return this.getAssetsOfTag('photo', 'abstract', this.$q.screen.width);
+          return this.getAssetsOfTag(
+            'photo',
+            'abstract',
+            this.$q.screen.width,
+            false
+          );
         case 'photo-fine-art':
-          return this.getAssetsOfTag('photo', 'fineArt', this.$q.screen.width);
+          return this.getAssetsOfTag(
+            'photo',
+            'fineArt',
+            this.$q.screen.width,
+            false
+          );
         case 'nature':
-          return this.getAssetsOfTag('photo', 'nature', this.$q.screen.width);
+          return this.getAssetsOfTag(
+            'photo',
+            'nature',
+            this.$q.screen.width,
+            false
+          );
         case 'portrait':
-          return this.getAssetsOfTag('photo', 'portrait', this.$q.screen.width);
+          return this.getAssetsOfTag(
+            'photo',
+            'portrait',
+            this.$q.screen.width,
+            false
+          );
         // FINE ART
         case 'fine-art':
           return this.getAssetsOfCategory('fine', this.$q.screen.width);

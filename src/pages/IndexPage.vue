@@ -42,7 +42,8 @@
               v-for="(asset, idx) in getAssetsOfTag(
                 project.category,
                 project.tag,
-                $q.screen.width
+                $q.screen.width,
+                false
               )"
               :key="idx"
               :src="asset.srcS"
@@ -139,7 +140,10 @@ export default defineComponent({
     }
 
     function IsScrollbarAtEnd(element: HTMLElement) {
-      return element.clientWidth + element.scrollLeft == element.scrollWidth;
+      return (
+        // The extra 1 pixel seems necessary to guarantee that this will eventually return true
+        element.clientWidth + element.scrollLeft >= element.scrollWidth - 1
+      );
     }
 
     if (scrollContainers) {
