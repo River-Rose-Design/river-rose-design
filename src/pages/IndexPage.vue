@@ -4,6 +4,8 @@
       :visible="lightboxVisibleRef"
       :imgs="lightboxImgsRef"
       :index="lightboxIndexRef"
+      :loop="true"
+      :moveDisabled="true"
       @hide="onLightboxHide"
     ></vue-easy-lightbox>
 
@@ -81,6 +83,10 @@
 .card-shadow {
   box-shadow: 0px -5px 7px 0 rgba(0, 0, 0, 0.08),
     0px 5px 7px 0 rgba(0, 0, 0, 0.08);
+}
+
+.toolbar-btn__rotate {
+  display: none;
 }
 </style>
 

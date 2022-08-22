@@ -17,6 +17,7 @@
         :imgs="lightboxImgsRef"
         :index="lightboxIndexRef"
         :loop="true"
+        :moveDisabled="true"
         @hide="onLightboxHide"
       ></vue-easy-lightbox>
     </div>
@@ -33,6 +34,7 @@
         :imgs="lightboxImgsRef"
         :index="lightboxIndexRef"
         :loop="true"
+        :moveDisabled="true"
         @hide="onGDLightboxHide()"
       ></vue-easy-lightbox>
     </div>
