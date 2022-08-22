@@ -27,18 +27,6 @@
             label="Contact"
           />
         </q-tabs>
-        <!-- <q-toolbar class="col justify-center" style="top: 3px">
-          <img
-            src="../assets/brand/logo_rectangle.svg"
-            @click="$router.push({ name: 'home' })"
-            id="logo"
-            style="width: 196px"
-          />
-        </q-toolbar> -->
-        <!-- <q-tabs class="col">
-          <q-route-tab to="/about" label="About" />
-          <q-route-tab to="/contact" label="Contact" />
-        </q-tabs> -->
       </div>
     </q-header>
 
@@ -67,28 +55,29 @@
       />
     </q-header>
     <q-dialog
+      id="mobile-menu"
       v-model="mobileMenu"
       persistent
       maximized
       transition-show="slide-down"
       transition-hide="slide-up"
     >
-      <q-card class="bg-primary text-black">
+      <q-card class="bg-white text-black text-uppercase text-center">
         <q-bar>
           <q-space />
           <q-btn dense flat icon="close" v-close-popup />
         </q-bar>
-        <q-card-section class="q-ma-lg">
-          <div class="text-h2">
+        <q-card-section class="q-ma-md">
+          <div class="mobile-menu-item">
             <a href="/" class="text-black">Home</a>
           </div>
-          <div class="text-h2">
+          <div class="mobile-menu-item q-mt-sm">
             <a href="/gallery" class="text-black">Gallery</a>
           </div>
-          <div class="text-h2 q-mt-sm">
+          <div class="mobile-menu-item q-mt-sm">
             <a href="/about" class="text-black">About</a>
           </div>
-          <div class="text-h2 q-mt-sm">
+          <div class="mobile-menu-item q-mt-sm">
             <a href="/contact" class="text-black">Contact</a>
           </div>
         </q-card-section>
@@ -101,13 +90,25 @@
     </q-page-container>
 
     <!-- Footer -->
-    <q-footer class="bg-white text-black" id="footer">
+    <q-footer class="bg-white text-black q-pa-md" id="footer">
       <q-toolbar style="max-width: 1200px; margin: auto">
         <q-toolbar-title class="row justify-between">
-          <div>Contact/Social Footer</div>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-black.svg" />
-          </q-avatar>
+          <div class="row items-center">
+            <q-avatar class="q-mr-sm">
+              <img src="../assets/brand/logo_rose.svg" />
+            </q-avatar>
+            <div class="items-center">
+              All content created by Quinn Wilson, copyright 2022
+            </div>
+          </div>
+          <div class="row items-center">
+            Site by&nbsp;
+            <a
+              href="https://www.linkedin.com/in/danielgregorywilson/"
+              target="_blank"
+              >Daniel Wilson</a
+            >
+          </div>
         </q-toolbar-title>
       </q-toolbar>
     </q-footer>
@@ -150,8 +151,21 @@
   right: 24px;
   z-index: 2001;
 }
+#mobile-menu {
+  a {
+    text-decoration: none;
+  }
+
+  .mobile-menu-item {
+    font-size: 40px;
+  }
+}
 #footer {
   box-shadow: 0px -5px 7px 0 rgba(0, 0, 0, 0.08);
+
+  .q-toolbar {
+    padding: 0;
+  }
 }
 </style>
 
