@@ -101,11 +101,12 @@
             <q-avatar class="q-mr-sm">
               <img src="../assets/brand/logo_rose.svg" />
             </q-avatar>
-            <div class="items-center" style="height: 25px">
-              All content created by Quinn Wilson, copyright 2022
+            <div style="height: 25px">
+              All content created by Quinn Wilson,&nbsp;
             </div>
+            <div style="height: 25px">copyright 2022</div>
           </div>
-          <div class="row items-center" style="margin-top: 6px">
+          <div class="row" style="margin-top: 6px">
             Site by&nbsp;
             <a
               href="https://www.linkedin.com/in/danielgregorywilson/"
