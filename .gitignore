@@ -36,4 +36,4 @@ yarn-error.log*
 /assets/fine
 /assets/gd
 /assets/static
-/src/assets.ts
+/assets/assets.ts
