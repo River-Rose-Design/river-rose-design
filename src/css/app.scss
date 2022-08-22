@@ -6,3 +6,22 @@ body {
 p {
   font-size: 16px;
 }
+
+// Content boxes
+.card-shadow {
+  box-shadow: 0px -5px 7px 0 rgba(0, 0, 0, 0.08),
+    0px 5px 7px 0 rgba(0, 0, 0, 0.08);
+}
+
+// Lightbox
+.toolbar-btn__rotate {
+  display: none;
+}
+@media (min-width: $breakpoint-md-min) {
+  .btn__prev {
+    font-size: 80px !important;
+  }
+  .btn__next {
+    font-size: 80px !important;
+  }
+}

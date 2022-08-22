@@ -80,20 +80,6 @@
 #portrait {
   width: 240px;
 }
-.card-shadow {
-  box-shadow: 0px -5px 7px 0 rgba(0, 0, 0, 0.08),
-    0px 5px 7px 0 rgba(0, 0, 0, 0.08);
-}
-
-.toolbar-btn__rotate {
-  display: none;
-}
-.btn__prev {
-  font-size: 80px !important;
-}
-.btn__next {
-  font-size: 80px !important;
-}
 </style>
 
 <script lang="ts">
@@ -109,8 +95,8 @@ const projectCards: Array<{
   { title: 'Staunton Music Festival', category: 'gd', tag: 'staunton' },
   { title: 'Costanoa Resort Rebrand', category: 'gd', tag: 'costanoa' },
   { title: 'Sundance Natural Foods', category: 'gd', tag: 'naturalFoods' },
-  { title: 'Creative Summit 15', category: 'gd', tag: 'CS15' },
   { title: 'The Bleed Magazine', category: 'gd', tag: 'theBleed' },
+  { title: 'Creative Summit 15', category: 'gd', tag: 'CS15' },
   { title: 'Art At Lane Promotions', category: 'gd', tag: 'artAtLane' },
 ];
 

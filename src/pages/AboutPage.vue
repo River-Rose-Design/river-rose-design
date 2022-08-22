@@ -69,13 +69,9 @@
   width: 100%;
   padding-bottom: 24px;
   @media (min-width: $breakpoint-sm-min) {
-    width: 410px;
+    width: 300px;
     padding-bottom: 10px;
   }
-}
-.card-shadow {
-  box-shadow: 0px -5px 7px 0 rgba(0, 0, 0, 0.08),
-    0px 5px 7px 0 rgba(0, 0, 0, 0.08);
 }
 </style>
 
