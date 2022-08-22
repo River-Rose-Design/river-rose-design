@@ -141,7 +141,6 @@ export default defineComponent({
       projectCards,
     };
   },
-
   mounted() {
     const scrollContainers = document.getElementsByClassName(
       'q-scrollarea__container'

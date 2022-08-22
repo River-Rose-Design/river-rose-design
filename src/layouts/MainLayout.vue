@@ -20,7 +20,12 @@
             />
           </q-toolbar>
           <q-route-tab class="col" to="/about" label="About" />
-          <q-route-tab class="col" to="/contact" label="Contact" />
+          <q-route-tab
+            class="col"
+            to="/contact"
+            href="mailto:quinnriverrose@gmail.com?subject=Let's work together!"
+            label="Contact"
+          />
         </q-tabs>
         <!-- <q-toolbar class="col justify-center" style="top: 3px">
           <img
@@ -52,7 +57,6 @@
       <q-btn
         v-if="$q.screen.lt.sm"
         id="mobile-menu-button"
-        class="text-secondary"
         @click="mobileMenu = true"
         flat
         dense
