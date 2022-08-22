@@ -251,6 +251,12 @@
 .toolbar-btn__rotate {
   display: none;
 }
+.btn__prev {
+  font-size: 80px !important;
+}
+.btn__next {
+  font-size: 80px !important;
+}
 </style>
 
 <script lang="ts">
