@@ -1,5 +1,5 @@
 <template>
-  <q-page id="index-page"> Contact </q-page>
+  <q-page id="contact-page"> Contact </q-page>
 </template>
 
 <style lang="scss"></style>
