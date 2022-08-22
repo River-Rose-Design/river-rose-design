@@ -26,8 +26,8 @@
           <p>I thrive on collaboration and human connection.</p>
 
           <p>
-            I believe design is an act of communication, that can be used to
-            help create a more
+            I believe design is an act of communication that can be used to help
+            create a more
             <a
               href="/assets/static/bleed_final_we-want-more.pdf"
               target="_blank"
