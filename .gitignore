@@ -35,4 +35,5 @@ yarn-error.log*
 /assets/photo
 /assets/fine
 /assets/gd
+/assets/static
 /src/assets.ts

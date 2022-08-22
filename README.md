@@ -47,7 +47,7 @@ Create a new invaliation from a copy here: https://us-east-1.console.aws.amazon.
 
 ### Update assets
 
-Drag new assets to assets/gd (or /fine or /photo) here: https://s3.console.aws.amazon.com/s3/buckets/quinnriverrose.com?region=us-west-2&prefix=assets/&showversions=false
+Drag new assets to assets/gd (or /fine or /photo or /static) here: https://s3.console.aws.amazon.com/s3/buckets/quinnriverrose.com?region=us-west-2&prefix=assets/&showversions=false
 Drag new src/assets.ts to /assets/assets.ts
 
 ### Customize the configuration

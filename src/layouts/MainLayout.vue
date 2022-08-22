@@ -23,7 +23,7 @@
           <q-route-tab
             class="col"
             to="/contact"
-            href="mailto:quinnriverrose@gmail.com?subject=Let's work together!"
+            href="mailto:fences.pumper.0y@icloud.com?subject=Let's work together!"
             label="Contact"
           />
         </q-tabs>
@@ -78,7 +78,11 @@
             <a href="/about" class="text-black">About</a>
           </div>
           <div class="mobile-menu-item q-mt-sm">
-            <a href="/contact" class="text-black">Contact</a>
+            <a
+              href="mailto:fences.pumper.0y@icloud.com?subject=Let's work together!"
+              class="text-black"
+              >Contact</a
+            >
           </div>
         </q-card-section>
       </q-card>
