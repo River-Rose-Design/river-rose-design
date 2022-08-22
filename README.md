@@ -43,7 +43,7 @@ quasar build
 Build the app for production
 Drag contents of dist/spa to: https://s3.console.aws.amazon.com/s3/upload/quinnriverrose.com?region=us-west-2
 !!!Don't drag assets unless you want to have to copy all assets again!!!
-Create a new invaliation from a copy here: https://us-east-1.console.aws.amazon.com/cloudfront/v3/home?region=us-east-1#/distributions/E17XT7M57G45TV
+Create a new invaliation from a copy here: https://us-east-1.console.aws.amazon.com/cloudfront/v3/home?region=us-east-1#/distributions/E17XT7M57G45TV/invalidations
 
 ### Update assets
 

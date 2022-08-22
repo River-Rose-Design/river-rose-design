@@ -19,14 +19,18 @@
         <div class="col-sm">
           <h4 style="margin-top: 20px; margin-bottom: 20px">Hi, I’m Quinn.</h4>
           <p>
-            I‘m a neurodivergent science and data nerd who uses art and design
-            to communicate across the myriad of human neurotypes.
-          </p>
-          <p>
             I delight in visually rendering the abstract and making the
             conceptual concrete.
           </p>
+
           <p>I thrive on collaboration and human connection.</p>
+
+          <p>
+            I believe design is an act of communication, that can be used to
+            help create a more just, equitable, and sustainable world.
+          </p>
+
+          <p>Let’s work together.</p>
         </div>
       </div>
     </div>
