@@ -102,20 +102,6 @@ const routes: RouteRecordRaw[] = [
     ],
   },
 
-  // STATICS
-  {
-    path: '/bleed-alarm',
-    redirect: '/assets/static/bleed_final_alarm-and-hope.pdf',
-  },
-  {
-    path: '/bleed-bilingual',
-    redirect: '/assets/static/bleed_final_bilingual-article.pdf',
-  },
-  {
-    path: '/bleed-more',
-    redirect: '/assets/static/bleed_final_we-want-more.pdf',
-  },
-
   // Always leave this as last one,
   // but you can also remove it
   {

@@ -27,7 +27,23 @@
 
           <p>
             I believe design is an act of communication, that can be used to
-            help create a more just, equitable, and sustainable world.
+            help create a more
+            <a
+              href="/assets/static/bleed_final_we-want-more.pdf"
+              target="_blank"
+              >just</a
+            >,
+            <a
+              href="/assets/static/bleed_final_bilingual-article.pdf"
+              target="_blank"
+              >equitable</a
+            >, and
+            <a
+              href="/assets/static/bleed_final_alarm-and-hope.pdf"
+              target="_blank"
+              >sustainable</a
+            >
+            world.
           </p>
 
           <p>Let’s work together.</p>
