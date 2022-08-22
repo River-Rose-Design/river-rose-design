@@ -24,7 +24,7 @@
             class="col"
             to="/contact"
             href="mailto:fences.pumper.0y@icloud.com?subject=Let's work together!"
-            label="Contact"
+            label="Email Me"
           />
         </q-tabs>
       </div>
@@ -81,7 +81,7 @@
             <a
               href="mailto:fences.pumper.0y@icloud.com?subject=Let's work together!"
               class="text-black"
-              >Contact</a
+              >Email Me</a
             >
           </div>
         </q-card-section>
