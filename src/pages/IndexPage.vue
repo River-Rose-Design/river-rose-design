@@ -91,7 +91,7 @@
   </q-page>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 #index-page {
   background-color: $primary;
   padding-top: 0.02px; // TODO: Why is this necessary to get pink background above hero?
@@ -99,6 +99,9 @@
 }
 #portrait {
   width: 240px;
+}
+h4 {
+  font-weight: 400;
 }
 </style>
 
