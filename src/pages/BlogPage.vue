@@ -7,6 +7,7 @@
       </h4>
       <p id="byline" class="text-uppercase">By <strong>Quinn Wilson</strong></p>
       <p id="publishDate"><em>04/28/2023</em></p>
+
       <p>
         Graphic design great Milton Glaser, who famously coined the above
         description of what “design” is, always avoided using computers directly
@@ -15,7 +16,20 @@
         Delight,” he discussed his mistrust of the power and ability of digital
         tools.
       </p>
-      <img id="img-1" src="https://placekitten.com/300/300" />
+      <q-img
+        class="img-left img-50"
+        src="/src/assets/blog/glaser/photo_portrait.jpeg"
+        @mouseover="hoverImg(1)"
+        @mouseleave="unhoverImg(1)"
+      >
+        <div
+          id="caption-1"
+          style="visibility: hidden"
+          class="absolute-bottom text-subtitle1 text-center"
+        >
+          THIS IS A CAPTION
+        </div>
+      </q-img>
       <blockquote>
         “The computer is dangerous because it shapes your capacity to understand
         what’s possible. The computer is like an apparently submissive servant
@@ -30,6 +44,20 @@
         habits — and it begins to dominate the way you think about what is
         possible.”
       </blockquote>
+      <q-img
+        class="img-right img-40"
+        src="https://placekitten.com/300/300"
+        @mouseover="hoverImg(2)"
+        @mouseleave="unhoverImg(2)"
+      >
+        <div
+          id="caption-2"
+          style="visibility: hidden"
+          class="absolute-bottom text-subtitle1 text-center"
+        >
+          THIS IS A DIFFERENT CAPTION
+        </div>
+      </q-img>
       <p>
         As I spent the last few weeks exploring how I might use AI image-model
         Midjourney in graphic design contexts, these cautionary words from have
@@ -340,8 +368,6 @@
         use the power of these tools to navigate this transformation with human
         intention and true understanding.
       </p>
-
-      <img id="img-2" src="https://placekitten.com/300/300" />
     </div>
   </q-page>
 </template>
@@ -385,10 +411,72 @@ a {
   color: $accent;
 }
 
-#img-1 {
-  position: relative;
-  top: 10px;
+.img-left {
+  width: 300px;
+  float: left;
+  margin-right: 20px;
+  margin-left: -150px;
+}
+
+.img-right {
+  width: 300px;
+  float: right;
+  margin-left: 20px;
+  margin-right: -150px;
+}
+
+.img-10 {
+  margin-top: 10px;
+  shape-outside: inset(10px 0px 0px 0px);
+}
+.img-20 {
+  margin-top: 20px;
+  shape-outside: inset(20px 0px 0px 0px);
+}
+.img-30 {
+  margin-top: 30px;
+  shape-outside: inset(30px 0px 0px 0px);
+}
+.img-40 {
+  margin-top: 40px;
+  shape-outside: inset(40px 0px 0px 0px);
+}
+.img-50 {
+  margin-top: 50px;
+  shape-outside: inset(50px 0px 0px 0px);
+}
+.img-60 {
+  margin-top: 60px;
+  shape-outside: inset(60px 0px 0px 0px);
+}
+.img-70 {
+  margin-top: 70px;
+  shape-outside: inset(70px 0px 0px 0px);
+}
+.img-80 {
+  margin-top: 80px;
+  shape-outside: inset(80px 0px 0px 0px);
+}
+.img-90 {
+  margin-top: 90px;
+  shape-outside: inset(90px 0px 0px 0px);
+}
+.img-100 {
+  margin-top: 100px;
+  shape-outside: inset(100px 0px 0px 0px);
 }
 </style>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+function hoverImg(id: number) {
+  if (document.querySelector(`#caption-${id}`)) {
+    document.querySelector(`#caption-${id}`).style.visibility = 'visible';
+  }
+}
+
+function unhoverImg(id: number) {
+  if (document.querySelector(`#caption-${id}`)) {
+    document.querySelector(`#caption-${id}`).style.visibility = 'hidden';
+  }
+}
+</script>

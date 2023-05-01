@@ -100,8 +100,8 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/BlogPage.vue'),
         children: [
           {
-            name: 'firstpost',
-            path: 'first',
+            name: 'glaser-article',
+            path: 'glaser',
             component: () => import('pages/BlogPage.vue'),
           },
         ],
