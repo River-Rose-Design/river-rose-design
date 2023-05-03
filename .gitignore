@@ -1,6 +1,7 @@
 .DS_Store
 .thumbs.db
 node_modules
+river-rose-design.code-workspace
 
 # Quasar core related directories
 .quasar
@@ -33,4 +34,4 @@ yarn-error.log*
 *.sln
 
 # Portfolio Art Assets
-/assets
+public/assets
