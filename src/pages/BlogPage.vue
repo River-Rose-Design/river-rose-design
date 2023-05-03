@@ -1,5 +1,14 @@
 <template>
   <q-page id="blog-page" class="row justify-center">
+    <vue-easy-lightbox
+      :visible="lightboxVisible"
+      :imgs="lightboxImgs"
+      :index="lightboxIndex"
+      :loop="true"
+      :moveDisabled="true"
+      @hide="onLightboxHide"
+    ></vue-easy-lightbox>
+
     <div id="article-container">
       <h4 class="text-uppercase">
         Is <span class="rose">Generative AI</span> Moving Designers ‘From an
@@ -7,7 +16,6 @@
       </h4>
       <p id="byline" class="text-uppercase">By <strong>Quinn Wilson</strong></p>
       <p id="publishDate"><em>04/28/2023</em></p>
-
       <p>
         Graphic design great Milton Glaser, who famously coined the above
         description of what “design” is, always avoided using computers directly
@@ -21,6 +29,7 @@
         src="/src/assets/blog/glaser/cyborg2_edit.jpg"
         @mouseover="hoverImg(1)"
         @mouseleave="unhoverImg(1)"
+        @click="onLightboxShow(1, 0)"
       >
         <div
           id="caption-1"
@@ -49,6 +58,7 @@
         src="/src/assets/blog/glaser/intern_01.png"
         @mouseover="hoverImg(2)"
         @mouseleave="unhoverImg(2)"
+        @click="onLightboxShow(2, 0)"
       >
         <div
           id="caption-2"
@@ -131,6 +141,7 @@
           src="/src/assets/blog/glaser/flower_trees_fail_01.png"
           @mouseover="hoverImg(4)"
           @mouseleave="unhoverImg(4)"
+          @click="onLightboxShow(4, 0)"
         >
           <div
             id="caption-4"
@@ -149,6 +160,7 @@
           src="/src/assets/blog/glaser/flower_trees_fail_02.png"
           @mouseover="hoverImg(5)"
           @mouseleave="unhoverImg(5)"
+          @click="onLightboxShow(4, 1)"
         >
           <div
             id="caption-5"
@@ -168,6 +180,7 @@
           src="/src/assets/blog/glaser/flower_trees_fail_03.png"
           @mouseover="hoverImg(6)"
           @mouseleave="unhoverImg(6)"
+          @click="onLightboxShow(4, 2)"
         >
           <div
             id="caption-6"
@@ -188,6 +201,7 @@
           src="/src/assets/blog/glaser/successful_single_01.png"
           @mouseover="hoverImg(7)"
           @mouseleave="unhoverImg(7)"
+          @click="onLightboxShow(7, 0)"
         >
           <div
             id="caption-7"
@@ -204,6 +218,7 @@
           src="/src/assets/blog/glaser/successful_single_02.png"
           @mouseover="hoverImg(8)"
           @mouseleave="unhoverImg(8)"
+          @click="onLightboxShow(7, 1)"
         >
           <div
             id="caption-8"
@@ -221,6 +236,7 @@
           src="/src/assets/blog/glaser/successful_single_06.png"
           @mouseover="hoverImg(9)"
           @mouseleave="unhoverImg(9)"
+          @click="onLightboxShow(7, 2)"
         >
           <div
             id="caption-9"
@@ -250,6 +266,7 @@
         src="/src/assets/blog/glaser/watermarks_01.png"
         @mouseover="hoverImg(3)"
         @mouseleave="unhoverImg(3)"
+        @click="onLightboxShow(3, 0)"
       >
         <div
           id="caption-3"
@@ -637,6 +654,15 @@ a {
 </style>
 
 <script setup lang="ts">
+import { ref, Ref } from 'vue';
+
+import VueEasyLightbox from 'vue-easy-lightbox';
+
+let lightboxVisible = ref(false);
+let lightboxGroup = ref(0);
+let lightboxIndex = ref(0);
+let lightboxImgs: Ref<Array<{ title: string; src: string }>> = ref([]);
+
 function hoverImg(id: number) {
   if (document.querySelector(`#caption-${id}`)) {
     document.querySelector(`#caption-${id}`).style.visibility = 'visible';
@@ -646,6 +672,76 @@ function hoverImg(id: number) {
 function unhoverImg(id: number) {
   if (document.querySelector(`#caption-${id}`)) {
     document.querySelector(`#caption-${id}`).style.visibility = 'hidden';
+  }
+}
+
+function onLightboxShow(group: number, index: number) {
+  lightboxGroup.value = group;
+  lightboxIndex.value = index;
+  lightboxImgs.value = lightboxAssets();
+  lightboxVisible.value = true;
+}
+
+function onLightboxHide() {
+  lightboxVisible.value = false;
+}
+
+function lightboxAssets() {
+  switch (lightboxGroup.value) {
+    case 1:
+      return [
+        {
+          title: 'A CAPTION1',
+          src: '/src/assets/blog/glaser/cyborg2_edit.jpg',
+        },
+      ];
+    case 2:
+      return [
+        {
+          title: 'A CAPTION1',
+          src: '/src/assets/blog/glaser/intern_01.png',
+        },
+      ];
+    case 3:
+      return [
+        {
+          title: 'Flowermarks',
+          src: '/src/assets/blog/glaser/watermarks_01.png',
+        },
+      ];
+    case 4:
+      return [
+        {
+          title: 'Flowertrees1',
+          src: '/src/assets/blog/glaser/flower_trees_fail_01.png',
+        },
+        {
+          title: 'Flowertrees2',
+          src: '/src/assets/blog/glaser/flower_trees_fail_02.png',
+        },
+        {
+          title: 'Flowertrees3',
+          src: '/src/assets/blog/glaser/flower_trees_fail_03.png',
+        },
+      ];
+    case 7:
+      return [
+        {
+          title: 'Flowertrees4',
+          src: '/src/assets/blog/glaser/successful_single_01.png',
+        },
+        {
+          title: 'Flowertrees5',
+          src: '/src/assets/blog/glaser/successful_single_02.png',
+        },
+        {
+          title: 'Flowertrees6',
+          src: '/src/assets/blog/glaser/successful_single_06.png',
+        },
+      ];
+    default:
+      // debugger;
+      return [];
   }
 }
 </script>

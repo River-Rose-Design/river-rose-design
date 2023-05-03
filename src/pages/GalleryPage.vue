@@ -250,7 +250,7 @@
 </style>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref, Ref } from 'vue';
 import { useRoute } from 'vue-router';
 import VueEasyLightbox from 'vue-easy-lightbox';
 import { getAssetsOfCategory, getAssetsOfTag } from '../helpers';
@@ -264,7 +264,7 @@ export default defineComponent({
     // For single lightbox in photography and fine art
     const lightboxVisibleRef = ref(false);
     const lightboxIndexRef = ref(0); // default 0
-    const lightboxImgsRef: Array<string> = ref([]);
+    const lightboxImgsRef: Ref<Array<string>> = ref([]);
 
     // For multiple lightboxes in GD
     const anyGDLightBoxVisibleRef = ref(false); // Necessary to close lightboxes
