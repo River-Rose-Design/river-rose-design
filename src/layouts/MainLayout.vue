@@ -10,7 +10,7 @@
       <div class="row header-interior">
         <q-tabs class="col">
           <q-route-tab class="col" to="/gallery" label="Gallery" />
-          <q-route-tab class="col" to="/blog/first" label="Blog" />
+          <q-route-tab class="col" to="/blog/glaser" label="Blog" />
           <q-toolbar class="col-4 justify-center" style="top: 3px">
             <img
               src="../assets/brand/logo_rectangle.svg"
@@ -75,7 +75,7 @@
             <a href="/gallery" class="text-black">Gallery</a>
           </div>
           <div class="mobile-menu-item q-mt-sm">
-            <a href="/blog/first" class="text-black">Blog</a>
+            <a href="/blog/glaser" class="text-black">Blog</a>
           </div>
           <div class="mobile-menu-item q-mt-sm">
             <a href="/about" class="text-black">About</a>

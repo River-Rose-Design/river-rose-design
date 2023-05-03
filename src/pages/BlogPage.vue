@@ -17,8 +17,8 @@
         tools.
       </p>
       <q-img
-        class="img-left img-50"
-        src="/src/assets/blog/glaser/photo_portrait.jpeg"
+        class="img-left img-60"
+        src="/src/assets/blog/glaser/cyborg2_edit.jpg"
         @mouseover="hoverImg(1)"
         @mouseleave="unhoverImg(1)"
       >
@@ -45,8 +45,8 @@
         possible.”
       </blockquote>
       <q-img
-        class="img-right img-40"
-        src="https://placekitten.com/300/300"
+        class="img-right img-70"
+        src="/src/assets/blog/glaser/intern_01.png"
         @mouseover="hoverImg(2)"
         @mouseleave="unhoverImg(2)"
       >
@@ -69,6 +69,7 @@
         already represent both an obvious boon and a pernicious threat to
         designers and artists’ current ways of working.
       </p>
+
       <p>
         Where merely a year ago image-generative AI software looked like child’s
         play, certain types of images generated with the latest and best ones
@@ -83,6 +84,14 @@
         the effects that the production software available to graphic designers
         at that time might have on creative outputs.
       </p>
+      <div class="img-left img-40 pullquote">
+        <!-- <span class="pullquotemarks">"</span> -->
+        While it excels at producing the familiar and anodyne, to get anything
+        truly novel and remarkable, you must not only have a clear vision, but
+        hold onto that vision with a tenacity that most casual users might not
+        possess.
+        <!-- <span class="pullquotemarks">"</span> -->
+      </div>
       <p>
         In using Midjourney these past few weeks, I have generated many things
         that, had I used my own existing skills with visual media and sought to
@@ -98,6 +107,7 @@
         onto that vision with a tenacity that most casual users might not
         possess.
       </p>
+
       <p>
         For one children’s illustration project, I wanted to see a forest where
         the trees <em>were</em> flowers, but over and over it wanted instead to
@@ -115,6 +125,114 @@
         leaves, or that rocks might possess the ability to hold up walls and
         parapets in thin air.
       </p>
+      <div class="row q-gutter-md justify-between triple-image">
+        <q-img
+          class="col"
+          src="/src/assets/blog/glaser/flower_trees_fail_01.png"
+          @mouseover="hoverImg(4)"
+          @mouseleave="unhoverImg(4)"
+        >
+          <div
+            id="caption-4"
+            style="visibility: hidden"
+            class="absolute-bottom text-subtitle1 text-center"
+          >
+            No giant tree-like flowers here. (MJ Prompt: a psychedeillic forest
+            of gigantic flowers the size of trees, light magically filters
+            through the canopy of brighly colored blossoms, and a path winds
+            through the stems, a little girl wearing a pink and purple and
+            orange dress is walking up the path)
+          </div>
+        </q-img>
+        <q-img
+          class="col"
+          src="/src/assets/blog/glaser/flower_trees_fail_02.png"
+          @mouseover="hoverImg(5)"
+          @mouseleave="unhoverImg(5)"
+        >
+          <div
+            id="caption-5"
+            style="visibility: hidden"
+            class="absolute-bottom text-subtitle1 text-center"
+          >
+            Getting warmer, but lets face it, those are giant colorful
+            mushrooms, not flowers. (MJ prompt: a psychedeillic forest of
+            gigantic flowers the size of trees, light magically filters through
+            the canopy of brighly colored blossoms, and a path winds through the
+            stems, a little girl wearing a pink and purple and orange dress is
+            walking up the path)
+          </div>
+        </q-img>
+        <q-img
+          class="col"
+          src="/src/assets/blog/glaser/flower_trees_fail_03.png"
+          @mouseover="hoverImg(6)"
+          @mouseleave="unhoverImg(6)"
+        >
+          <div
+            id="caption-6"
+            style="visibility: hidden"
+            class="absolute-bottom text-subtitle1 text-center"
+          >
+            Still no...but the floating lantern jellyfish bugs are sweet. (MJ
+            Prompt: a psychedeillic forest of gigantic flowers the size of
+            trees, light magically filters through the canopy of brighly colored
+            blossoms, and a path winds through the stems, a little girl wearing
+            a pink and purple and orange dress is walking up the path)
+          </div>
+        </q-img>
+      </div>
+      <div class="row q-gutter-md justify-between triple-image">
+        <q-img
+          class="col"
+          src="/src/assets/blog/glaser/successful_single_01.png"
+          @mouseover="hoverImg(7)"
+          @mouseleave="unhoverImg(7)"
+        >
+          <div
+            id="caption-7"
+            style="visibility: hidden"
+            class="absolute-bottom text-subtitle1 text-center"
+          >
+            Maybe they're more like colorful mushrooms, but I'll go with it. MJ
+            Prompt: "a child walking in a forest of human-sized giant flowers,
+            children's illustration style"
+          </div>
+        </q-img>
+        <q-img
+          class="col"
+          src="/src/assets/blog/glaser/successful_single_02.png"
+          @mouseover="hoverImg(8)"
+          @mouseleave="unhoverImg(8)"
+        >
+          <div
+            id="caption-8"
+            style="visibility: hidden"
+            class="absolute-bottom text-subtitle1 text-center"
+          >
+            MJ prompt: "a psychedeillic forest of gigantic flowers the size of
+            trees, light magically filters through the canopy of brighly colored
+            blossoms, and a path winds through the stems, a little girl wearing
+            a pink and purple and orange dress is walking up the path)"
+          </div>
+        </q-img>
+        <q-img
+          class="col"
+          src="/src/assets/blog/glaser/successful_single_06.png"
+          @mouseover="hoverImg(9)"
+          @mouseleave="unhoverImg(9)"
+        >
+          <div
+            id="caption-9"
+            style="visibility: hidden"
+            class="absolute-bottom text-subtitle1 text-center"
+          >
+            MJ Prompt: "a child walking in a dense forest of human-sized giant
+            flowers, children's illustration style"
+          </div>
+        </q-img>
+      </div>
+
       <p>
         While ultimately, I found the words I needed to create some truly
         beautiful renderings of some of these more challenging concepts, I began
@@ -127,6 +245,28 @@
         not truly novel, nor representative of my own creativity in any
         meaningful way.
       </p>
+      <q-img
+        class="img-left img-60"
+        src="/src/assets/blog/glaser/watermarks_01.png"
+        @mouseover="hoverImg(3)"
+        @mouseleave="unhoverImg(3)"
+      >
+        <div
+          id="caption-3"
+          style="visibility: hidden"
+          class="absolute-bottom text-subtitle1 text-center"
+        >
+          In this particularly cute example, the image prompt's content of
+          "flowers" seemed to shape the watermark-inspired aspects of the output
+          into logos that are remarkably flower-like, while still resembling
+          stock-image watermarks. (MJ prompt: "pensive cute simplified cartoon
+          woman with a sunhat surveying small cute garden, simple vector style,
+          mid shot, expression cute, thoughtful, and naïve, herbs, flowers, uses
+          colors: #BAE1BE, #89COAA, #A0B961, #8BC2AB, #657c7c, #411948. No
+          watermark. no captions single frame no watermark. Simple colors. Clean
+          lines.")
+        </div>
+      </q-img>
       <p>
         One of the clearest reminders of this problem, as well as both the
         provenance and structure of Midjourney’s remarkable abilities, presents
@@ -139,6 +279,7 @@
         interspersed with logo-like distortions, to more subtle little illegible
         signatures with a variety of type-like appearances.
       </p>
+
       <p>
         Skeptics of AI art, or of its ethical foundations, are quick to point to
         this phenomenon as evidence of it “stealing” its source material. While
@@ -153,6 +294,7 @@
         Moreover, the actual explanation is both more interesting and more
         illuminating of the true shortcomings of these generative models.
       </p>
+
       <p>
         While the watermarks are indeed “evidence” that these models viewed
         copyrighted material to generate its understanding of the relationship
@@ -376,6 +518,12 @@
 #gallery-page {
   background-color: white;
 }
+.text-subtitle1 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.15px;
+}
 
 #article-container {
   max-width: 470px;
@@ -411,18 +559,39 @@ a {
   color: $accent;
 }
 
+.pullquote {
+  color: $accent;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 200;
+  // font-variant: small-caps;
+}
+.pullquotemarks {
+  color: $accent;
+  font-size: 34px;
+  line-height: 24px;
+  font-weight: 300;
+  margin-left: -0.5em;
+  // font-variant: small-caps;
+}
+.triple-image {
+  margin-bottom: 16px;
+  margin-left: -196px;
+  width: 846px;
+}
+
 .img-left {
   width: 300px;
   float: left;
   margin-right: 20px;
-  margin-left: -150px;
+  margin-left: -180px;
 }
 
 .img-right {
   width: 300px;
   float: right;
   margin-left: 20px;
-  margin-right: -150px;
+  margin-right: -180px;
 }
 
 .img-10 {
