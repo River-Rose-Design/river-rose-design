@@ -3,6 +3,7 @@
 A Quasar Project
 
 Works with node v20.0.0 and npm v9.6.4
+Also seems to work with node v16.15.0
 
 source ~/.bash_profile
 nvm use 20
