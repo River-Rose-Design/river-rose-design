@@ -29,3 +29,21 @@ a {
     font-size: 80px !important;
   }
 }
+
+.vel-modal .vel-img-wrapper {
+  top: calc(45% + 0px) !important;
+}
+.vel-modal {
+  background: rgba(0, 0, 0, 0.75) !important;
+}
+.vel-btns-wrapper .vel-img-title {
+  white-space: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  line-height: 1.5em;
+  bottom: 30px;
+}
+div.vel-toolbar {
+  display: none;
+}
