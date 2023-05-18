@@ -109,7 +109,7 @@
             <div style="height: 25px">copyright 2022</div>
           </div>
           <div class="row" style="margin-top: 6px">
-            Site by&nbsp;
+            Site by Quinn &&nbsp;
             <a
               href="https://www.linkedin.com/in/danielgregorywilson/"
               target="_blank"

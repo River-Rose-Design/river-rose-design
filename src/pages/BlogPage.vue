@@ -475,7 +475,7 @@
         enough to adapt, but not so much as to lose the value of comfortable
         historical visual context for the audience.
       </p>
-      <div class="img-right img-50 pullquote">
+      <div class="img-right img-0 pullquote">
         <!-- <span class="pullquotemarks">"</span> -->
         The human artist’s mind is serving as a kind of supreme court, reading
         past creations and styles, and fitting them around the problem they’re
@@ -495,22 +495,8 @@
         and context. But this sort of creative innovation can only come from
         both recombination and <em>understanding</em> working together.
       </p>
-      <p>
-        Whether, and when, generative artificial intelligence will eventually
-        develop this melding of the conceptual and executive elements of art is
-        an open question, with estimates all over the map. But because it
-        currently lacks it, as is clearly illuminated by its shortcomings (such
-        as strangely shaped appendages and those incorrigible watermarks) its
-        current form provides us with a useful window into the value of
-        <em>understanding</em> <em>in the abstract</em> both the
-        <em>purpose</em> and <em>context</em> of the substrate our own creative
-        minds are trained on. Not only can a human intelligently interpret and
-        curate which elements of art history to draw upon to execute a project’s
-        goals, they can do so with a sensitivity to cultural norms and to how
-        they would like to be driving the cultural conversation of the future.
-      </p>
       <q-img
-        class="img-left img-50"
+        class="img-left img-90"
         src="/src/assets/blog/glaser/bicycle_of_the_mind_03.png"
         @mouseover="hoverImg(13)"
         @mouseleave="unhoverImg(13)"
@@ -525,6 +511,20 @@
         </div>
       </q-img>
       <p>
+        Whether, and when, generative artificial intelligence will eventually
+        develop this melding of the conceptual and executive elements of art is
+        an open question, with estimates all over the map. But because it
+        currently lacks it, as is clearly illuminated by its shortcomings (such
+        as strangely shaped appendages and those incorrigible watermarks) its
+        current form provides us with a useful window into the value of
+        <em>understanding</em> <em>in the abstract</em> both the
+        <em>purpose</em> and <em>context</em> of the substrate our own creative
+        minds are trained on. Not only can a human intelligently interpret and
+        curate which elements of art history to draw upon to execute a project’s
+        goals, they can do so with a sensitivity to cultural norms and to how
+        they would like to be driving the cultural conversation of the future.
+      </p>
+      <p>
         Steve Jobs’ famous comparison of the personal computer to a bicycle for
         the mind can be extended to generative AI. A bicycle can limit one’s
         experience by only allowing movement on a predetermined path but can
@@ -536,13 +536,32 @@
         given errand, and what angle you’re likely to approach a destination
         from, a bicycle does not <em>understand</em> your needs, and cannot
         choose your destination. Further, to move the creative consciousness
-        forward with intention and effect,
-        <span class="callout">
-          >artists must be ready and willing to park their vehicles and blaze
-          trails across the unpaved landscape of cultural needs that this novel
-          toolset can only bring us to the edge of</span
-        >.
+        forward with intention and effect, artists must be ready and willing to
+        park their vehicles and blaze trails across the unpaved landscape of
+        cultural needs that this novel toolset can only bring us to the edge of.
       </p>
+      <div class="item-center pullquote">
+        <!-- <span class="pullquotemarks">"</span> -->
+        Artists must be ready and willing to park their vehicles and blaze
+        trails across the unpaved landscape of cultural needs that this novel
+        toolset can only bring us to the edge of.
+        <!-- <span class="pullquotemarks">"</span> -->
+      </div>
+      <q-img
+        class="img-right img-90"
+        src="/src/assets/blog/glaser/parked_bicycle_sq.png"
+        @mouseover="hoverImg(14)"
+        @mouseleave="unhoverImg(14)"
+        @click="onLightboxShow(14, 0)"
+      >
+        <div
+          id="caption-14"
+          style="visibility: hidden"
+          class="absolute-bottom text-subtitle1 text-center"
+        >
+          "A Bicycle Left Behind"
+        </div>
+      </q-img>
       <p>
         The technical tools available to artists have always played a key role
         in shaping the cultural design consciousness. Novel tools open up new
@@ -563,6 +582,7 @@
         the emergence of impressionism, as a response to the experientially
         cold, ‘objective’ nature of photographs.
       </p>
+
       <p>
         <a
           href="https://www.nytimes.com/2023/04/07/opinion/ezra-klein-podcast-ama-april2023.html"
@@ -583,6 +603,31 @@
         use the power of these tools to navigate this transformation with human
         intention and true understanding.
       </p>
+      <div class-="blog-bio">
+        <q-img
+          class="img-bio"
+          src="/src/assets/brand/self_portrait.svg"
+          @mouseover="hoverImg(14)"
+          @mouseleave="unhoverImg(14)"
+          @click="onLightboxShow(14, 0)"
+        >
+          <div
+            id="caption-14"
+            style="visibility: hidden"
+            class="absolute-bottom text-subtitle1 text-center"
+          >
+            "A Bicycle Left Behind"
+          </div>
+        </q-img>
+        <p>
+          Quinn Wilson is a graphic designer and data nerd based in Eugene,
+          Oregon. With a background in environmental science, data
+          visualization, and graphic design they bring a unique combination of
+          analytical and artistic thinking to their written and visual work,
+          with the aim of using art and design to bridge communication gaps
+          between different modes of human thought.
+        </p>
+      </div>
     </div>
   </q-page>
 </template>
@@ -656,6 +701,18 @@ a {
   margin-bottom: 16px;
   margin-left: -196px;
   width: 846px;
+}
+.img-bio {
+  width: 100px;
+  float: left;
+  margin-right: 20px;
+  margin-left: -120px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.blog-bio {
+  border-top: 0.5px solid #ee3f48;
+  font-family: 'Nunito Sans';
 }
 
 .img-left {
@@ -891,8 +948,16 @@ function lightboxAssets() {
       return [
         {
           title:
-            '"A Bicycle of the Mind," Which can perhaps help an artist sort out a complex past into a clear present. (Midjourney prompt: ""a bicycle of the mind" in the style of a 1960s modernist poster" With signficant iteration rounds, modifications, and edits)',
+            '"A Bicycle of the Mind," Which can perhaps help an artist sort out a complex past into a clear present. (Midjourney collaboration beginning with the prompt: ""a bicycle of the mind" in the style of a 1960s modernist poster" With signficant iteration rounds, modifications, and edits)',
           src: '/src/assets/blog/glaser/bicycle_of_the_mind_03.png',
+        },
+      ];
+    case 14:
+      return [
+        {
+          title:
+            'Artists must be ready and willing to park their vehicles and blaze trails across the unpaved landscape of cultural needs that this novel toolset can only bring us to the edge of. Quinn Wilson with Midjourney collaboration',
+          src: '/src/assets/blog/glaser/parked_bicycle.png',
         },
       ];
     default:
