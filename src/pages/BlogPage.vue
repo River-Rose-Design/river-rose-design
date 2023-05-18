@@ -11,22 +11,22 @@
 
     <div id="article-container">
       <h4 class="text-uppercase">
-        Is <span class="rose">Generative AI</span> Moving Designers ‘From an
-        Existing State to a Preferred one?’
+        Is <span class="rose">Generative AI</span> Moving Designers to a
+        'preferred state?'’
       </h4>
       <p id="byline" class="text-uppercase">By <strong>Quinn Wilson</strong></p>
       <p id="publishDate"><em>04/28/2023</em></p>
       <p>
-        Graphic design great Milton Glaser, who coined the above iconic
-        description of what “design” is, famously avoided using computers
-        directly for his work. He relied instead on interns to pixel-push for
-        him, even well into the digital age. In the 2013 documentary “To Inform
-        and Delight,” he discussed his mistrust of the power and ability of
-        digital tools.
+        Graphic design great Milton Glaser iconically described design as
+        "moving from an existing state to a preferred one." He also famously
+        avoided using computers directly for his work. He relied instead on
+        interns to pixel-push for him, even well into the digital age. In the
+        2013 documentary “To Inform and Delight,” he discussed his mistrust of
+        the power and ability of digital tools.
       </p>
       <q-img
         class="img-left img-90"
-        src="/src/assets/blog/glaser/cyborg2_edit.jpg"
+        src="/assets/blog/glaser/cyborg2_edit.jpg"
         @mouseover="hoverImg(1)"
         @mouseleave="unhoverImg(1)"
         @click="onLightboxShow(1, 0)"
@@ -56,7 +56,7 @@
       </blockquote>
       <q-img
         class="img-right img-70"
-        src="/src/assets/blog/glaser/intern_01.png"
+        src="/assets/blog/glaser/intern_01.png"
         @mouseover="hoverImg(2)"
         @mouseleave="unhoverImg(2)"
         @click="onLightboxShow(2, 0)"
@@ -71,7 +71,7 @@
       </q-img>
       <p>
         As I spent the last few weeks exploring how I might use AI image-model
-        Midjourney in graphic design contexts, these cautionary words from have
+        Midjourney in graphic design contexts, these cautionary words have
         remained top-of mind for me. Generative AI is in its infancy, and
         simultaneously in a period of incredibly rapid growth, so any judgements
         one might make about it right now are as likely to be rendered obsolete
@@ -137,102 +137,7 @@
         parapets in thin air.
       </p>
       <BlogTripleImage :groupId="1" :assets="tripleImageAssets1" />
-      <div class="row q-gutter-md justify-between triple-image">
-        <q-img
-          class="col"
-          src="/src/assets/blog/glaser/flower_trees_fail_01.png"
-          @mouseover="hoverImg(4)"
-          @mouseleave="unhoverImg(4)"
-          @click="onLightboxShow(4, 0)"
-        >
-          <div
-            id="caption-4"
-            style="visibility: hidden"
-            class="absolute-bottom text-subtitle1 text-center"
-          >
-            No giant tree-like flowers here.
-          </div>
-        </q-img>
-        <q-img
-          class="col"
-          src="/src/assets/blog/glaser/flower_trees_fail_02.png"
-          @mouseover="hoverImg(5)"
-          @mouseleave="unhoverImg(5)"
-          @click="onLightboxShow(4, 1)"
-        >
-          <div
-            id="caption-5"
-            style="visibility: hidden"
-            class="absolute-bottom text-subtitle1 text-center"
-          >
-            Getting warmer, but lets face it, those are giant colorful
-            mushrooms, not flowers.
-          </div>
-        </q-img>
-        <q-img
-          class="col"
-          src="/src/assets/blog/glaser/flower_trees_fail_03.png"
-          @mouseover="hoverImg(6)"
-          @mouseleave="unhoverImg(6)"
-          @click="onLightboxShow(4, 2)"
-        >
-          <div
-            id="caption-6"
-            style="visibility: hidden"
-            class="absolute-bottom text-subtitle1 text-center"
-          >
-            Still no...but the floating lantern jellyfish bugs are sweet.
-          </div>
-        </q-img>
-      </div>
-      <div class="row q-gutter-md justify-between triple-image">
-        <q-img
-          class="col"
-          src="/src/assets/blog/glaser/successful_single_01.png"
-          @mouseover="hoverImg(7)"
-          @mouseleave="unhoverImg(7)"
-          @click="onLightboxShow(7, 0)"
-        >
-          <div
-            id="caption-7"
-            style="visibility: hidden"
-            class="absolute-bottom text-subtitle1 text-center"
-          >
-            More like colorful mushrooms, but I'll go with it.
-          </div>
-        </q-img>
-        <q-img
-          class="col"
-          src="/src/assets/blog/glaser/successful_single_02.png"
-          @mouseover="hoverImg(8)"
-          @mouseleave="unhoverImg(8)"
-          @click="onLightboxShow(7, 1)"
-        >
-          <div
-            id="caption-8"
-            style="visibility: hidden"
-            class="absolute-bottom text-subtitle1 text-center"
-          >
-            Now we're getting somewhere.
-          </div>
-        </q-img>
-        <q-img
-          class="col"
-          src="/src/assets/blog/glaser/successful_single_06.png"
-          @mouseover="hoverImg(9)"
-          @mouseleave="unhoverImg(9)"
-          @click="onLightboxShow(7, 2)"
-        >
-          <div
-            id="caption-9"
-            style="visibility: hidden"
-            class="absolute-bottom text-subtitle1 text-center"
-          >
-            Another of several ultimately successful attempts.
-          </div>
-        </q-img>
-      </div>
-
+      <BlogTripleImage :groupId="2" :assets="tripleImageAssets2" />
       <p>
         While ultimately, I found the words I needed to create some truly
         beautiful renderings of some of these more challenging concepts, I began
@@ -247,7 +152,7 @@
       </p>
       <q-img
         class="img-left img-50"
-        src="/src/assets/blog/glaser/watermarks_01.png"
+        src="/assets/blog/glaser/watermarks_01.png"
         @mouseover="hoverImg(3)"
         @mouseleave="unhoverImg(3)"
         @click="onLightboxShow(3, 0)"
@@ -289,17 +194,17 @@
       </p>
       <q-img
         class="img-right img-50"
-        src="/src/assets/blog/glaser/art_nouveau_m_01.png"
-        @mouseover="hoverImg(10)"
-        @mouseleave="unhoverImg(10)"
-        @click="onLightboxShow(10, 0)"
+        src="/assets/blog/glaser/art_nouveau_m_01.png"
+        @mouseover="hoverImg(4)"
+        @mouseleave="unhoverImg(4)"
+        @click="onLightboxShow(4, 0)"
       >
         <div
-          id="caption-10"
+          id="caption-4"
           style="visibility: hidden"
           class="absolute-bottom text-subtitle1 text-center"
         >
-          "An M in art nouveau style"
+          MJ prompt: An M in art nouveau style
         </div>
       </q-img>
       <p>
@@ -369,13 +274,13 @@
       </p>
       <q-img
         class="img-left img-50"
-        src="/src/assets/blog/glaser/inside_the_box_02.png"
-        @mouseover="hoverImg(11)"
-        @mouseleave="unhoverImg(11)"
-        @click="onLightboxShow(11, 0)"
+        src="/assets/blog/glaser/inside_the_box_02.png"
+        @mouseover="hoverImg(5)"
+        @mouseleave="unhoverImg(5)"
+        @click="onLightboxShow(5, 0)"
       >
         <div
-          id="caption-11"
+          id="caption-5"
           style="visibility: hidden"
           class="absolute-bottom text-subtitle1 text-center"
         >
@@ -442,13 +347,13 @@
       </p>
       <q-img
         class="img-left img-0"
-        src="/src/assets/blog/glaser/hokusai_03.png"
-        @mouseover="hoverImg(12)"
-        @mouseleave="unhoverImg(12)"
-        @click="onLightboxShow(12, 0)"
+        src="/assets/blog/glaser/hokusai_03.png"
+        @mouseover="hoverImg(6)"
+        @mouseleave="unhoverImg(6)"
+        @click="onLightboxShow(6, 0)"
       >
         <div
-          id="caption-12"
+          id="caption-6"
           style="visibility: hidden"
           class="absolute-bottom text-subtitle1 text-center"
         >
@@ -497,13 +402,13 @@
       </p>
       <q-img
         class="img-left img-90"
-        src="/src/assets/blog/glaser/bicycle_of_the_mind_03.png"
-        @mouseover="hoverImg(13)"
-        @mouseleave="unhoverImg(13)"
-        @click="onLightboxShow(13, 0)"
+        src="/assets/blog/glaser/bicycle_of_the_mind_03.png"
+        @mouseover="hoverImg(7)"
+        @mouseleave="unhoverImg(7)"
+        @click="onLightboxShow(7, 0)"
       >
         <div
-          id="caption-13"
+          id="caption-7"
           style="visibility: hidden"
           class="absolute-bottom text-subtitle1 text-center"
         >
@@ -549,13 +454,13 @@
       </div>
       <q-img
         class="img-right img-90"
-        src="/src/assets/blog/glaser/parked_bicycle_sq.png"
-        @mouseover="hoverImg(14)"
-        @mouseleave="unhoverImg(14)"
-        @click="onLightboxShow(14, 0)"
+        src="/assets/blog/glaser/parked_bicycle_sq.png"
+        @mouseover="hoverImg(8)"
+        @mouseleave="unhoverImg(8)"
+        @click="onLightboxShow(8, 0)"
       >
         <div
-          id="caption-14"
+          id="caption-8"
           style="visibility: hidden"
           class="absolute-bottom text-subtitle1 text-center"
         >
@@ -603,31 +508,7 @@
         use the power of these tools to navigate this transformation with human
         intention and true understanding.
       </p>
-      <div class-="blog-bio">
-        <q-img
-          class="img-bio"
-          src="/src/assets/brand/self_portrait.svg"
-          @mouseover="hoverImg(14)"
-          @mouseleave="unhoverImg(14)"
-          @click="onLightboxShow(14, 0)"
-        >
-          <div
-            id="caption-14"
-            style="visibility: hidden"
-            class="absolute-bottom text-subtitle1 text-center"
-          >
-            "A Bicycle Left Behind"
-          </div>
-        </q-img>
-        <p>
-          Quinn Wilson is a graphic designer and data nerd based in Eugene,
-          Oregon. With a background in environmental science, data
-          visualization, and graphic design they bring a unique combination of
-          analytical and artistic thinking to their written and visual work,
-          with the aim of using art and design to bridge communication gaps
-          between different modes of human thought.
-        </p>
-      </div>
+      <BlogBio />
     </div>
   </q-page>
 </template>
@@ -701,18 +582,6 @@ a {
   margin-bottom: 16px;
   margin-left: -196px;
   width: 846px;
-}
-.img-bio {
-  width: 100px;
-  float: left;
-  margin-right: 20px;
-  margin-left: -120px;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-.blog-bio {
-  border-top: 0.5px solid #ee3f48;
-  font-family: 'Nunito Sans';
 }
 
 .img-left {
@@ -805,11 +674,12 @@ a {
 </style>
 
 <script setup lang="ts">
-import { ref, Ref } from 'vue';
+import { onMounted, ref, Ref } from 'vue';
 
 import VueEasyLightbox from 'vue-easy-lightbox';
 
 import BlogTripleImage from 'src/components/BlogTripleImage.vue';
+import BlogBio from 'src/components/BlogBio.vue';
 
 let lightboxVisible = ref(false);
 let lightboxGroup = ref(0);
@@ -831,7 +701,7 @@ function unhoverImg(id: number) {
 function onLightboxShow(group: number, index: number) {
   lightboxGroup.value = group;
   lightboxIndex.value = index;
-  lightboxImgs.value = lightboxAssets();
+  lightboxImgs.value = singleImageAssets();
   lightboxVisible.value = true;
 }
 
@@ -839,14 +709,53 @@ function onLightboxHide() {
   lightboxVisible.value = false;
 }
 
-function lightboxAssets() {
+onMounted(() => {
+  const scrollContainers = document.getElementsByClassName(
+    'q-scrollarea__container'
+  );
+
+  function IsScrollbarAtBeginning(element: HTMLElement) {
+    return element.scrollLeft == 0;
+  }
+
+  function IsScrollbarAtEnd(element: HTMLElement) {
+    return (
+      // The extra 1 pixel seems necessary to guarantee that this will eventually return true
+      element.clientWidth + element.scrollLeft >= element.scrollWidth - 1
+    );
+  }
+
+  function scrollToCenter(element: HTMLElement) {
+    setTimeout(() => {
+      element.scrollLeft = element.scrollWidth / 2 - element.clientWidth / 2;
+    }, 500);
+  }
+
+  if (scrollContainers) {
+    for (let i = 0; i < scrollContainers.length; i++) {
+      scrollToCenter(scrollContainers[i]);
+
+      scrollContainers[i].addEventListener('wheel', (evt) => {
+        if (
+          (evt.deltaY > 0 && !IsScrollbarAtEnd(scrollContainers[i])) ||
+          (evt.deltaY < 0 && !IsScrollbarAtBeginning(scrollContainers[i]))
+        ) {
+          evt.preventDefault();
+          scrollContainers[i].scrollLeft += evt.deltaY;
+        }
+      });
+    }
+  }
+});
+
+function singleImageAssets() {
   switch (lightboxGroup.value) {
     case 1:
       return [
         {
           title:
             'A Subversive Servant: Midjourney prompt: "A cyborg making art at an easel, illustrated in the style of Milton Glaser" Modified from MJ output.',
-          src: '/src/assets/blog/glaser/cyborg2_edit.jpg',
+          src: '/assets/blog/glaser/cyborg2_edit.jpg',
         },
       ];
     case 2:
@@ -854,7 +763,7 @@ function lightboxAssets() {
         {
           title:
             'Pixel Pushing: Midjourney prompt: "Milton Glaser directing an intern to use a computer for him. Illustrated in the style of Milton Glaser" Modified from MJ output.',
-          src: '/src/assets/blog/glaser/intern_01.png',
+          src: '/assets/blog/glaser/intern_01.png',
         },
       ];
     case 3:
@@ -862,102 +771,78 @@ function lightboxAssets() {
         {
           title:
             'Flowermarks for the flower girl. In this particularly cute example, the image prompt\'s content of "flowers" seemed to shape the watermark-inspired aspects of the output into logos that are remarkably flower-like, while still resembling stock-image watermarks. (MJ prompt: "pensive cute simplified cartoon woman with a sunhat surveying small cute garden, simple vector style, mid shot, expression cute, thoughtful, and naïve, herbs, flowers, uses colors: #BAE1BE, #89COAA, #A0B961, #8BC2AB, #657c7c, #411948. No watermark. no captions single frame no watermark. Simple colors. Clean lines.")',
-          src: '/src/assets/blog/glaser/watermarks_01.png',
+          src: '/assets/blog/glaser/watermarks_01.png',
         },
       ];
     case 4:
       return [
         {
           title:
-            'No giant tree-like flowers here. (MJ Prompt: a psychedeillic forest of gigantic flowers the size of trees, light magically filters through the canopy of brighly colored blossoms, and a path winds through the stems, a little girl wearing a pink and purple and orange dress is walking up the path)',
-          src: '/src/assets/blog/glaser/flower_trees_fail_01.png',
+            'MJ prompt: "An M in art nouveau style." Modified from MJ output.',
+          src: '/assets/blog/glaser/art_nouveau_m_01.png',
+        },
+      ];
+    case 5:
+      return [
+        {
+          title:
+            'Thinking Inside the Machine\'s Box. (unfinished conceptual midjourney-assisted project) MJ prompt: "a visual conceptual commentary on the way machines affect how we make art, in the style of Milton Glaser" Modified and recombined with realted materials for final image.',
+          src: '/assets/blog/glaser/inside_the_box_02.png',
         },
         {
           title:
-            ' Getting warmer, but lets face it, those are giant colorful mushrooms, not flowers. (MJ prompt: a psychedeillic forest of gigantic flowers the size of trees, light magically filters through the canopy of brighly colored blossoms, and a path winds through the stems, a little girl wearing a pink and purple and orange dress is walking up the path)',
-          src: '/src/assets/blog/glaser/flower_trees_fail_02.png',
+            "Creating iterations and recombining options from midjourney output can help artists reach a final vision that differs from the machine's inlination",
+          src: '/assets/blog/glaser/inside_the_box_04.png',
         },
         {
           title:
-            'Still no...but the floating lantern jellyfish bugs are sweet. (MJ Prompt: a psychedeillic forest of gigantic flowers the size of trees, light magically filters through the canopy of brighly colored blossoms, and a path winds through the stems, a little girl wearing a pink and purple and orange dress is walking up the path)',
-          src: '/src/assets/blog/glaser/flower_trees_fail_03.png',
+            'Some variations deviate too far from a concept, but have something to offer in one area or another',
+          src: '/assets/blog/glaser/inside_the_box_03.png',
+        },
+        {
+          title:
+            'The ease of whole-image iteration for AI means that an artist can apply a simple conceptual tweak after developing a concept and propogate it, albeit imprecisely, across the entire piece in the blink of an eye.',
+          src: '/assets/blog/glaser/inside_the_box_06.png',
+        },
+      ];
+    case 6:
+      return [
+        {
+          title:
+            'While Katsushika Hokusai was a prolific and influential artist with many subjects, the overwhelming popularity of The Great Wave off Kanagawa, from the series Thirty-Six Views of Mount Fuji means any attempt to emulate his style using midjourney is nearly guaranteed to contain an inappropriately positioned woodblock print style wave. For the prompt "a human profile in the style of Hokusai" all results included waves, while not a single one of Hokusai\'s works the included a human subject also included such elements.',
+          src: '/assets/blog/glaser/hokusai_03.png',
+        },
+        {
+          title: '"a human profile in the style of Hokusai"',
+          src: '/assets/blog/glaser/hokusai_01.png',
+        },
+        {
+          title: '"a human profile in the style of Hokusai"',
+          src: '/assets/blog/glaser/hokusai_02.png',
+        },
+        {
+          title: '"a human profile in the style of Hokusai"',
+          src: '/assets/blog/glaser/hokusai_04.png',
         },
       ];
     case 7:
       return [
         {
           title:
-            'More like colorful mushrooms, but I\'ll go with it. MJ Prompt: "a child walking in a forest of human-sized giant flowers, children\'s illustration style"',
-          src: '/src/assets/blog/glaser/successful_single_01.png',
-        },
-        {
-          title:
-            'Now we\'re getting somewhere. MJ prompt: "a psychedeillic forest of gigantic flowers the size of trees, light magically filters through the canopy of brighly colored blossoms, and a path winds through the stems, a little girl wearing a pink and purple and orange dress is walking up the path)"',
-          src: '/src/assets/blog/glaser/successful_single_02.png',
-        },
-        {
-          title:
-            'Another of several ultimately successful attempts, across multiple styles. All told this project added up to 30+ prompts, with iterations and some edits after the fact. MJ Prompt: "a child walking in a dense forest of human-sized giant flowers, children\'s illustration style"',
-          src: '/src/assets/blog/glaser/successful_single_06.png',
-        },
-      ];
-    case 11:
-      return [
-        {
-          title:
-            'Thinking Inside the Machine\'s Box. (unfinished conceptual midjourney-assisted project) MJ prompt: "a visual conceptual commentary on the way machines affect how we make art, in the style of Milton Glaser" Modified and recombined with realted materials for final image.',
-          src: '/src/assets/blog/glaser/inside_the_box_02.png',
-        },
-        {
-          title:
-            "Creating iterations and recombining options from midjourney output can help artists reach a final vision that differs from the machine's inlination",
-          src: '/src/assets/blog/glaser/inside_the_box_04.png',
-        },
-        {
-          title:
-            'Some variations deviate too far from a concept, but have something to offer in one area or another',
-          src: '/src/assets/blog/glaser/inside_the_box_03.png',
-        },
-        {
-          title:
-            'The ease of whole-image iteration for AI means that an artist can apply a simple conceptual tweak after developing a concept and propogate it, albeit imprecisely, across the entire piece in the blink of an eye.',
-          src: '/src/assets/blog/glaser/inside_the_box_06.png',
-        },
-      ];
-    case 12:
-      return [
-        {
-          title:
-            'While Katsushika Hokusai was a prolific and influential artist with many subjects, the overwhelming popularity of The Great Wave off Kanagawa, from the series Thirty-Six Views of Mount Fuji means any attempt to emulate his style using midjourney is nearly guaranteed to contain an inappropriately positioned woodblock print style wave. For the prompt "a human profile in the style of Hokusai" all results included waves, while not a single one of Hokusai\'s works the included a human subject also included such elements.',
-          src: '/src/assets/blog/glaser/hokusai_03.png',
-        },
-        {
-          title: '"a human profile in the style of Hokusai"',
-          src: '/src/assets/blog/glaser/hokusai_01.png',
-        },
-        {
-          title: '"a human profile in the style of Hokusai"',
-          src: '/src/assets/blog/glaser/hokusai_02.png',
-        },
-        {
-          title: '"a human profile in the style of Hokusai"',
-          src: '/src/assets/blog/glaser/hokusai_04.png',
-        },
-      ];
-    case 13:
-      return [
-        {
-          title:
             '"A Bicycle of the Mind," Which can perhaps help an artist sort out a complex past into a clear present. (Midjourney collaboration beginning with the prompt: ""a bicycle of the mind" in the style of a 1960s modernist poster" With signficant iteration rounds, modifications, and edits)',
-          src: '/src/assets/blog/glaser/bicycle_of_the_mind_03.png',
+          src: '/assets/blog/glaser/bicycle_of_the_mind_03.png',
         },
       ];
-    case 14:
+    case 8:
       return [
         {
           title:
             'Artists must be ready and willing to park their vehicles and blaze trails across the unpaved landscape of cultural needs that this novel toolset can only bring us to the edge of. Quinn Wilson with Midjourney collaboration',
-          src: '/src/assets/blog/glaser/parked_bicycle.png',
+          src: '/assets/blog/glaser/parked_bicycle.png',
+        },
+        {
+          title: '',
+          src: '/assets/blog/glaser/bicycle_02.png',
         },
       ];
     default:
@@ -967,22 +852,39 @@ function lightboxAssets() {
 
 const tripleImageAssets1 = [
   {
-    id: 1,
+    id: 0,
     title:
       'No giant tree-like flowers here. (MJ Prompt: a psychedeillic forest of gigantic flowers the size of trees, light magically filters through the canopy of brighly colored blossoms, and a path winds through the stems, a little girl wearing a pink and purple and orange dress is walking up the path)',
-    src: '/src/assets/blog/glaser/flower_trees_fail_01.png',
+    src: '/assets/blog/glaser/flower_trees_fail_01.png',
+  },
+  {
+    id: 1,
+    title:
+      'Getting warmer, but lets face it, those are giant colorful mushrooms, not flowers. (MJ prompt: a psychedeillic forest of gigantic flowers the size of trees, light magically filters through the canopy of brighly colored blossoms, and a path winds through the stems, a little girl wearing a pink and purple and orange dress is walking up the path)',
+    src: '/assets/blog/glaser/flower_trees_fail_02.png',
   },
   {
     id: 2,
     title:
-      ' Getting warmer, but lets face it, those are giant colorful mushrooms, not flowers. (MJ prompt: a psychedeillic forest of gigantic flowers the size of trees, light magically filters through the canopy of brighly colored blossoms, and a path winds through the stems, a little girl wearing a pink and purple and orange dress is walking up the path)',
-    src: '/src/assets/blog/glaser/flower_trees_fail_02.png',
+      'Still no...but the floating lantern jellyfish bugs are sweet. (MJ Prompt: a psychedeillic forest of gigantic flowers the size of trees, light magically filters through the canopy of brighly colored blossoms, and a path winds through the stems, a little girl wearing a pink and purple and orange dress is walking up the path)',
+    src: '/assets/blog/glaser/flower_trees_fail_03.png',
+  },
+];
+const tripleImageAssets2 = [
+  {
+    id: 0,
+    title: "More like colorful mushrooms, but I'll go with it.",
+    src: '/assets/blog/glaser/successful_single_01.png',
   },
   {
-    id: 3,
-    title:
-      'Still no...but the floating lantern jellyfish bugs are sweet. (MJ Prompt: a psychedeillic forest of gigantic flowers the size of trees, light magically filters through the canopy of brighly colored blossoms, and a path winds through the stems, a little girl wearing a pink and purple and orange dress is walking up the path)',
-    src: '/src/assets/blog/glaser/flower_trees_fail_03.png',
+    id: 1,
+    title: "Now we're getting somewhere.",
+    src: '/assets/blog/glaser/successful_single_02.png',
+  },
+  {
+    id: 2,
+    title: 'Another of several ultimately successful attempts.',
+    src: '/assets/blog/glaser/successful_single_06.png',
   },
 ];
 </script>
