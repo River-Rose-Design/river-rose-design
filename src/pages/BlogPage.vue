@@ -578,11 +578,6 @@ a {
   margin-left: -0.5em;
   // font-variant: small-caps;
 }
-.triple-image {
-  margin-bottom: 16px;
-  margin-left: -196px;
-  width: 846px;
-}
 
 .img-left {
   width: 300px;
@@ -653,7 +648,7 @@ a {
 
 @media only screen and (max-width: 800px) {
   #article-container {
-    max-width: 450px;
+    max-width: 360px;
   }
 
   .q-img {

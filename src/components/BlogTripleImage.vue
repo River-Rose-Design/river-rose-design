@@ -32,7 +32,7 @@
     </div>
 
     <!-- Mobile View -->
-    <div class="lt-md q-mb-md" style="width: 450px">
+    <div class="lt-md q-mb-md">
       <q-scroll-area style="height: 360px">
         <div class="row no-wrap q-gutter-sm">
           <img
@@ -60,6 +60,12 @@
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.15px;
+}
+
+@media only screen and (max-width: 800px) {
+  .triple-image {
+    width: 360px;
+  }
 }
 </style>
 
