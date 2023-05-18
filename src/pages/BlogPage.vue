@@ -12,7 +12,7 @@
     <div id="article-container">
       <h4 class="text-uppercase">
         Is <span class="rose">Generative AI</span> Moving Designers to a
-        'preferred state?'’
+        'preferred state?'
       </h4>
       <p id="byline" class="text-uppercase">By <strong>Quinn Wilson</strong></p>
       <p id="publishDate"><em>04/28/2023</em></p>
