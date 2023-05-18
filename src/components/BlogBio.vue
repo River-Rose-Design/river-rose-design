@@ -1,6 +1,6 @@
 <template>
   <div class="blog-bio q-pt-md">
-    <q-img class="img-bio" src="/src/assets/brand/self_portrait.svg" />
+    <q-img class="img-bio" src="../assets/brand/self_portrait.svg" />
     <p>
       Quinn Wilson is a graphic designer and data nerd based in Eugene, Oregon.
       With a background in environmental science, data visualization, and
