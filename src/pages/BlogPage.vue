@@ -32,6 +32,11 @@
         @click="onLightboxShow(1, 0)"
       >
         <div
+          class="absolute-top-right text-subtitle2 image-expand-container row items-center justify-center"
+        >
+          <q-icon name="add" />
+        </div>
+        <div
           id="caption-1"
           style="visibility: hidden"
           class="absolute-bottom text-subtitle1 text-center"
@@ -522,6 +527,16 @@
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.15px;
+}
+
+.image-expand-container {
+  height: 30px;
+  width: 30px;
+  opacity: 50%;
+
+  .q-icon {
+    margin-top: -7px;
+  }
 }
 
 #article-container {
