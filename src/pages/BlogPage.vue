@@ -25,14 +25,14 @@
         the power and ability of digital tools.
       </p>
       <q-img
-        class="img-left img-90"
+        class="img-left img-0"
         src="/assets/blog/glaser/cyborg2_edit.jpg"
         @mouseover="hoverImg(1)"
         @mouseleave="unhoverImg(1)"
         @click="onLightboxShow(1, 0)"
       >
         <div
-          class="absolute-top-right text-subtitle2 image-expand-container row items-center justify-center"
+          class="absolute-bottom-right text-subtitle2 image-expand-container row items-center justify-center"
         >
           <q-icon name="add" />
         </div>
@@ -60,12 +60,17 @@
         possible.”
       </blockquote>
       <q-img
-        class="img-right img-70"
+        class="img-right img-60"
         src="/assets/blog/glaser/intern_01.png"
         @mouseover="hoverImg(2)"
         @mouseleave="unhoverImg(2)"
         @click="onLightboxShow(2, 0)"
       >
+        <div
+          class="absolute-bottom text-subtitle2 image-expand-container row items-center justify-center"
+        >
+          <q-icon name="add" />
+        </div>
         <div
           id="caption-2"
           style="visibility: hidden"
@@ -100,7 +105,7 @@
         the effects that the production software available to graphic designers
         at that time might have on creative outputs.
       </p>
-      <div class="img-left img-50 pullquote">
+      <div class="img-left img-90 pullquote">
         <!-- <span class="pullquotemarks">"</span> -->
         While it excels at producing the familiar and anodyne, to get anything
         truly novel and remarkable, you must not only have a clear vision, but
@@ -156,12 +161,17 @@
         meaningful way.
       </p>
       <q-img
-        class="img-left img-50"
+        class="img-left img-60"
         src="/assets/blog/glaser/watermarks_01.png"
         @mouseover="hoverImg(3)"
         @mouseleave="unhoverImg(3)"
         @click="onLightboxShow(3, 0)"
       >
+        <div
+          class="absolute-bottom-right text-subtitle2 image-expand-container row items-center justify-center"
+        >
+          <q-icon name="add" />
+        </div>
         <div
           id="caption-3"
           style="visibility: hidden"
@@ -198,12 +208,17 @@
         illuminating of the true shortcomings of these generative models.
       </p>
       <q-img
-        class="img-right img-50"
+        class="img-right img-60"
         src="/assets/blog/glaser/art_nouveau_m_01.png"
         @mouseover="hoverImg(4)"
         @mouseleave="unhoverImg(4)"
         @click="onLightboxShow(4, 0)"
       >
+        <div
+          class="absolute-bottom-left text-subtitle2 image-expand-container row items-center justify-center"
+        >
+          <q-icon name="add" />
+        </div>
         <div
           id="caption-4"
           style="visibility: hidden"
@@ -278,12 +293,17 @@
         relevant and necessary information about a brand.
       </p>
       <q-img
-        class="img-left img-50"
+        class="img-left img-85"
         src="/assets/blog/glaser/inside_the_box_02.png"
         @mouseover="hoverImg(5)"
         @mouseleave="unhoverImg(5)"
         @click="onLightboxShow(5, 0)"
       >
+        <div
+          class="absolute-bottom-right text-subtitle2 image-expand-container row items-center justify-center"
+        >
+          <q-icon name="add" />
+        </div>
         <div
           id="caption-5"
           style="visibility: hidden"
@@ -311,7 +331,7 @@
         metaphor that has emerged for me so far in my experimentation with these
         tools.
       </p>
-      <div class="img-right img-50 pullquote">
+      <div class="img-right img-15 pullquote">
         <!-- <span class="pullquotemarks">"</span> -->
         This role–not as a subversive servant, but an efficient, if naïve,
         intern–is the clearest positive alternative metaphor that has emerged
@@ -357,6 +377,11 @@
         @mouseleave="unhoverImg(6)"
         @click="onLightboxShow(6, 0)"
       >
+        <div
+          class="absolute-bottom-right text-subtitle2 image-expand-container row items-center justify-center"
+        >
+          <q-icon name="add" />
+        </div>
         <div
           id="caption-6"
           style="visibility: hidden"
@@ -413,6 +438,11 @@
         @click="onLightboxShow(7, 0)"
       >
         <div
+          class="absolute-bottom-right text-subtitle2 image-expand-container row items-center justify-center"
+        >
+          <q-icon name="add" />
+        </div>
+        <div
           id="caption-7"
           style="visibility: hidden"
           class="absolute-bottom text-subtitle1 text-center"
@@ -447,8 +477,9 @@
         from, a bicycle does not <em>understand</em> your needs, and cannot
         choose your destination. Further, to move the creative consciousness
         forward with intention and effect, artists must be ready and willing to
-        park their vehicles and blaze trails across the unpaved landscape of
-        cultural needs that this novel toolset can only bring us to the edge of.
+        park&nbsp;their vehicles and blaze trails across the unpaved landscape
+        of cultural needs that this novel toolset can only bring us to the edge
+        of.
       </p>
       <div class="item-center pullquote">
         <!-- <span class="pullquotemarks">"</span> -->
@@ -464,6 +495,11 @@
         @mouseleave="unhoverImg(8)"
         @click="onLightboxShow(8, 0)"
       >
+        <div
+          class="absolute-bottom-left text-subtitle2 image-expand-container row items-center justify-center"
+        >
+          <q-icon name="add" />
+        </div>
         <div
           id="caption-8"
           style="visibility: hidden"
@@ -489,8 +525,8 @@
           href="https://kiamaartgallery.wordpress.com/2015/05/05/impressionism-the-influence-of-photography/"
           >contributed to</a
         >
-        the emergence of impressionism, as a response to the experientially
-        cold, ‘objective’ nature of photographs.
+        the emergence of&nbsp;impressionism,&nbsp;as a response to the
+        experientially cold, ‘objective’ nature of photographs.
       </p>
 
       <p>
@@ -506,12 +542,13 @@
         it gave in productivity, social cohesion, and quality of life. If past
         is prologue, the question of
         <em>whether</em> AI art will affect the visual landscape of our culture
-        is easy to answer. The question of how, and how much, though, will
-        depend on whether art creators and consumers let these algorithmic
-        servants–operating in their context and objective agnostic
-        manner–subversively define the flow of artistic evolution, or whether we
+        is easy to answer. Whether this change brings about ‘a preferred state,’
+        however, will depend on how it is approached, or designed. The question
+        that remains is: Will art creators and consumers let these algorithmic
+        servants–operating in their context-and-objective-agnostic
+        manner–subversively define the flow of artistic evolution, or will we
         use the power of these tools to navigate this transformation with human
-        intention and true understanding.
+        intention and true understanding?
       </p>
       <BlogBio />
     </div>
@@ -532,10 +569,12 @@
 .image-expand-container {
   height: 30px;
   width: 30px;
-  opacity: 50%;
+  opacity: 30%;
 
   .q-icon {
     margin-top: -7px;
+    font-weight: bold;
+    font-size: 17px;
   }
 }
 
@@ -622,36 +661,48 @@ a {
 }
 
 .img-10 {
-  margin-top: 15px;
+  margin-top: 10px;
   shape-outside: inset(10px 0px 0px 0px);
+}
+.img-15 {
+  margin-top: 15px;
+  shape-outside: inset(15px 0px 0px 0px);
 }
 .img-20 {
   margin-top: 20px;
   shape-outside: inset(20px 0px 0px 0px);
 }
 .img-30 {
-  margin-top: 35px;
+  margin-top: 30px;
   shape-outside: inset(30px 0px 0px 0px);
 }
 .img-40 {
-  margin-top: 45px;
+  margin-top: 40px;
   shape-outside: inset(40px 0px 0px 0px);
 }
 .img-50 {
-  margin-top: 55px;
+  margin-top: 50px;
   shape-outside: inset(50px 0px 0px 0px);
 }
 .img-60 {
-  margin-top: 65px;
+  margin-top: 60px;
   shape-outside: inset(60px 0px 0px 0px);
 }
 .img-70 {
-  margin-top: 75px;
+  margin-top: 70px;
   shape-outside: inset(70px 0px 0px 0px);
 }
+.img-75 {
+  margin-top: 75px;
+  shape-outside: inset(75px 0px 0px 0px);
+}
 .img-80 {
-  margin-top: 85px;
+  margin-top: 80px;
   shape-outside: inset(80px 0px 0px 0px);
+}
+.img-85 {
+  margin-top: 85px;
+  shape-outside: inset(85px 0px 0px 0px);
 }
 .img-90 {
   margin-top: 95px;
@@ -660,6 +711,10 @@ a {
 .img-100 {
   margin-top: 100px;
   shape-outside: inset(100px 0px 0px 0px);
+}
+.img-110 {
+  margin-top: 110px;
+  shape-outside: inset(110px 0px 0px 0px);
 }
 
 @media only screen and (max-width: 800px) {
@@ -781,7 +836,7 @@ function singleImageAssets() {
       return [
         {
           title:
-            'Flowermarks for the flower girl. In this particularly cute example, the image prompt\'s content of "flowers" seemed to shape the watermark-inspired aspects of the output into logos that are remarkably flower-like, while still resembling stock-image watermarks.',
+            'Flowermarks for the flower girl. In this particularly cute example, the image prompt\'s content of "flowers" seemed to shape the watermark-inspired aspects of the output into logos that are remarkably flower-like, while still resembling stock-image watermarks. (MJ prompt: "pensive cute simplified cartoon woman with a sunhat surveying small cute garden, simple vector style, mid shot, expression cute, thoughtful, and naïve, herbs, flowers, uses colors: #BAE1BE, #89COAA, #A0B961, #8BC2AB, #657c7c, #411948. No watermark. no captions single frame no watermark. Simple colors. Clean lines.")',
           src: '/assets/blog/glaser/watermarks_01.png',
         },
       ];
@@ -820,7 +875,7 @@ function singleImageAssets() {
       return [
         {
           title:
-            'While Katsushika Hokusai was a prolific and influential artist with many subjects, the overwhelming popularity of The Great Wave off Kanagawa, from the series Thirty-Six Views of Mount Fuji means any attempt to emulate his style using midjourney is nearly guaranteed to contain an inappropriately positioned woodblock print style wave.',
+            'While Katsushika Hokusai was a prolific and influential artist with many subjects, the overwhelming popularity of The Great Wave off Kanagawa, from the series Thirty-Six Views of Mount Fuji means any attempt to emulate his style using midjourney is nearly guaranteed to contain an inappropriately positioned woodblock print style wave. For the prompt "a human profile in the style of Hokusai" all results included waves, while not a single one of Hokusai\'s works the included a human subject also included such elements.',
           src: '/assets/blog/glaser/hokusai_03.png',
         },
         {
@@ -848,7 +903,7 @@ function singleImageAssets() {
       return [
         {
           title:
-            'Artists must be ready and willing to park their vehicles and blaze trails across the unpaved landscape of cultural needs that this novel toolset can only bring us to the edge of. Quinn Wilson with Midjourney collaboration',
+            "'A Bicycle Left Behind' Artists must be ready and willing to park their vehicles and blaze trails across the unpaved landscape of cultural needs that this novel toolset can only bring us to the edge of. Quinn Wilson with Midjourney collaboration",
           src: '/assets/blog/glaser/parked_bicycle.png',
         },
         {
@@ -884,17 +939,20 @@ const tripleImageAssets1 = [
 const tripleImageAssets2 = [
   {
     id: 0,
-    title: "More like colorful mushrooms, but I'll go with it.",
+    title:
+      'More like colorful mushrooms, but I\'ll go with it. (MJ Prompt: "supernatural world where flowers grow gigantic, 10-20meter tall flowers. Giant daisies, spreading out like umbrellas above the forest floor")',
     src: '/assets/blog/glaser/successful_single_01.png',
   },
   {
     id: 1,
-    title: "Now we're getting somewhere.",
+    title:
+      'Now we\'re getting somewhere. MJ prompt: "a psychedeillic forest of gigantic flowers the size of trees, light magically filters through the canopy of brighly colored blossoms, and a path winds through the stems, a little girl wearing a pink and purple and orange dress is walking up the path)"',
     src: '/assets/blog/glaser/successful_single_02.png',
   },
   {
     id: 2,
-    title: 'Another of several ultimately successful attempts.',
+    title:
+      'Another of several ultimately successful attempts, across multiple styles. All told this project added up to 30+ prompts, with iterations and some edits after the fact. MJ Prompt: "a child walking in a dense forest of human-sized giant flowers, children\'s illustration style"',
     src: '/assets/blog/glaser/successful_single_06.png',
   },
 ];
