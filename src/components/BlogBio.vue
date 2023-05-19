@@ -25,8 +25,19 @@
   border-top: 0.5px solid #ee3f48;
   font-family: 'Nunito Sans';
   p {
-    font-size: 12px;
+    font-size: 13px;
+    overflow: hidden;
     line-height: 1.75;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .img-bio {
+    width: 120px;
+  }
+  .blog-bio {
+    p {
+      line-height: 1.5;
+    }
   }
 }
 </style>

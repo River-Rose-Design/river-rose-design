@@ -549,7 +549,7 @@ blockquote {
 
 p {
   font-family: 'Nunito Sans';
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 300;
 }
 

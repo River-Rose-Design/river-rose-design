@@ -33,7 +33,12 @@
 
     <!-- Mobile View -->
     <div class="lt-md q-mb-md" style="360px">
-      <q-scroll-area style="height: 360px">
+      <q-scroll-area
+        :visible="scrollbarVisible"
+        style="height: 375px"
+        :thumb-style="scrollbarThumbStyle"
+        :bar-style="scrollbarStyle"
+      >
         <div class="row no-wrap q-gutter-sm">
           <img
             v-for="asset in props.assets"
@@ -79,6 +84,23 @@ const props = defineProps<{
 
 let lightboxVisible = ref(false);
 let lightboxIndex = ref(0);
+
+let scrollbarVisible = ref(true);
+let scrollbarThumbStyle = ref({
+  backgroundColor: '#ee3f48',
+  borderRadius: '5px',
+  right: '0px',
+  width: '5px',
+  opacity: 0.3,
+});
+let scrollbarStyle = ref({
+  right: '2px',
+  height: '50%',
+  borderRadius: '9px',
+  backgroundColor: 'blue',
+  width: '5px',
+  opacity: 0,
+});
 
 function hoverImg(id: number) {
   if (document.querySelector(`#caption-${props.groupId}-${id}`)) {
