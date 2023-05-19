@@ -541,6 +541,7 @@ blockquote {
   font-family: 'Nunito Sans';
   font-weight: 400;
   font-style: italic;
+  font-size: 15px;
 }
 
 .rose {
@@ -549,7 +550,7 @@ blockquote {
 
 p {
   font-family: 'Nunito Sans';
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -765,7 +766,7 @@ function singleImageAssets() {
       return [
         {
           title:
-            'Flowermarks for the flower girl. In this particularly cute example, the image prompt\'s content of "flowers" seemed to shape the watermark-inspired aspects of the output into logos that are remarkably flower-like, while still resembling stock-image watermarks. (MJ prompt: "pensive cute simplified cartoon woman with a sunhat surveying small cute garden, simple vector style, mid shot, expression cute, thoughtful, and naïve, herbs, flowers, uses colors: #BAE1BE, #89COAA, #A0B961, #8BC2AB, #657c7c, #411948. No watermark. no captions single frame no watermark. Simple colors. Clean lines.")',
+            'Flowermarks for the flower girl. In this particularly cute example, the image prompt\'s content of "flowers" seemed to shape the watermark-inspired aspects of the output into logos that are remarkably flower-like, while still resembling stock-image watermarks.',
           src: '/assets/blog/glaser/watermarks_01.png',
         },
       ];
@@ -804,7 +805,7 @@ function singleImageAssets() {
       return [
         {
           title:
-            'While Katsushika Hokusai was a prolific and influential artist with many subjects, the overwhelming popularity of The Great Wave off Kanagawa, from the series Thirty-Six Views of Mount Fuji means any attempt to emulate his style using midjourney is nearly guaranteed to contain an inappropriately positioned woodblock print style wave. For the prompt "a human profile in the style of Hokusai" all results included waves, while not a single one of Hokusai\'s works the included a human subject also included such elements.',
+            'While Katsushika Hokusai was a prolific and influential artist with many subjects, the overwhelming popularity of The Great Wave off Kanagawa, from the series Thirty-Six Views of Mount Fuji means any attempt to emulate his style using midjourney is nearly guaranteed to contain an inappropriately positioned woodblock print style wave.',
           src: '/assets/blog/glaser/hokusai_03.png',
         },
         {

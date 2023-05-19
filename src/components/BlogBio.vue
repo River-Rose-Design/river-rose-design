@@ -25,7 +25,7 @@
   border-top: 0.5px solid #ee3f48;
   font-family: 'Nunito Sans';
   p {
-    font-size: 13px;
+    font-size: 14px;
     overflow: hidden;
     line-height: 1.75;
   }
