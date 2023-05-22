@@ -16,16 +16,32 @@
       </h4>
       <p id="byline" class="text-uppercase">By <strong>Quinn Wilson</strong></p>
       <p id="publishDate"><em>04/28/2023</em></p>
+
       <p>
-        Graphic design great Milton Glaser iconically described design as
-        "moving from an existing state to a preferred one." He also famously
-        avoided using computers directly for his work. He relied instead on
-        interns to pixel-push for him, even well into the digital age. In the
-        2013 documentary “To Inform and Delight,” he discussed his mistrust of
-        the power and ability of digital tools.
+        Graphic design great Milton Glaser famously described design as "moving
+        from an existing state to a preferred one." He was also known to avoid
+        using computers directly for his work. Instead, he relied on interns to
+        pixel-push for him, even well into the digital age. In the 2013
+        documentary “To Inform and Delight,” he discussed his mistrust of the
+        power and ability of digital tools.
       </p>
+
+      <blockquote>
+        “The computer is dangerous because it shapes your capacity to understand
+        what’s possible. The computer is like an apparently submissive servant
+        that turns out to be a subversive that ultimately gains control of your
+        mind. [It] is such a powerful instrument that it defines, after a while,
+        what is possible for you. And what is possible is [what is] within the
+        computer’s capacity. And while it seems in the beginning like this
+        incredibly gifted and talented servant actually has… intelligence — the
+        brain is so much vaster than the computer. But, the computer is very
+        insistent about what it’s good at, and before you know it — it’s like
+        being with somebody who has bad habits, you sort of fall into the bad
+        habits — and it begins to dominate the way you think about what is
+        possible.”
+      </blockquote>
       <q-img
-        class="img-left img-0"
+        class="img-left img-85"
         src="/assets/blog/glaser/cyborg2_edit.jpg"
         @mouseover="hoverImg(1)"
         @mouseleave="unhoverImg(1)"
@@ -45,22 +61,19 @@
         </div>
       </q-img>
 
-      <blockquote>
-        “The computer is dangerous because it shapes your capacity to understand
-        what’s possible. The computer is like an apparently submissive servant
-        that turns out to be a subversive that ultimately gains control of your
-        mind. [It] is such a powerful instrument that it defines, after a while,
-        what is possible for you. And what is possible is [what is] within the
-        computer’s capacity. And while it seems in the beginning like this
-        incredibly gifted and talented servant actually has… intelligence — the
-        brain is so much vaster than the computer. But, the computer is very
-        insistent about what it’s good at, and before you know it — it’s like
-        being with somebody who has bad habits, you sort of fall into the bad
-        habits — and it begins to dominate the way you think about what is
-        possible.”
-      </blockquote>
+      <p>
+        As I spent the last few weeks exploring the use of AI image-model
+        Midjourney in graphic design contexts, these cautionary words have
+        remained top-of mind for me. Generative AI is in its infancy, and
+        simultaneously in a period of growth so rapid that any judgements one
+        might make about it right now are as likely to be rendered obsolete next
+        month as they are to prove salient additions to the dialog. That said,
+        even if their current ability were held static, these tools already
+        represent both an obvious boon and a pernicious threat to designers and
+        artists’ current ways of working.
+      </p>
       <q-img
-        class="img-right img-60"
+        class="img-right img-110"
         src="/assets/blog/glaser/intern_01.png"
         @mouseover="hoverImg(2)"
         @mouseleave="unhoverImg(2)"
@@ -80,30 +93,19 @@
         </div>
       </q-img>
       <p>
-        As I spent the last few weeks exploring how I might use AI image-model
-        Midjourney in graphic design contexts, these cautionary words have
-        remained top-of mind for me. Generative AI is in its infancy, and
-        simultaneously in a period of incredibly rapid growth, so any judgements
-        one might make about it right now are as likely to be rendered obsolete
-        next month as they are to prove salient additions to the dialog. That
-        said, even if their current ability were held static, these tools
-        already represent both an obvious boon and a pernicious threat to
-        designers and artists’ current ways of working.
-      </p>
-
-      <p>
-        Where merely a year ago image-generative AI software looked like child’s
-        play, certain types of images generated with the latest and best ones
-        are essentially indistinguishable from professionally-produced
-        photography or art. But whether the output of a particular Midjourney
-        query ‘looks like professional grade art’, and whether it accomplishes
-        anything close to the same goal as would have been possible had a human
-        artist set their skills (though presumably significantly
-        <em>more</em> time) to the same project, are wholly different questions.
-        While nearly a decade has passed, these questions both tie in deeply
-        with the concern at the core of Glaser’s critique ten years ago about
-        the effects that the production software available to graphic designers
-        at that time might have on creative outputs.
+        Where merely a year or two ago image-generative AI results often looked
+        like a drunken toddler's finger painting session, certain types of
+        images generated with the latest and best ones are essentially
+        indistinguishable from professionally-produced photography or art. But
+        whether the output of a particular Midjourney query "looks like
+        professional grade art", and whether it accomplishes anything close to
+        the same goal as would have been possible had a human artist set their
+        skills—though presumably significantly
+        <em>more</em> time—to the same project, are different questions. While
+        nearly a decade has passed, these questions both tie in deeply with the
+        concern at the core of Glaser’s critique ten years ago about the effects
+        that the production software available to graphic designers at that time
+        might have on creative outputs.
       </p>
       <div class="img-left img-90 pullquote">
         <!-- <span class="pullquotemarks">"</span> -->
@@ -114,51 +116,49 @@
         <!-- <span class="pullquotemarks">"</span> -->
       </div>
       <p>
-        In using Midjourney these past few weeks, I have generated many things
-        that, had I used my own existing skills with visual media and sought to
-        create them <em>specifically</em>, would have been pieces that evoked
-        quite a lot of pride of craft. Yet I have nevertheless felt like
-        Midjourney was indeed, to an extent, subversively “defining” what was
-        possible (or perhaps more accurately allowing the shape and various
-        depths of content in the
+        In using Midjourney these past few weeks, I generated many things that,
+        had I used my own skills with visual media and sought to create them
+        <em>specifically</em>, would have been pieces that evoked genuine pride
+        of craft. Yet I have nevertheless felt like Midjourney was indeed, to an
+        extent, subversively “defining” what was possible (or perhaps more
+        accurately allowing the shape and various depths of content in the
         <a href="https://www.youtube.com/watch?v=SVcsDDABEkM"> latent space </a>
         it possessed to influence our visual and linguistic dialog.) While it
-        excels at producing the familiar and anodyne, to get anything truly
-        novel and remarkable, you must not only have a clear vision, but hold
-        onto that vision with a tenacity that most casual users might not
-        possess.
+        excels at producing the familiar and anodyne, to get anything novel and
+        remarkable, one must not only have a clear vision, but hold onto that
+        vision with a tenacity that most casual users might not possess.
       </p>
 
       <p>
         For one children’s illustration project, I wanted to see a forest where
-        the trees <em>were</em> flowers, but over and over it wanted instead to
-        make me a forest where traditional looking trees were
-        <em>covered</em> in flowers. <em>That</em> was what it was used to
-        seeing, or was at least fewer steps away from what it was used to
-        seeing. In another, I wanted a medieval floating city above water,
-        founded on stalactite-covered rocks like on the fictional planet Pandora
-        - but until I actually invoked <em>“Pandora”</em> specifically, drawing
-        directly on the images of the specific set of creative artists who
-        developed the look and feel of that world, it wouldn’t conceive visually
-        for me of a city that defied the laws of physics in this way. I had to
-        be incredibly determined to convince it that flowers might be envisioned
-        to tower over the head, forming a vast canopy of petals instead of
-        leaves, or that rocks might possess the ability to hold up walls and
-        parapets in thin air.
+        the trees <em>were</em> flowers, but over and over it produced only a
+        forest where traditional looking trees were <em>covered</em> in flowers.
+        <em>That</em> was what it was used to seeing, or was at least fewer
+        steps away from the sorts of images the predomianted its primarily
+        real-world training data. In another, I wanted a medieval floating city
+        above water, founded on stalactite-covered rocks like on the fictional
+        planet Pandora - but until I actually invoked
+        <em>“Pandora”</em> specifically, drawing directly on the images of the
+        specific set of creative artists who developed the look and feel of that
+        world, it wouldn’t conceive visually for me of a city that defied the
+        laws of physics in this way. Most images in our world, and certainly
+        those of cities, do not do this. I had to be incredibly determined to
+        convince it that flowers might be envisioned to tower over the head,
+        forming a vast canopy of petals instead of leaves, or that rocks might
+        possess the ability to hold up walls and parapets in thin air.
       </p>
       <BlogTripleImage :groupId="1" :assets="tripleImageAssets1" />
       <BlogTripleImage :groupId="2" :assets="tripleImageAssets2" />
       <p>
-        While ultimately, I found the words I needed to create some truly
-        beautiful renderings of some of these more challenging concepts, I began
-        to think that perhaps envisioning truly <em>fantastical</em> things
-        requires an <em>understanding</em>, not just of what has been, but of
-        what rules we are accepting that we might momentarily suspend to make
-        something <em>novel</em>, and something perfectly suited to the problem
-        of the moment. I could imagine that with a less tenacious grasp on my
-        ultimate vision, I might have settled for output that was beautiful, but
-        not truly novel, nor representative of my own creativity in any
-        meaningful way.
+        Ultimately, I found the words I needed to create truly beautiful
+        renderings of these more challenging concepts. I began to think,
+        however, that envisioning truly <em>fantastical</em> things requires an
+        <em>understanding</em>, not just of what has been, but of what rules we
+        are accepting that we might momentarily suspend to make something
+        perfectly suited to the problem of the moment. I could imagine that with
+        a less tenacious grasp on my ultimate vision, I might have settled for
+        output that was beautiful, but not truly novel, nor representative of my
+        own creativity in any meaningful way.
       </p>
       <q-img
         class="img-left img-60"
@@ -181,24 +181,23 @@
         </div>
       </q-img>
       <p>
-        One of the clearest reminders of this problem, as well as both the
-        provenance and structure of Midjourney’s remarkable abilities, presents
-        itself in the form of the engine’s incorrigible tendency to include
-        image artifacts in its creations that are reminiscent of watermarks.
-        This is especially true when asked for particular types of work; those
-        that might be more likely to show up often in a stock image search, for
-        example. When given particular types of keywords, Midjourney often
-        applies anything from a crisscrossing grid of watermark lines
-        interspersed with logo-like distortions, to more subtle little illegible
-        signatures with a variety of type-like appearances.
+        A clear reminder of this problem—and the provenance and structure of
+        Midjourney’s remarkable abilities—presents itself in the form of the
+        engine’s incorrigible tendency to include image artifacts reminiscent of
+        watermarks in its creations. This is especially true when asked for
+        particular types of work; those that might be more likely to show up
+        often in a stock image search, for example. When given cetain keywords,
+        Midjourney often applies anything from a crisscrossing grid of watermark
+        lines interspersed with logo-like distortions, to more subtle little
+        illegible signatures with a variety of type-like appearances.
       </p>
 
       <p>
-        Skeptics of AI art, or of its ethical foundations, are quick to point to
+        Skeptics of AI art, and its ethical foundations, are quick to point to
         this phenomenon as evidence of it “stealing” its source material. While
-        this claim seems to have some facile validity, it relies on a shaky and
-        shallow understanding of the way these generators work, and is often
-        used to prop up some
+        this claim has some superficial validity, it relies on a shaky and
+        shallow understanding of how these generators both train and create, and
+        is often used to prop up some
         <a
           href="https://www.eff.org/deeplinks/2023/04/ai-art-generators-and-online-image-market"
           >dangerous ideas</a
@@ -228,7 +227,7 @@
         </div>
       </q-img>
       <p>
-        While the watermarks are indeed “evidence” that these models viewed
+        While the watermarks are indeed 'evidence' that these models viewed
         copyrighted material to generate its understanding of the relationship
         between certain linguistic prompt elements and certain visual patterns,
         and to train its
@@ -237,11 +236,10 @@
           >diffusion model</a
         >
         to predict the way pixels should resolve given these prompts, that’s not
-        exactly something that one needs evidence for, as it is common
-        knowledge, and does not necessarily represent any more of a breach of
-        the rules, legal or ethical, of content “ownership” than a human artist
-        using reference material to learn or to paint something novel of their
-        own.
+        exactly something that one needs evidence for, as it is public
+        knowledge. It does not necessarily represent any more of a legal or
+        ethical breach of content “ownership” than a human artist using
+        reference material to learn, or to paint something novel of their own.
       </p>
       <p>
         What is, however, of particular interest to me about this phenomenon is
@@ -259,24 +257,16 @@
       </p>
       <p>
         It is in this lack of “understanding” that one can find the truest
-        extant limitation of generative AI models as they exist today. In the
-        opening of the quotation above, Glaser refers to how a computer can
-        affect the designers “capacity to understand what’s possible.” In a very
-        true sense, it is ultimately this extant lack, for all its appearance of
+        extant limitation of current generative AI models. Glaser refers to how
+        a computer affects the designers “capacity to understand what’s
+        possible.” It is ultimately this extant lack, for all its appearance of
         skilled artistry and capacity for remixing in novel ways, that
         inexorably separates Midjourney from a human designer’s mind. In drawing
-        this distinction we can find one of the most important precautions to
-        any designer seeking to use these tools to solve visual problems. To
-        truly tackle a problem, especially in a novel or interesting way, the
-        first step is <em>understanding</em>.
+        this distinction we identify the most important precaution that any
+        designer using these tools must internalize. To truly tackle a problem,
+        especially in a novel or interesting way, the first step is
+        <em>understanding</em>.
       </p>
-      <div class="item-center pullquote">
-        <!-- <span class="pullquotemarks">"</span> -->
-        The best design solutions were found by first forming a deep
-        <em>understanding</em> of a client’s needs and of the job’s conceptual
-        structure.
-        <!-- <span class="pullquotemarks">"</span> -->
-      </div>
       <p>
         Near the beginning of my formal graphic design education, a professor
         opened his unit on logo design with the sentence “All I ask is that you
@@ -292,8 +282,15 @@
         to something that conveyed, in the simplest visual terms, the most
         relevant and necessary information about a brand.
       </p>
+      <div class="item-center pullquote">
+        <!-- <span class="pullquotemarks">"</span> -->
+        The best design solutions were found by first forming a deep
+        <em>understanding</em> of a client’s needs and of the job’s conceptual
+        structure.
+        <!-- <span class="pullquotemarks">"</span> -->
+      </div>
       <q-img
-        class="img-left img-85"
+        class="img-left img-110"
         src="/assets/blog/glaser/inside_the_box_02.png"
         @mouseover="hoverImg(5)"
         @mouseleave="unhoverImg(5)"
@@ -315,12 +312,12 @@
       <p>
         But another thing we learned in that course is that it can be useful to
         <em>produce</em> those facile solutions, to get them out of the way, or
-        perhaps to contain them in your brain’s own
+        perhaps to produce your brain’s own
         <a href="https://www.youtube.com/watch?v=SVcsDDABEkM"
           >generated latent space</a
         >
-        around a project. This process though, however useful, takes time. If
-        you work in a larger firm, this is time you might direct an intern
+        for a project. This process though, however useful, takes time. If you
+        work in a larger firm, this is a task you might direct an intern
         towards, with clear instructions on content, style, and level of detail.
         In this same way, a less-resourced designer who has worked hard to
         develop a deep understanding of a design problem can also readily make
@@ -343,32 +340,31 @@
         abilities of these AI art models is their ability to emulate existing
         artists, both contemporary and long dead. Yet here too, the limitations
         of
-        <em>understanding</em> are amply evident. Midjourney exhibited a strong,
-        and unsurprising, tendency to overweight individual famous pieces, in
-        its conception of an artist’s style, especially for more eclectic
-        artists whose style was perhaps better conceptualized in their
-        <em>approach to problems</em>, rather than the particular visual
-        outputs.
+        <em>understanding</em> are amply evident. Midjourney exhibited a strong
+        tendency to overweight individual famous pieces, in its conception of an
+        artist’s style, especially for more eclectic artists whose style was
+        perhaps better conceptualized in their <em>approach to problems</em>,
+        rather than the particular visual outputs.
       </p>
       <p>
-        One such artist is Milton Glaser himself, whose exceptional graphic
-        design acumen was distinguished more in how he drew on art history with
-        intention, and innovated upon existing design paradigms, than in the
-        particular visual effects he produced on paper. When Midjourney is
-        prompted to work in the style of Milton Glaser, however, it generally
-        reproduces a style that actually makes up only a small, if notable,
-        minority of his work: pieces that are illustrative, highly colorful,
-        detailed to the point of being nearly busy, and quasi-psychedelic but
-        with a geometric twist. While this is a beautiful (and relatively
-        distinctive) style, most designers know Glaser primarily as someone who
-        was inventive, thought solidly outside the box (even boxes of his own
-        past-creation), and assiduously used white space and simplification to
-        his advantage. The former represents features one might uniquely find in
-        the latent visual space between Glaser’s productions, while the latter
-        is something for which replication would have to be predicated wholly on
-        understanding of the subject matter, its historical and social context,
-        and the audience: something that for all its technical acumen,
-        Midjourney unquestionably lacks.
+        One such artist is Milton Glaser himself, whose graphic design acumen
+        was distinguished more in how he drew on art history with intention, and
+        innovated upon existing design paradigms, than in the particular visual
+        effects he produced on paper. When Midjourney is prompted to work in the
+        style of Milton Glaser, however, it generally reproduces a style that
+        actually makes up only a small, if notable, minority of his work: pieces
+        that are illustrative, highly colorful, detailed to the point of being
+        nearly busy, and quasi-psychedelic but with a geometric twist. While
+        this is a beautiful (and relatively distinctive) style, most designers
+        know Glaser primarily as someone who was inventive, thought solidly
+        outside the box (even boxes of his own past-creation), and assiduously
+        used white space and simplification to his advantage. The former
+        represents features one might uniquely find in the latent visual space
+        between Glaser’s productions, while the latter is something for which
+        replication would have to be predicated wholly on understanding of the
+        subject matter, its historical and social context, and the audience: an
+        ability that for all its technical acumen, Midjourney unquestionably
+        lacks.
       </p>
       <q-img
         class="img-left img-0"
@@ -421,10 +417,10 @@
       <p>
         Pablo Picasso, himself a pioneer famous for mastering art in its
         traditional form and using that context to move beyond the
-        traditional–in world-changing ways–is frequently credited with the
-        famous adage “Bad artists copy, good artists borrow, great artists
-        steal.” The central concept here is that true creativity is found in
-        remixing so
+        traditional—in world-changing ways—is among many thinkers frequently
+        credited with the famous adage “Bad artists copy, good artists borrow,
+        great artists steal.” The central concept here is that true creativity
+        is found in remixing so
         <em>well</em>, and choosing what to remix so aptly, that your audience
         cannot help but feel the result is bespoke to their very specific needs
         and context. But this sort of creative innovation can only come from
@@ -465,27 +461,31 @@
         they would like to be driving the cultural conversation of the future.
       </p>
       <p>
-        Steve Jobs’ famous comparison of the personal computer to a bicycle for
-        the mind can be extended to generative AI. A bicycle can limit one’s
-        experience by only allowing movement on a predetermined path but can
-        also expand one’s experience by allowing greater distance to be covered
-        in less time. Like a bicycle, the transformative, novel man-machine
-        partnership enabled by generative AI has the potential to both limit and
-        expand creative experiences, depending on how it is utilized. But
-        importantly, while it may affect how far you are willing to travel for a
-        given errand, and what angle you’re likely to approach a destination
-        from, a bicycle does not <em>understand</em> your needs, and cannot
-        choose your destination. Further, to move the creative consciousness
-        forward with intention and effect, artists must be ready and willing to
-        park&nbsp;their vehicles and blaze trails across the unpaved landscape
-        of cultural needs that this novel toolset can only bring us to the edge
-        of.
+        Steve Jobs’
+        <a href="https://www.youtube.com/watch?v=L40B08nWoMk"
+          >famous comparison</a
+        >
+        of the personal computer to a bicycle for the mind can be extended to
+        generative AI. A bicycle can limit one’s experience by only allowing
+        movement on a predetermined path but can also expand one’s experience by
+        allowing greater distance to be covered in less time. Like a bicycle,
+        the transformative, novel man-machine partnership enabled by generative
+        AI has the potential to both limit and expand creative experiences,
+        depending on how it is utilized. But importantly, while it may affect
+        how far you are willing to travel for a given errand, and what angle
+        you’re likely to approach a destination from, a bicycle does not
+        <em>understand</em> your needs, and cannot choose your destination.
+        While it can move with unprecedented velocity within it, this novel
+        toolset can only bring us to the edge of the space human artists have
+        already built. To move the creative consciousness forward with intention
+        and effect, artists must be ready and willing to park&nbsp;their
+        vehicles and blaze trails across the unpaved landscape of cultural
+        needs.
       </p>
       <div class="item-center pullquote">
         <!-- <span class="pullquotemarks">"</span> -->
         Artists must be ready and willing to park their vehicles and blaze
-        trails across the unpaved landscape of cultural needs that this novel
-        toolset can only bring us to the edge of.
+        trails across the unpaved landscape of cultural needs.
         <!-- <span class="pullquotemarks">"</span> -->
       </div>
       <q-img
@@ -534,7 +534,7 @@
           href="https://www.nytimes.com/2023/04/07/opinion/ezra-klein-podcast-ama-april2023.html"
           >Ezra Klein has noted</a
         >
-        that, due to its unforeseen downsides, the ubiquitous global
+        that, possibly due to its unforeseen downsides, the ubiquitous global
         connectivity of the internet failed to deliver the productivity gains
         that might have been predicted in the 90s had people truly understood
         the technology’s potential. While the internet was fundamentally
@@ -545,8 +545,8 @@
         is easy to answer. Whether this change brings about ‘a preferred state,’
         however, will depend on how it is approached, or designed. The question
         that remains is: Will art creators and consumers let these algorithmic
-        servants–operating in their context-and-objective-agnostic
-        manner–subversively define the flow of artistic evolution, or will we
+        servants—operating in their context-and-objective-agnostic
+        manner—subversively define the flow of artistic evolution, or will we
         use the power of these tools to navigate this transformation with human
         intention and true understanding?
       </p>
@@ -595,7 +595,8 @@ blockquote {
   font-family: 'Nunito Sans';
   font-weight: 400;
   font-style: italic;
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .rose {
