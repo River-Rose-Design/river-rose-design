@@ -776,6 +776,10 @@ const metaData = {
 
 useMeta(metaData);
 
+const descEl = document.querySelector('head meta[name="description"]');
+
+descEl.setAttribute('content', 'AI art as intern');
+
 function hoverImg(id: number) {
   if (document.querySelector(`#caption-${id}`)) {
     document.querySelector(`#caption-${id}`).style.visibility = 'visible';
