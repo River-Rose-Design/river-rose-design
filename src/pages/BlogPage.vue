@@ -741,6 +741,7 @@ a {
 </style>
 
 <script setup lang="ts">
+import { useMeta } from 'quasar';
 import { onMounted, ref, Ref } from 'vue';
 
 import VueEasyLightbox from 'vue-easy-lightbox';
@@ -752,6 +753,28 @@ let lightboxVisible = ref(false);
 let lightboxGroup = ref(0);
 let lightboxIndex = ref(0);
 let lightboxImgs: Ref<Array<{ title: string; src: string }>> = ref([]);
+
+const metaData = {
+  title: 'River Rose Design',
+
+  // meta tags
+  meta: {
+    ogTitle: {
+      name: 'og:title',
+      content: "Is Generative AI Moving Designers to a 'Preferred State?'",
+    },
+    ogDescription: {
+      name: 'og:description',
+      content: 'AI art as intern',
+    },
+    ogImage: {
+      name: 'og:image',
+      content: '/assets/blog/glaser/parked_bicycle.png',
+    },
+  },
+};
+
+useMeta(metaData);
 
 function hoverImg(id: number) {
   if (document.querySelector(`#caption-${id}`)) {

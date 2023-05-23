@@ -106,6 +106,7 @@ h4 {
 </style>
 
 <script lang="ts">
+import { useMeta } from 'quasar';
 import { defineComponent, ref } from 'vue';
 import VueEasyLightbox from 'vue-easy-lightbox';
 import { getAssetsOfTag } from '../helpers';
@@ -123,12 +124,46 @@ const projectCards: Array<{
   { title: 'Art At Lane Promotions', category: 'gd', tag: 'artAtLane' },
 ];
 
+const metaData = {
+  title: 'River Rose Design',
+
+  // meta tags
+  meta: {
+    title: {
+      name: 'title',
+      content: 'River Rose Design',
+    },
+    ogTitle: {
+      name: 'og:title',
+      content: 'River Rose Design',
+    },
+    description: {
+      name: 'description',
+      content: 'Making the conceptual concrete',
+    },
+    ogDescription: {
+      name: 'og:description',
+      content: 'Making the conceptual concrete',
+    },
+    ogImage: {
+      name: 'og:image',
+      content: '/assets/brand/self_portrait.svg',
+    },
+    keywords: { name: 'keywords', content: 'design connection' },
+    equiv: {
+      'http-equiv': 'Content-Type',
+      content: 'text/html; charset=UTF-8',
+    },
+  },
+};
+
 export default defineComponent({
   name: 'IndexPage',
   components: {
     VueEasyLightbox,
   },
   setup() {
+    useMeta(metaData);
     const lightboxVisibleRef = ref(false);
     const lightboxIndexRef = ref(0); // default 0
     const lightboxImgsRef: Array<string> = ref([]);
