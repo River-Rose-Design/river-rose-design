@@ -11,6 +11,12 @@ quasar dev
 
 ## Install the dependencies
 
+<!-- NVM -->
+https://github.com/nvm-sh/nvm
+
+<!-- Quasar CLI -->
+https://quasar.dev/start/quasar-cli/
+
 ```bash
 yarn
 # or
