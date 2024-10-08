@@ -106,7 +106,7 @@
             </q-avatar>
             <div style="height: 25px">Content by&nbsp;</div>
             <div style="height: 25px">Quinn Wilson,&nbsp;</div>
-            <div style="height: 25px">copyright 2023</div>
+            <div style="height: 25px">copyright 2024</div>
           </div>
           <div class="row" style="margin-top: 6px">
             Site by Quinn &&nbsp;
