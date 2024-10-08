@@ -9,10 +9,9 @@
           class="q-mr-lg"
         />
         <p>
-          Quinn Wilson is a queer, neurodivergent graphic designer, science &
-          data nerd, culinary mad-scientist and parent living in Eugene, Oregon.
-          They use art and design to communicate across the myriad of human
-          neurotypes.
+          Quinn Wilson is a graphic designer, science & data nerd, culinary
+          mad-scientist and parent living in Eugene, Oregon. They use art and
+          design to communicate across the myriad of human neurotypes.
         </p>
 
         <p>
