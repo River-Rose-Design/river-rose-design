@@ -97,12 +97,16 @@ const routes: RouteRecordRaw[] = [
       {
         name: 'blog',
         path: 'blog',
-        component: () => import('pages/BlogPage.vue'),
         children: [
           {
             name: 'glaser-article',
             path: 'glaser',
-            component: () => import('pages/BlogPage.vue'),
+            component: () => import('pages/blog/GlaserPost.vue'),
+          },
+          {
+            name: 'control-article',
+            path: 'control',
+            component: () => import('pages/blog/ControlPost.vue'),
           },
         ],
       },
